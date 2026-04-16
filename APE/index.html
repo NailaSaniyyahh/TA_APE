@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APE — Book Search</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f6fb;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 60px 16px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 680px;
+        }
+
+        /* Header */
+        .header { text-align: center; margin-bottom: 32px; }
+        .header h1 {
+            font-size: 28px;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+        .header p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Method selector */
+        .method-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            justify-content: center;
+        }
+        .method-tab {
+            padding: 8px 20px;
+            border-radius: 20px;
+            border: 1.5px solid #ccc;
+            background: white;
+            cursor: pointer;
+            font-size: 13px;
+            color: #555;
+            transition: all 0.2s;
+        }
+        .method-tab.active {
+            background: #1a1a2e;
+            color: white;
+            border-color: #1a1a2e;
+        }
+
+        /* Search box */
+        .search-wrapper {
+            position: relative;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: white;
+            border: 1.5px solid #ddd;
+            border-radius: 12px;
+            padding: 12px 16px;
+            gap: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: border-color 0.2s;
+        }
+        .search-box:focus-within {
+            border-color: #1a1a2e;
+        }
+        .search-icon { color: #aaa; font-size: 18px; }
+        .search-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            color: #1a1a2e;
+            background: transparent;
+        }
+        .search-input::placeholder { color: #bbb; }
+
+        /* Dropdown suggestion */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: calc(100% + 6px);
+            left: 0; right: 0;
+            background: white;
+            border: 1.5px solid #eee;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+            overflow: hidden;
+            z-index: 100;
+        }
+        .dropdown.show { display: block; }
+
+        .dropdown-item {
+            padding: 12px 16px;
+            cursor: pointer;
+            border-bottom: 1px solid #f5f5f5;
+            transition: background 0.15s;
+        }
+        .dropdown-item:last-child { border-bottom: none; }
+        .dropdown-item:hover { background: #f9f9fc; }
+
+        .item-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+        .item-author {
+            font-size: 12px;
+            color: #888;
+            margin-top: 2px;
+        }
+        .item-score {
+            font-size: 11px;
+            color: #aaa;
+            margin-top: 2px;
+        }
+
+        /* Badge metode */
+        .badge {
+            font-size: 10px;
+            padding: 2px 7px;
+            border-radius: 10px;
+            background: #eef0ff;
+            color: #5c6bc0;
+            float: right;
+            margin-top: 2px;
+        }
+
+        /* Loading */
+        .loading {
+            padding: 16px;
+            text-align: center;
+            color: #aaa;
+            font-size: 13px;
+        }
+
+        /* Empty state */
+        .empty {
+            padding: 16px;
+            text-align: center;
+            color: #bbb;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>APE Book Search</h1>
+        <!-- <p>Aplikasi Pendukung Eksperimen — simulasi search suggestion<br>
+        dengan re-ranking BM25, SBERT, dan Hybrid</p> -->
+    </div>
+
+    <!-- Pilih metode -->
+    <!-- <div class="method-tabs">
+        <button class="method-tab active" data-method="bm25">BM25</button>
+        <button class="method-tab" data-method="sbert">SBERT</button>
+        <button class="method-tab" data-method="hybrid">Hybrid</button>
+    </div> -->
+
+    <!-- Search box -->
+    <div class="search-wrapper">
+        <div class="search-box">
+            <span class="search-icon"></span>
+            <input
+                id="searchInput"
+                class="search-input"
+                type="text"
+                placeholder="Ketik judul atau nama penulis..."
+                autocomplete="off"
+            />
+        </div>
+        <div id="dropdown" class="dropdown"></div>
+    </div>
+
+</div>
+
+<script>
+    const API_BASE   = "http://127.0.0.1:5000";
+    const input      = document.getElementById("searchInput");
+    const dropdown   = document.getElementById("dropdown");
+    const methodTabs = document.querySelectorAll(".method-tab");
+
+    let selectedMethod = "bm25";
+    let debounce = null;
+
+    // ── Pilih metode ──────────────────────────────────────────────
+    methodTabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            methodTabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+            selectedMethod = tab.dataset.method;
+
+            // Re-fetch dengan metode baru kalau ada query
+            if (input.value.trim()) fetchSuggestions(input.value.trim());
+        });
+    });
+
+    // ── Input handler dengan debounce 300ms ───────────────────────
+    input.addEventListener("input", () => {
+        clearTimeout(debounce);
+        const query = input.value.trim();
+        if (!query) { hideDropdown(); return; }
+        debounce = setTimeout(() => fetchSuggestions(query), 300);
+    });
+
+    // ── Fetch ke backend ──────────────────────────────────────────
+    async function fetchSuggestions(query) {
+        showLoading();
+        try {
+            const res  = await fetch(
+                `${API_BASE}/suggest?query=${encodeURIComponent(query)}&method=${selectedMethod}`
+            );
+            const data = await res.json();
+            renderDropdown(data, selectedMethod);
+        } catch (err) {
+            console.error(err);
+            hideDropdown();
+        }
+    }
+
+    // ── Render dropdown ───────────────────────────────────────────
+    function renderDropdown(items, method) {
+        dropdown.innerHTML = "";
+
+        if (!items.length) {
+            dropdown.innerHTML = `<div class="empty">Tidak ada hasil ditemukan.</div>`;
+            dropdown.classList.add("show");
+            return;
+        }
+
+        const methodLabel = { bm25: "BM25", sbert: "SBERT", hybrid: "Hybrid" };
+
+        items.forEach(item => {
+            const div = document.createElement("div");
+            div.className = "dropdown-item";
+
+            // Tampilkan skor sesuai metode
+            // let scoreText = "";
+            // if (method === "bm25")
+            //     scoreText = `BM25: ${item.score_bm25?.toFixed(4) ?? "-"}`;
+            // else if (method === "sbert")
+            //     scoreText = `SBERT: ${item.score_sbert?.toFixed(4) ?? "-"}`;
+            // else
+            //     scoreText = `BM25: ${item.score_bm25?.toFixed(3) ?? "-"} | SBERT: ${item.score_sbert?.toFixed(3) ?? "-"} | Hybrid: ${item.score?.toFixed(3) ?? "-"}`;
+
+            div.innerHTML = `
+                <div class="item-title">${item.title}</div>
+                <div class="item-author">${item.author || ""}</div>
+            `;
+
+            div.addEventListener("click", () => {
+                input.value = item.title;
+                hideDropdown();
+            });
+
+            dropdown.appendChild(div);
+        });
+
+        dropdown.classList.add("show");
+    }
+
+    function showLoading() {
+        dropdown.innerHTML = `<div class="loading">Memuat...</div>`;
+        dropdown.classList.add("show");
+    }
+
+    function hideDropdown() {
+        dropdown.classList.remove("show");
+        dropdown.innerHTML = "";
+    }
+
+    // Tutup dropdown kalau klik di luar
+    document.addEventListener("click", e => {
+        if (!e.target.closest(".search-wrapper")) hideDropdown();
+    });
+</script>
+</body>
+</html>
