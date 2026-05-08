@@ -2,47 +2,74 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from opensearchpy import OpenSearch
 from rank_bm25 import BM25Okapi
+import copy
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
-import numpy as np
+import logging
+
+# Setup logging untuk debugging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 CORS(app)
 
-# ─── Koneksi OpenSearch ───────────────────────────────────────────
-client = OpenSearch(
-    hosts=[{"host": "localhost", "port": 9200}],
-    http_auth=("admin", "KoTA404TABAH!"),
-    use_ssl=True,
-    verify_certs=False,
-    ssl_show_warn=False,
-    timeout=60
-)
+# Initialize OpenSearch with better error handling
+try:
+    client = OpenSearch(
+        hosts=[{"host": "localhost", "port": 9200}],
+        http_auth=("admin", "KoTA404TABAH!"),
+        use_ssl=True,
+        verify_certs=False,
+        ssl_show_warn=False,
+        timeout=60,
+        max_retries=3,
+        retry_on_timeout=True
+    )
+    # Test connection
+    info = client.info()
+    logger.info("✓ OpenSearch connected successfully")
+except Exception as e:
+    logger.error(f"✗ Failed to connect to OpenSearch: {e}")
+    logger.warning("App will continue but queries may fail")
 
-INDEX_NAME = "books"
+INDEX_NAME = "bookss"
 
-# ─── Load model SBERT sekali saja saat startup ───────────────────
-print("Loading SBERT model...")
-sbert_model = SentenceTransformer("all-MiniLM-L6-v2")
-print("SBERT model ready.")
+sbert_model = None  
+
+def get_sbert_model():
+    """Load SBERT model hanya sekali, lazy loading"""
+    global sbert_model
+    if sbert_model is None:
+        logger.info("📦 Loading SBERT model for the first time...")
+        sbert_model = SentenceTransformer("all-MiniLM-L6-v2")
+        logger.info("✓ SBERT model loaded successfully")
+    return sbert_model
+
+def clear_sbert_memory():
+    """Hapus model SBERT dari memory untuk menghemat resource"""
+    global sbert_model
+    if sbert_model is not None:
+        import gc
+        del sbert_model
+        sbert_model = None
+        gc.collect()  # Force garbage collection
+        logger.info("🧹 SBERT model cleared from memory")
+    else:
+        logger.info("ℹ️ SBERT model not loaded, nothing to clear")
+logger.info("⏳ Pre-loading SBERT model on server startup...")
+get_sbert_model()
+logger.info("✓ SBERT pre-loaded and ready!")
 
 
-# ════════════════════════════════════════════════════════════════════
-# STEP 1 — Completion Suggester (OpenSearch)
-# Tugasnya: dari query user, ambil kandidat judul buku
-# ════════════════════════════════════════════════════════════════════
-def get_candidates(query: str, size: int = 10) -> list[dict]:
-    """
-    Kirim query ke OpenSearch Completion Suggester.
-    Return: list of dict {title, author, description}
-    """
+def get_candidates(query: str) -> list[dict]:
     body = {
         "suggest": {
             "suggest_by_title": {
                 "prefix": query,
                 "completion": {
                     "field": "suggest_title",
-                    "size": size,
+                    "size": 10,
                     "skip_duplicates": True
                 }
             },
@@ -50,165 +77,363 @@ def get_candidates(query: str, size: int = 10) -> list[dict]:
                 "prefix": query,
                 "completion": {
                     "field": "suggest_author",
-                    "size": size,
+                    "size": 10,
                     "skip_duplicates": True
                 }
             }
         },
+        "query": {
+            "bool": {
+                "should":[
+                    {
+                        "match":{
+                            "title":{
+                                "query": query,
+                                "fuzziness": "2"
+                            }    
+                        }
+                    },
+                    {
+                        "match":{
+                            "author":{
+                                "query": query,
+                                "fuzziness": "2"
+                            }    
+                        }
+                    },    
+                ],
+                "minimum_should_match": "1"
+            }
+        },
+        "size": 10,
         "_source": ["title", "author", "description"]
     }
 
     response = client.search(index=INDEX_NAME, body=body)
     seen      = set()
-    candidates = []
-    # Prioritaskan hasil dari suggest_title dulu
+    # candidates = []
+
+    completion_result =[]
     for suggest_key in ["suggest_by_title", "suggest_by_author"]:
         options = response["suggest"][suggest_key][0]["options"]
         for opt in options:
             src   = opt["_source"]
             title = src.get("title", "")
-            if title in seen:
+            if not title or title in seen:
                 continue
             seen.add(title)
-            candidates.append({
+            completion_result.append({
                 "title":       title,
                 "author":      src.get("author", ""),
-                "description": src.get("description", "")
+                "description": src.get("description", ""),
+                "source":      "completion"
             })
+    match_result = []
+    hits = response.get("hits", {}).get("hits", [])
+    for hit in hits:
+        src   = hit["_source"]
+        title = src.get("title", "")
+        if not title or title in seen:
+            continue
+        seen.add(title)
+        match_result.append({
+            "title":       title,
+            "author":      src.get("author", ""),
+            "description": src.get("description", ""),
+            "source":      "fuzzy"
+        })
 
-    return candidates[:size]
+    candidates = completion_result + match_result
+    return candidates[:10]
 
+def compute_bm25_scores(query, candidates):
+    corpus = [f"{c['title']} {c['author']}" for c in candidates]
+    tokenized_corpus = [doc.lower().split() for doc in corpus]
+    tokenized_query  = query.lower().split()
+    bm25 = BM25Okapi(tokenized_corpus)
+    return bm25.get_scores(tokenized_query)  # return scores saja, tidak di-sort
 
-# ════════════════════════════════════════════════════════════════════
-# STEP 2A — Re-ranking dengan BM25
-# Tugasnya: hitung skor BM25 antara query vs tiap kandidat
-# ════════════════════════════════════════════════════════════════════
+def compute_sbert_scores(query, candidates):
+    model = get_sbert_model()
+    corpus = [f"{c['title']} {c['author']} {c['description']}" for c in candidates]
+    query_vec     = model.encode([query])
+    candidate_vec = model.encode(corpus)
+    return cosine_similarity(query_vec, candidate_vec)[0]  # return scores saja
+
 # def rerank_bm25(query: str, candidates: list[dict]) -> list[dict]:
-#     """
-#     Tokenisasi setiap kandidat (title+author+description),
-#     lalu hitung BM25 score terhadap query.
-#     """
-#     # Gabungkan field jadi satu dokumen teks per kandidat
-#     corpus = [
-#         f"{c['title']} {c['author']} {c['description']}"
-#         for c in candidates
-#     ]
+#     if not candidates:
+#         return candidates
+    
+#     # jadi doc
+#     corpus = []
+#     for c in candidates:
+#         corpus.append(f"{c['title']} {c['author']}")
 
-#     # Tokenisasi sederhana (lowercase + split)
-#     tokenized_corpus = [doc.lower().split() for doc in corpus]
-#     tokenized_query  = query.lower().split()
+#     # tokenization
+#     tokenized_corpus = []
+#     for doc in corpus:
+#         words = doc.lower().split()  # lowercase dulu, baru split
+#         tokenized_corpus.append(words)
 
-#     bm25   = BM25Okapi(tokenized_corpus)
+#     tokenized_query = query.lower().split()
+
+#     bm25   = BM25Okapi(tokenized_corpus)   #bisa diganti jenisnya misal pake bm25L/bm25+
 #     scores = bm25.get_scores(tokenized_query)
 
-#     # Gabungkan skor ke kandidat
-#     for i, c in enumerate(candidates):
-#         c["score_bm25"] = float(scores[i])
-#         c["score"]      = float(scores[i])  # score final
+#     for i, candidate in enumerate(candidates):
+#         candidate["score_bm25"] = float(scores[i])
 
-#     # Urutkan descending
-#     return sorted(candidates, key=lambda x: x["score"], reverse=True)
+#     reranked = sorted(candidates, key=lambda x: x["score_bm25"], reverse=True)
 
+#     return reranked
+def rerank_bm25(query, candidates):
+    if not candidates:         
+        return candidates
+    scores = compute_bm25_scores(query, candidates)
+    for i, c in enumerate(candidates):
+        c["score_bm25"] = float(scores[i])
+    return sorted(candidates, key=lambda x: x["score_bm25"], reverse=True)
 
-# # ════════════════════════════════════════════════════════════════════
-# # STEP 2B — Re-ranking dengan SBERT
-# # Tugasnya: hitung cosine similarity antara embedding query vs kandidat
-# # ════════════════════════════════════════════════════════════════════
+def rerank_sbert(query, candidates):
+    if not candidates:         
+        return candidates
+    scores = compute_sbert_scores(query, candidates)
+    for i, c in enumerate(candidates):
+        c["score_sbert"] = float(scores[i])
+    return sorted(candidates, key=lambda x: x["score_sbert"], reverse=True)
+
 # def rerank_sbert(query: str, candidates: list[dict]) -> list[dict]:
-#     """
-#     Encode query dan tiap kandidat pakai SBERT,
-#     lalu hitung cosine similarity.
-#     """
-#     corpus = [
-#         f"{c['title']} {c['author']} {c['description']}"
-#         for c in candidates
-#     ]
-
-#     query_vec     = sbert_model.encode([query])
-#     candidate_vec = sbert_model.encode(corpus)
-
+#     if not candidates:
+#         return candidates
+    
+#     # Encode query
+#     query_embedding = sbert_model.encode(query, convert_to_tensor=False)
+    
+#     # Prepare documents: combine title, author, and description
+#     documents = []
+#     for c in candidates:
+#         doc_text = f"{c['title']} {c['author']} {c['description']}"
+#         documents.append(doc_text)
+    
+#     # Encode all documents
+#     doc_embeddings = sbert_model.encode(documents, convert_to_tensor=False)
+    
+#     # Calculate cosine similarity between query and each document
+#     scores = cosine_similarity([query_embedding], doc_embeddings)[0]
+    
+#     # Assign scores to candidates
+#     for i, candidate in enumerate(candidates):
+#         candidate["score_sbert"] = float(scores[i])
+    
+#     # Sort by SBERT score (descending)
+#     reranked = sorted(candidates, key=lambda x: x["score_sbert"], reverse=True)
+    
+#     return reranked
+# def rerank_sbert(query: str, candidates: list[dict]) -> list[dict]:
+#     if not candidates:
+#         return candidates
+    
+#     model = get_sbert_model()  # Load model jika belum ada
+#     corpus = [f"{c['title']} {c['author']} {c['description']}" for c in candidates]
+#     query_vec = model.encode([query])
+#     candidate_vec = model.encode(corpus)
 #     similarities = cosine_similarity(query_vec, candidate_vec)[0]
-
+    
 #     for i, c in enumerate(candidates):
 #         c["score_sbert"] = float(similarities[i])
-#         c["score"]       = float(similarities[i])
+    
+#     return sorted(candidates, key=lambda x: x["score_sbert"], reverse=True)
 
-#     return sorted(candidates, key=lambda x: x["score"], reverse=True)
+# def normalize_theoretical(scores, theoretical_min=0):
+#     # """
+#     # Theoretical min-max normalization.
+#     # Formula: (score - theoretical_min) / (actual_max - theoretical_min)
+    
+#     # Args:
+#     #     scores: list/array of scores to normalize
+#     #     theoretical_min: theoretical minimum value (0 for BM25, -1 for SBERT cosine similarity)
+    
+#     # Returns:
+#     #     list of normalized scores between [0, 1]
+#     # """
+#     if len(scores) == 0:
+#         return []
+    
+#     actual_max = max(scores)
+#     denominator = actual_max - theoretical_min
+    
+#     # Jika denominator 0 (semua skor sama), return array of 0s
+#     if denominator == 0:
+#         return [0.0] * len(scores)
+    
+#     return [(s - theoretical_min) / denominator for s in scores]
 
+def normalize(scores):
+    min_s, max_s = min(scores), max(scores)
+    if max_s - min_s == 0:
+        return [0.0] * len(scores)
+    return [(s - min_s) / (max_s - min_s) for s in scores]
 
-# # ════════════════════════════════════════════════════════════════════
-# # STEP 2C — Re-ranking Hybrid (BM25 + SBERT)
-# # Tugasnya: normalisasi kedua skor lalu gabungkan dengan bobot
-# # ════════════════════════════════════════════════════════════════════
-# def rerank_hybrid(query: str, candidates: list[dict],
-#                   alpha: float = 0.5) -> list[dict]:
-#     """
-#     alpha = bobot BM25 (0.5 berarti 50:50)
-#     1 - alpha = bobot SBERT
-#     """
-#     # Hitung BM25
-#     corpus = [
-#         f"{c['title']} {c['author']} {c['description']}"
-#         for c in candidates
-#     ]
-#     tokenized_corpus = [doc.lower().split() for doc in corpus]
-#     tokenized_query  = query.lower().split()
-#     bm25             = BM25Okapi(tokenized_corpus)
-#     bm25_scores      = bm25.get_scores(tokenized_query)
+def rerank_hybrid(query, candidates, alpha=0.5):
+    # alphanya 0.5 dulu buat nampilin si hasil hybridnya / default
+    # if not candidates:
+    #     return candidates
+    
+    # hitung skor bm25
+    # corpus_bm25 = [f"{c['title']} {c['author']}" for c in candidates]
+    # tokenized_corpus = [doc.lower().split() for doc in corpus_bm25]
+    # tokenized_query  = query.lower().split()
+    # bm25   = BM25Okapi(tokenized_corpus)
+    # bm25_scores = bm25.get_scores(tokenized_query) 
 
-#     # Hitung SBERT
-#     query_vec     = sbert_model.encode([query])
-#     candidate_vec = sbert_model.encode(corpus)
-#     sbert_scores  = cosine_similarity(query_vec, candidate_vec)[0]
+    # # hitung skor sbert
+    # model = get_sbert_model()  # Load model jika belum ada
+    # corpus_sbert = [f"{c['title']} {c['author']} {c['description']}" for c in candidates]
+    # query_vec     = model.encode([query])
+    # candidate_vec = model.encode(corpus_sbert)
+    # sbert_scores  = cosine_similarity(query_vec, candidate_vec)[0]
+    # bm25_ranked   = rerank_bm25(query, copy.deepcopy(candidates))
+    # sbert_ranked  = rerank_sbert(query, copy.deepcopy(candidates))
+    
+    # # Ekstrak scores dari hasil reranking
+    # bm25_scores  = [c["score_bm25"] for c in bm25_ranked]
+    # sbert_scores = [c["score_sbert"] for c in sbert_ranked]
+    
+    # print(f"\n{'='*60}")
+    # print(f"DEBUG HYBRID — query: '{query}'")
+    # print(f"{'='*60}")
+    # print(f"{'Title':<35} {'BM25':>8} {'SBERT':>8}")
+    # print(f"{'-'*55}")
+    # for i, c in enumerate(candidates):
+    #     print(f"{c['title'][:34]:<35} {bm25_scores[i]:>8.4f} {sbert_scores[i]:>8.4f}")
+    # print(f"{'='*60}\n")
 
-#     # Normalisasi BM25 ke rentang [0, 1]
-#     bm25_max = max(bm25_scores) if max(bm25_scores) > 0 else 1
-#     bm25_norm = bm25_scores / bm25_max
+    # for i, c in enumerate(candidates):
+    #     print(f"{c['title'][:34]:<35} {bm25_scores[i]:>8.4f} {sbert_scores[i]:>8.4f} {bm25_norm[i]:>8.4f} {sbert_norm[i]:>8.4f}")
+    #     print(f"{'='*70}\n")
+    # bm25_norm  = normalize_theoretical(bm25_scores, theoretical_min=0)
+    # sbert_norm = normalize_theoretical(sbert_scores, theoretical_min=-1)
 
-#     # SBERT sudah di rentang [-1, 1], normalisasi ke [0, 1]
-#     sbert_norm = (sbert_scores + 1) / 2
+    # bm25_norm  = normalize(bm25_scores)
+    # sbert_norm = normalize(sbert_scores)
+    # # combine
+    # for i, c in enumerate(candidates):
+    #     c["score_bm25"]   = float(bm25_scores[i])
+    #     c["score_sbert"]  = float(sbert_scores[i])
+    #     c["score_hybrid"] = float((1 - alpha) * bm25_norm[i] + alpha * sbert_norm[i])
+    
+    # return sorted(candidates, key=lambda x: x["score_hybrid"], reverse=True)
 
-#     # Gabungkan skor
-#     for i, c in enumerate(candidates):
-#         c["score_bm25"]  = float(bm25_scores[i])
-#         c["score_sbert"] = float(sbert_scores[i])
-#         c["score"]       = float(alpha * bm25_norm[i] +
-#                                  (1 - alpha) * sbert_norm[i])
+    if not candidates:
+        return candidates
 
-#     return sorted(candidates, key=lambda x: x["score"], reverse=True)
+    bm25_scores  = compute_bm25_scores(query, candidates)
+    sbert_scores = compute_sbert_scores(query, candidates)
 
+    print(f"\n{'='*65}")
+    print(f"DEBUG HYBRID — query: '{query}', alpha={alpha}")
+    print(f"{'Title':<35} {'BM25':>8} {'SBERT':>8}")
+    print(f"{'-'*65}")
+    for i, c in enumerate(candidates):
+        print(f"{c['title'][:34]:<35} {float(bm25_scores[i]):>8.4f} {float(sbert_scores[i]):>8.4f}")
+    print(f"{'='*65}\n")
 
-# ════════════════════════════════════════════════════════════════════
-# ROUTES Flask
-# ════════════════════════════════════════════════════════════════════
+    bm25_norm  = normalize(list(bm25_scores))
+    sbert_norm = normalize([float(s) for s in sbert_scores])
+
+    print(f"{'Title':<35} {'BM25N':>8} {'SBERTN':>8} {'HYBRID':>8}")
+    print(f"{'-'*65}")
+    for i, c in enumerate(candidates):
+        hybrid = float((1 - alpha) * bm25_norm[i] + alpha * sbert_norm[i])
+        print(f"{c['title'][:34]:<35} {bm25_norm[i]:>8.4f} {sbert_norm[i]:>8.4f} {hybrid:>8.4f}")
+    print(f"{'='*65}\n")
+
+    for i, c in enumerate(candidates):
+        c["score_bm25"]   = float(bm25_scores[i])
+        c["score_sbert"]  = float(sbert_scores[i])
+        c["score_hybrid"] = float((1 - alpha) * bm25_norm[i] + alpha * sbert_norm[i])
+
+    return sorted(candidates, key=lambda x: x["score_hybrid"], reverse=True)
 
 @app.route("/suggest", methods=["GET"])
 def suggest():
     """
     GET /suggest?query=hunger&method=bm25
+    GET /suggest?query=hunger&method=sbert
     Return: list kandidat yang sudah di-rerank
+    
+    Methods:
+    - bm25: BM25 lexical matching
+    - sbert: Semantic search using SBERT (all-MiniLM-L6-v2)
     """
-    query  = request.args.get("query", "").strip()
-    method = request.args.get("method", "bm25").lower()
+    try:
+        query  = request.args.get("query", "").strip()
+        method = request.args.get("method", "bm25").lower()
 
+        if not query:
+            return jsonify([])
+
+        candidates = get_candidates(query)
+
+        if not candidates:
+            return jsonify([])
+
+        if method == "sbert":
+            ranked = rerank_sbert(query, candidates)
+        else:  # default to bm25
+            ranked = rerank_bm25(query, candidates)
+
+        return jsonify(ranked)
+    except Exception as e:
+        logger.error(f"Error in /suggest: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/compare_completion_bm25", methods=["GET"])
+def compare_completion_bm25():
+    """
+    Compare completion and BM25 ranking methods
+    GET /compare_completion_bm25?query=hunger
+    """
+    query = request.args.get("query", "").strip()
     if not query:
-        return jsonify([])
+        return jsonify({"completion": [], "bm25": []})
 
-    # Step 1: ambil kandidat dari OpenSearch
-    candidates = get_candidates(query, size=10)
-
+    candidates = get_candidates(query)
     if not candidates:
-        return jsonify([])
+        return jsonify({"completion": [], "bm25": []})
+    completion_order = copy.deepcopy(candidates)
 
-    # # Step 2: re-ranking sesuai metode
-    # if method == "sbert":
-    #     ranked = rerank_sbert(query, candidates)
-    # elif method == "hybrid":
-    #     ranked = rerank_hybrid(query, candidates)
-    # else:
-    #     ranked = rerank_bm25(query, candidates)
+    # Re-ranking BM25
+    bm25_order = rerank_bm25(query, copy.deepcopy(candidates))
 
-    return jsonify(candidates)
+    return jsonify({
+        "completion": completion_order,
+        "bm25": bm25_order
+    })
+
+
+@app.route("/compare_all_methods", methods=["GET"])
+def compare_all_methods():
+    query = request.args.get("query", "").strip()
+    if not query:
+        return jsonify({"completion": [], "bm25": [], "sbert": [], "hybrid": []})
+
+    candidates = get_candidates(query)
+    if not candidates:
+        return jsonify({"completion": [], "bm25": [], "sbert": [], "hybrid": []})
+    
+    completion_order = copy.deepcopy(candidates)
+    bm25_order = rerank_bm25(query, copy.deepcopy(candidates))
+    sbert_order = rerank_sbert(query, copy.deepcopy(candidates))
+    hybrid_order = rerank_hybrid(query, copy.deepcopy(candidates), alpha=0.5)
+
+    return jsonify({
+        "completion": completion_order,
+        "bm25": bm25_order,
+        "sbert": sbert_order,
+        "hybrid": hybrid_order
+    })
 
 
 @app.route("/health", methods=["GET"])
@@ -216,5 +441,40 @@ def health():
     return jsonify({"status": "ok"})
 
 
+@app.route("/sbert-status", methods=["GET"])
+def sbert_status():
+    global sbert_model
+    is_loaded = sbert_model is not None
+    return jsonify({
+        "model_loaded": is_loaded,
+        "message": "✓ SBERT model is in memory" if is_loaded else "✗ SBERT model not loaded"
+    })
+
+
+@app.route("/init-sbert", methods=["POST"])
+def init_sbert():
+    """Warmup endpoint (dipanggil dari HTML saat page load)"""
+    try:
+        get_sbert_model()  # sudah ter-load saat startup, ini hanya konfirmasi
+        return jsonify({
+            "message": "✓ SBERT model ready!",
+            "status": "ready",
+            "model_loaded": True
+        })
+    except Exception as e:
+        logger.error(f"Error initializing SBERT: {e}")
+        return jsonify({"error": str(e), "status": "failed"}), 500
+
+
+@app.route("/clear-sbert", methods=["POST"])
+def clear_sbert():
+    clear_sbert_memory()
+    return jsonify({
+        "message": "✓ SBERT model cleared from memory",
+        "note": "Model akan di-load ulang saat dibutuhkan"
+    })
+    
+
+
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=False, threaded=True, port=5000, use_reloader=False)

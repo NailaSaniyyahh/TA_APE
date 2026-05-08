@@ -14,29 +14,29 @@
             display: flex;
             align-items: flex-start;
             justify-content: center;
-            padding: 60px 16px;
+            padding: 48px 16px;
         }
 
         .container {
             width: 100%;
-            max-width: 680px;
+            max-width: 960px;
         }
 
         /* Header */
         .header { text-align: center; margin-bottom: 32px; }
         .header h1 {
-            font-size: 28px;
+            font-size: 26px;
             color: #1a1a2e;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
         .header p {
-            color: #666;
+            color: #888;
             font-size: 14px;
             line-height: 1.6;
         }
 
-        /* Method selector */
-        .method-tabs {
+        /* selector */
+        /* .method-tabs {
             display: flex;
             gap: 8px;
             margin-bottom: 16px;
@@ -56,11 +56,12 @@
             background: #1a1a2e;
             color: white;
             border-color: #1a1a2e;
-        }
+        } */
 
         /* Search box */
         .search-wrapper {
             position: relative;
+            margin-bottom: 28px;
         }
         .search-box {
             display: flex;
@@ -68,7 +69,7 @@
             background: white;
             border: 1.5px solid #ddd;
             border-radius: 12px;
-            padding: 12px 16px;
+            padding: 13px 18px;
             gap: 10px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.06);
             transition: border-color 0.2s;
@@ -76,19 +77,19 @@
         .search-box:focus-within {
             border-color: #1a1a2e;
         }
-        .search-icon { color: #aaa; font-size: 18px; }
+        .search-icon { color: #bbb; font-size: 17px; }
         .search-input {
             flex: 1;
             border: none;
             outline: none;
-            font-size: 16px;
+            font-size: 15px;
             color: #1a1a2e;
             background: transparent;
         }
-        .search-input::placeholder { color: #bbb; }
+        .search-input::placeholder { color: #ccc; }
 
         /* Dropdown suggestion */
-        .dropdown {
+        /* .dropdown {
             display: none;
             position: absolute;
             top: calc(100% + 6px);
@@ -125,10 +126,10 @@
             font-size: 11px;
             color: #aaa;
             margin-top: 2px;
-        }
+        } */
 
         /* Badge metode */
-        .badge {
+        /* .badge {
             font-size: 10px;
             padding: 2px 7px;
             border-radius: 10px;
@@ -136,21 +137,114 @@
             color: #5c6bc0;
             float: right;
             margin-top: 2px;
-        }
+        } */
 
         /* Loading */
-        .loading {
+        /* .loading {
             padding: 16px;
             text-align: center;
             color: #aaa;
             font-size: 13px;
-        }
+        } */
 
         /* Empty state */
-        .empty {
+        /* .empty {
             padding: 16px;
             text-align: center;
             color: #bbb;
+            font-size: 13px;
+        } */
+         /* ── 2 kolom hasil ── */
+        .results-grid {
+            display: none;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .results-grid.show { display: grid; }
+
+        .col-card {
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+            overflow: hidden;
+        }
+
+        /* Header tiap kolom */
+        .col-header {
+            padding: 14px 18px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .col-header.completion {
+            background: #f0f4ff;
+            color: #3b5bdb;
+        }
+        .col-header.bm25 {
+            background: #f0faf4;
+            color: #2f9e58;
+        }
+        .col-header span {
+            font-weight: 400;
+            color: #aaa;
+            font-size: 11px;
+            margin-left: 6px;
+        }
+
+        /* Item buku */
+        .book-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 18px;
+            border-bottom: 1px solid #f7f7f7;
+            transition: background 0.15s;
+        }
+        .book-item:last-child { border-bottom: none; }
+        .book-item:hover { background: #fafafa; }
+
+        .rank-num {
+            font-size: 12px;
+            font-weight: 700;
+            color: #ccc;
+            min-width: 18px;
+            padding-top: 2px;
+        }
+        .book-info { flex: 1; }
+        .book-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1a1a2e;
+            line-height: 1.4;
+        }
+        .book-author {
+            font-size: 11px;
+            color: #999;
+            margin-top: 3px;
+        }
+        .book-score {
+            font-size: 10px;
+            color: #bbb;
+            margin-top: 4px;
+        }
+
+        /* Badge rank berubah */
+        .rank-moved {
+            font-size: 10px;
+            padding: 1px 6px;
+            border-radius: 8px;
+            margin-left: 4px;
+        }
+        .rank-up   { background: #e8f8ee; color: #2f9e58; }
+        .rank-down { background: #fff0f0; color: #e03131; }
+        .rank-same { background: #f5f5f5; color: #aaa; }
+
+        /* Loading & empty */
+        .state-msg {
+            padding: 20px;
+            text-align: center;
+            color: #ccc;
             font-size: 13px;
         }
     </style>
@@ -171,11 +265,9 @@
         <button class="method-tab" data-method="sbert">SBERT</button>
         <button class="method-tab" data-method="hybrid">Hybrid</button>
     </div> -->
-
     <!-- Search box -->
     <div class="search-wrapper">
         <div class="search-box">
-            <span class="search-icon"></span>
             <input
                 id="searchInput"
                 class="search-input"
@@ -184,7 +276,48 @@
                 autocomplete="off"
             />
         </div>
-        <div id="dropdown" class="dropdown"></div>
+        <!-- <div id="dropdown" class="dropdown"></div> -->
+    </div>
+
+    <div id="resultsGrid" class="results-grid">
+
+        <!-- Kolom Completion Suggester -->
+        <div class="col-card">
+            <div class="col-header completion">
+                Completion Suggester
+            </div>
+            <div id="colCompletion">
+                <div class="state-msg">Ketik query untuk melihat hasil</div>
+            </div>
+        </div>
+
+        <!-- Kolom BM25 -->
+        <div class="col-card">
+            <div class="col-header bm25">
+                Re-ranking BM25
+            </div>
+            <div id="colBM25">
+                <div class="state-msg">Ketik query untuk melihat hasil</div>
+            </div>
+        </div>
+        <!-- KOLOM SBERT -->
+        <div class="col-card">
+            <div class="col-header sbert">
+                Re-ranking SBERT 
+            </div>
+            <div id="colSBERT">
+                <div class="state-msg">Ketik query untuk melihat hasil</div>
+            </div>
+        </div>
+        <!-- KOLOM hybrid -->
+        <div class="col-card">
+            <div class="col-header hybrid">
+                Re-ranking Hybrid
+            </div>
+            <div id="colHybrid">
+                <div class="state-msg">Ketik query untuk melihat hasil</div>
+            </div>
+        </div>
     </div>
 
 </div>
@@ -192,62 +325,83 @@
 <script>
     const API_BASE   = "http://127.0.0.1:5000";
     const input      = document.getElementById("searchInput");
-    const dropdown   = document.getElementById("dropdown");
-    const methodTabs = document.querySelectorAll(".method-tab");
-
-    let selectedMethod = "bm25";
+    const resultsGrid   = document.getElementById("resultsGrid");
+    const colCompletion = document.getElementById("colCompletion");
+    const colBM25       = document.getElementById("colBM25");
+    const colSBERT      = document.getElementById("colSBERT");
+    const colHybrid     = document.getElementById("colHybrid");
     let debounce = null;
+    let currentQuery  = "";
 
-    // ── Pilih metode ──────────────────────────────────────────────
-    methodTabs.forEach(tab => {
-        tab.addEventListener("click", () => {
-            methodTabs.forEach(t => t.classList.remove("active"));
-            tab.classList.add("active");
-            selectedMethod = tab.dataset.method;
+    
+    // window.addEventListener("load", async () => {
+    //     sbertDot.className = "sbert-dot loading";
+    //     sbertLabel.textContent = "Memuat SBERT model...";
+    //     try {
+    //         const res  = await fetch(`${API_BASE}/init-sbert`, { method: "POST" });
+    //         const data = await res.json();
+    //         if (data.model_loaded) {
+    //             sbertDot.className   = "sbert-dot ready";
+    //             sbertLabel.textContent = "✓ SBERT model siap (all-MiniLM-L6-v2)";
+    //         } else {
+    //             sbertDot.className   = "sbert-dot error";
+    //             sbertLabel.textContent = "⚠️ SBERT model belum siap";
+    //         }
+    //     } catch (err) {
+    //         sbertDot.className   = "sbert-dot error";
+    //         sbertLabel.textContent = "⚠️ Tidak bisa konek ke server Flask";
+    //     }
+    // });
 
-            // Re-fetch dengan metode baru kalau ada query
-            if (input.value.trim()) fetchSuggestions(input.value.trim());
-        });
-    });
-
-    // ── Input handler dengan debounce 300ms ───────────────────────
     input.addEventListener("input", () => {
         clearTimeout(debounce);
-        const query = input.value.trim();
-        if (!query) { hideDropdown(); return; }
-        debounce = setTimeout(() => fetchSuggestions(query), 300);
+        currentQuery = input.value.trim();
+        if (!currentQuery) {
+            hideDropdown(); 
+            return; 
+        }
+        debounce = setTimeout(() => fetchCompare(currentQuery), 300);
     });
 
-    // ── Fetch ke backend ──────────────────────────────────────────
-    async function fetchSuggestions(query) {
+    async function fetchCompare(query) {
         showLoading();
         try {
-            const res  = await fetch(
-                `${API_BASE}/suggest?query=${encodeURIComponent(query)}&method=${selectedMethod}`
-            );
+            const res  = await fetch(`${API_BASE}/compare_all_methods?query=${encodeURIComponent(query)}`);
+            if (!res.ok) throw new Error(`API Error: ${res.status}`);
             const data = await res.json();
-            renderDropdown(data, selectedMethod);
+            renderDropdown(data.completion, data.bm25, data.sbert, data.hybrid);
+ 
         } catch (err) {
-            console.error(err);
-            hideDropdown();
+            const errorMsg = `<div class="state-msg">❌ ${err.message}</div>`;
+            colCompletion.innerHTML = errorMsg;
+            colBM25.innerHTML       = errorMsg;
+            colSBERT.innerHTML      = errorMsg;
+            colHybrid.innerHTML     = errorMsg;
         }
     }
+    
 
-    // ── Render dropdown ───────────────────────────────────────────
-    function renderDropdown(items, method) {
-        dropdown.innerHTML = "";
+    function renderDropdown(completion, bm25, sbert, hybrid) {
+        resultsGrid.classList.add("show");
 
-        if (!items.length) {
-            dropdown.innerHTML = `<div class="empty">Tidak ada hasil ditemukan.</div>`;
-            dropdown.classList.add("show");
+        if (!completion.length && !bm25.length && !sbert.length && !hybrid.length) {
+            const emptyMsg = `<div class="state-msg">Tidak ada hasil ditemukan.</div>`;
+            colCompletion.innerHTML = emptyMsg;
+            colBM25.innerHTML       = emptyMsg;
+            colSBERT.innerHTML      = emptyMsg;
+            colHybrid.innerHTML     = emptyMsg;
             return;
         }
+ 
+        // Buat rank map dari completion sebagai baseline
+        const completionRankMap = {};
+        completion.forEach((item, i) => {
+            completionRankMap[item.title] = i + 1;
+        });
 
-        const methodLabel = { bm25: "BM25", sbert: "SBERT", hybrid: "Hybrid" };
-
-        items.forEach(item => {
-            const div = document.createElement("div");
-            div.className = "dropdown-item";
+        // items.forEach(item => {
+        //     const div = document.createElement("div");
+        //     div.className = "dropdown-item";
 
             // Tampilkan skor sesuai metode
             // let scoreText = "";
@@ -258,35 +412,138 @@
             // else
             //     scoreText = `BM25: ${item.score_bm25?.toFixed(3) ?? "-"} | SBERT: ${item.score_sbert?.toFixed(3) ?? "-"} | Hybrid: ${item.score?.toFixed(3) ?? "-"}`;
 
-            div.innerHTML = `
-                <div class="item-title">${item.title}</div>
-                <div class="item-author">${item.author || ""}</div>
-            `;
+        //     div.innerHTML = `
+        //         <div class="item-title">${item.title}</div>
+        //         <div class="item-author">${item.author || ""}</div>
+        //     `;
 
-            div.addEventListener("click", () => {
-                input.value = item.title;
-                hideDropdown();
-            });
+        //     div.addEventListener("click", () => {
+        //         input.value = item.title;
+        //         hideDropdown();
+        //     });
 
-            dropdown.appendChild(div);
-        });
+        //     dropdown.appendChild(div);
+        // });
 
-        dropdown.classList.add("show");
+        // dropdown.classList.add("show");
+
+        // completion couloms──
+        colCompletion.innerHTML = completion.length
+            ? completion.map((item, i) => `
+                <div class="book-item">
+                    <div class="rank-num">${i + 1}</div>
+                    <div class="book-info">
+                        <div class="book-title">${escHtml(item.title)}</div>
+                        <div class="book-author">${escHtml(item.author || "")}</div>
+                    </div>
+                </div>
+            `).join("")
+            : `<div class="state-msg">Tidak ada hasil.</div>`;
+
+        // bm25 coloms ──
+        colBM25.innerHTML = bm25.length
+            ? bm25.map((item, i) => {
+                const badge = buildBadge(completionRankMap[item.title], i + 1);
+                return `
+                    <div class="book-item">
+                        <div class="rank-num">${i + 1}</div>
+                        <div class="book-info">
+                            <div class="book-title">
+                                ${escHtml(item.title)} ${badge}
+                            </div>
+                            <div class="book-author">${escHtml(item.author || "")}</div>
+                            <div class="book-score">
+                                BM25: ${item.score_bm25 != null ? item.score_bm25.toFixed(4) : "-"}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join("")
+            : `<div class="state-msg">Tidak ada hasil.</div>`;
+        
+        // sbert coloms
+        colSBERT.innerHTML = sbert.length
+            ? sbert.map((item, i) => {
+                const badge = buildBadge(completionRankMap[item.title], i + 1);
+                return `
+                    <div class="book-item">
+                        <div class="rank-num">${i + 1}</div>
+                        <div class="book-info">
+                            <div class="book-title">
+                                ${escHtml(item.title)} ${badge}
+                            </div>
+                            <div class="book-author">${escHtml(item.author || "")}</div>
+                            <div class="book-score">
+                                SBERT: ${item.score_sbert != null ? item.score_sbert.toFixed(4) : "-"}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join("")
+            : `<div class="state-msg">Tidak ada hasil.</div>`;
+        
+        // Hybrid coloms
+        colHybrid.innerHTML = hybrid.length
+            ? hybrid.map((item, i) => {
+                const badge = buildBadge(completionRankMap[item.title], i + 1);
+                return `
+                    <div class="book-item">
+                        <div class="rank-num">${i + 1}</div>
+                        <div class="book-info">
+                            <div class="book-title">
+                                ${escHtml(item.title)} ${badge}
+                            </div>
+                            <div class="book-author">${escHtml(item.author || "")}</div>
+                            <div class="book-score">
+                                Hybrid: ${item.score_hybrid != null ? item.score_hybrid.toFixed(4) : "-"}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join("")
+            : `<div class="state-msg">Tidak ada hasil.</div>`;
+    }
+
+    function buildBadge(rankBefore, rankNow) {
+        if (rankBefore == null) {
+            return `<span class="rank-moved rank-up">baru</span>`;
+        }
+        const diff = rankBefore - rankNow;
+        if (diff > 0)
+            return `<span class="rank-moved rank-up">▲ ${diff}</span>`;
+        if (diff < 0)
+            return `<span class="rank-moved rank-down">▼ ${Math.abs(diff)}</span>`;
+        return `<span class="rank-moved rank-same">—</span>`;
+    }
+    
+    function escHtml(text) {
+        return text
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
     }
 
     function showLoading() {
-        dropdown.innerHTML = `<div class="loading">Memuat...</div>`;
-        dropdown.classList.add("show");
+        // dropdown.innerHTML = `<div class="loading">Memuat...</div>`;
+        // dropdown.classList.add("show");
+        resultsGrid.classList.add("show");
+        colCompletion.innerHTML = `<div class="state-msg">Memuat...</div>`;
+        colBM25.innerHTML       = `<div class="state-msg">Memuat...</div>`;
+        colSBERT.innerHTML      = `<div class="state-msg">Memuat...</div>`;
+        colHybrid.innerHTML     = `<div class="state-msg">Memuat...</div>`;
     }
 
     function hideDropdown() {
-        dropdown.classList.remove("show");
-        dropdown.innerHTML = "";
+        resultsGrid.classList.remove("show");
+        // dropdown.innerHTML = "";
     }
 
-    // Tutup dropdown kalau klik di luar
     document.addEventListener("click", e => {
-        if (!e.target.closest(".search-wrapper")) hideDropdown();
+        if (!e.target.closest(".search-wrapper") && !e.target.closest(".results-grid")) {
+            hideDropdown();
+        }
     });
 </script>
 </body>

@@ -2,7 +2,6 @@ from opensearchpy import OpenSearch
 import pandas as pd
 import os
 
-# Koneksi ke OpenSearch
 client = OpenSearch(
     hosts=[{"host": "localhost", "port": 9200}],
     http_auth=("admin", "KoTA404TABAH!"),
@@ -12,9 +11,8 @@ client = OpenSearch(
     timeout=60
 )
 
-INDEX_NAME = "books"
+INDEX_NAME = "bookss"
 
-# Mapping index dengan completion suggester
 mapping = {
     "mappings": {
         "properties": {
@@ -22,16 +20,19 @@ mapping = {
             "author": {"type": "text"},
             "description": {"type": "text"},
             "suggest_title": {
-                "type": "completion"   # suggest khusus dari judul
+                "type": "completion",   # suggest khusus dari judul
+                "preserve_separators": False,
+                "preserve_position_increments": False
             },
             "suggest_author": {
-                "type": "completion"   # suggest khusus dari author
+                "type": "completion",   # suggest khusus dari author
+                "preserve_separators": False,
+                "preserve_position_increments": False
             }
         }
     }
 }
 
-# Hapus index lama kalau ada, buat ulang
 if client.indices.exists(index=INDEX_NAME):
     client.indices.delete(index=INDEX_NAME)
     print(f"Index '{INDEX_NAME}' lama dihapus.")
@@ -39,13 +40,11 @@ if client.indices.exists(index=INDEX_NAME):
 client.indices.create(index=INDEX_NAME, body=mapping)
 print(f"Index '{INDEX_NAME}' berhasil dibuat.")
 
-# Baca CSV
-csv_path = os.path.join("..", "..", "..", "DATASET", "books_clean_en.csv")
+csv_path = os.path.join("..", "..", "..", "DATASET", "hasil_books.csv")
 df = pd.read_csv(csv_path)
 df.columns = df.columns.str.strip().str.lower()
 df = df.fillna("")
 
-# Index tiap buku
 success = 0
 for _, row in df.iterrows():
     title = row.get("title", "")
