@@ -1,0 +1,702 @@
+[
+  {
+    "query_id": "Q001",
+    "query_text": "devil s",
+    "query_type": "PREFIX_TITLE",
+    "title": "devil s guard",
+    "author": "george robert elford"
+  },
+  {
+    "query_id": "Q002",
+    "query_text": "the war",
+    "query_type": "PREFIX_TITLE",
+    "title": "the war of the flowers",
+    "author": "tad williams"
+  },
+  {
+    "query_id": "Q003",
+    "query_text": "game",
+    "query_type": "PREFIX_TITLE",
+    "title": "game design",
+    "author": "bob bates"
+  },
+  {
+    "query_id": "Q004",
+    "query_text": "the capricorn",
+    "query_type": "PREFIX_TITLE",
+    "title": "the capricorn stone",
+    "author": "madeleine brent"
+  },
+  {
+    "query_id": "Q005",
+    "query_text": "tuning hearts a",
+    "query_type": "PREFIX_TITLE",
+    "title": "tuning hearts a piano tuner s tale",
+    "author": "philip shapiro"
+  },
+  {
+    "query_id": "Q006",
+    "query_text": "angel",
+    "query_type": "PREFIX_TITLE",
+    "title": "angel seeker",
+    "author": "sharon shinn"
+  },
+  {
+    "query_id": "Q007",
+    "query_text": "once",
+    "query_type": "PREFIX_TITLE",
+    "title": "once bitten",
+    "author": "trina m lee"
+  },
+  {
+    "query_id": "Q008",
+    "query_text": "doctor who",
+    "query_type": "PREFIX_TITLE",
+    "title": "doctor who the widow s curse",
+    "author": "dan mcdaid"
+  },
+  {
+    "query_id": "Q009",
+    "query_text": "shoe",
+    "query_type": "PREFIX_TITLE",
+    "title": "shoe strings",
+    "author": "christy hayes"
+  },
+  {
+    "query_id": "Q010",
+    "query_text": "a miracle",
+    "query_type": "PREFIX_TITLE",
+    "title": "a miracle of hope",
+    "author": "ruth reid"
+  },
+  {
+    "query_id": "Q011",
+    "query_text": "goodbye dearest",
+    "query_type": "PREFIX_TITLE",
+    "title": "goodbye dearest holly",
+    "author": "kevin wells"
+  },
+  {
+    "query_id": "Q012",
+    "query_text": "blood",
+    "query_type": "PREFIX_TITLE",
+    "title": "blood fever",
+    "author": "charlie higson"
+  },
+  {
+    "query_id": "Q013",
+    "query_text": "a girl",
+    "query_type": "PREFIX_TITLE",
+    "title": "a girl like you",
+    "author": "gemma burgess"
+  },
+  {
+    "query_id": "Q014",
+    "query_text": "the lost",
+    "query_type": "PREFIX_TITLE",
+    "title": "the lost world",
+    "author": "michael crichton"
+  },
+  {
+    "query_id": "Q015",
+    "query_text": "beach blondes june dreams",
+    "query_type": "PREFIX_TITLE",
+    "title": "beach blondes june dreams july s promise august magic",
+    "author": "katherine applegate"
+  },
+  {
+    "query_id": "Q016",
+    "query_text": "doomsday",
+    "query_type": "PREFIX_TITLE",
+    "title": "doomsday book",
+    "author": "connie willis"
+  },
+  {
+    "query_id": "Q017",
+    "query_text": "h is",
+    "query_type": "PREFIX_TITLE",
+    "title": "h is for hawk",
+    "author": "helen macdonald"
+  },
+  {
+    "query_id": "Q018",
+    "query_text": "chinese education in singapore an",
+    "query_type": "PREFIX_TITLE",
+    "title": "chinese education in singapore an untold story of conflict and change",
+    "author": "zhixiong zhang"
+  },
+  {
+    "query_id": "Q019",
+    "query_text": "cunt",
+    "query_type": "PREFIX_TITLE",
+    "title": "cunt ups",
+    "author": "dodie bellamy"
+  },
+  {
+    "query_id": "Q020",
+    "query_text": "the broken",
+    "query_type": "PREFIX_TITLE",
+    "title": "the broken wings",
+    "author": "kahlil gibran"
+  },
+  {
+    "query_id": "Q021",
+    "query_text": "the dark",
+    "query_type": "PREFIX_TITLE",
+    "title": "the dark frigate",
+    "author": "charles boardman hawes"
+  },
+  {
+    "query_id": "Q022",
+    "query_text": "the gate",
+    "query_type": "PREFIX_TITLE",
+    "title": "the gate thief",
+    "author": "orson scott card"
+  },
+  {
+    "query_id": "Q023",
+    "query_text": "the six",
+    "query_type": "PREFIX_TITLE",
+    "title": "the six gun tarot",
+    "author": "r s belcher"
+  },
+  {
+    "query_id": "Q024",
+    "query_text": "it s only",
+    "query_type": "PREFIX_TITLE",
+    "title": "it s only the enemy screaming",
+    "author": "christopher mcenroe"
+  },
+  {
+    "query_id": "Q025",
+    "query_text": "tessa in",
+    "query_type": "PREFIX_TITLE",
+    "title": "tessa in love",
+    "author": "kate le vann"
+  },
+  {
+    "query_id": "Q026",
+    "query_text": "extreme",
+    "query_type": "PREFIX_TITLE",
+    "title": "extreme measures",
+    "author": "vince flynn"
+  },
+  {
+    "query_id": "Q027",
+    "query_text": "from johann",
+    "query_type": "PREFIX_TITLE",
+    "title": "from johann to tannenbaum",
+    "author": "ashlyn forge"
+  },
+  {
+    "query_id": "Q028",
+    "query_text": "never stop",
+    "query_type": "PREFIX_TITLE",
+    "title": "never stop running",
+    "author": "melissa caudle"
+  },
+  {
+    "query_id": "Q029",
+    "query_text": "a journey",
+    "query_type": "PREFIX_TITLE",
+    "title": "a journey of dragons",
+    "author": "scott robert ladd"
+  },
+  {
+    "query_id": "Q030",
+    "query_text": "the chronicles of harris burdick",
+    "query_type": "PREFIX_TITLE",
+    "title": "the chronicles of harris burdick 14 amazing authors tell the tales",
+    "author": "chris van allsburg contributor"
+  },
+  {
+    "query_id": "Q031",
+    "query_text": "milan kundera",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "laughable loves",
+    "author": "milan kundera"
+  },
+  {
+    "query_id": "Q032",
+    "query_text": "dan brown",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "deception point",
+    "author": "dan brown"
+  },
+  {
+    "query_id": "Q033",
+    "query_text": "jeffrey toobin",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "the nine inside the secret world of the supreme court",
+    "author": "jeffrey toobin"
+  },
+  {
+    "query_id": "Q034",
+    "query_text": "j m",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "learning to breathe",
+    "author": "j m hope"
+  },
+  {
+    "query_id": "Q035",
+    "query_text": "amy rees",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "what awesome looks like how to excel in business life",
+    "author": "amy rees anderson"
+  },
+  {
+    "query_id": "Q036",
+    "query_text": "annie proulx",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "barkskins",
+    "author": "annie proulx"
+  },
+  {
+    "query_id": "Q037",
+    "query_text": "elizabeth may",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "the falconer",
+    "author": "elizabeth may"
+  },
+  {
+    "query_id": "Q038",
+    "query_text": "ruth elwin",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "julia s story",
+    "author": "ruth elwin harris"
+  },
+  {
+    "query_id": "Q039",
+    "query_text": "terry goodkind",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "confessor",
+    "author": "terry goodkind"
+  },
+  {
+    "query_id": "Q040",
+    "query_text": "kate douglas",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "wolf tales",
+    "author": "kate douglas"
+  },
+  {
+    "query_id": "Q041",
+    "query_text": "andrea levy",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "small island",
+    "author": "andrea levy"
+  },
+  {
+    "query_id": "Q042",
+    "query_text": "emma donoghue",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "the pull of the stars",
+    "author": "emma donoghue"
+  },
+  {
+    "query_id": "Q043",
+    "query_text": "ivan doig",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "this house of sky landscapes of a western mind",
+    "author": "ivan doig"
+  },
+  {
+    "query_id": "Q044",
+    "query_text": "paul johnson",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "modern times the world from the twenties to the nineties",
+    "author": "paul johnson"
+  },
+  {
+    "query_id": "Q045",
+    "query_text": "derrick jensen",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "how to disappear from abusive spouses bloodhounds and the cia",
+    "author": "derrick jensen"
+  },
+  {
+    "query_id": "Q046",
+    "query_text": "bella forrest",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "a sword of chance",
+    "author": "bella forrest"
+  },
+  {
+    "query_id": "Q047",
+    "query_text": "lois walfrid",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "raiders from the sea",
+    "author": "lois walfrid johnson"
+  },
+  {
+    "query_id": "Q048",
+    "query_text": "ali shaw",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "the trees",
+    "author": "ali shaw"
+  },
+  {
+    "query_id": "Q049",
+    "query_text": "e lockhart",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "the disreputable history of frankie landau banks",
+    "author": "e lockhart"
+  },
+  {
+    "query_id": "Q050",
+    "query_text": "mindy morgenstern",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "the real rules for girls",
+    "author": "mindy morgenstern"
+  },
+  {
+    "query_id": "Q051",
+    "query_text": "storm",
+    "query_type": "PARTIAL",
+    "title": "a perfect storm",
+    "author": "lori foster"
+  },
+  {
+    "query_id": "Q052",
+    "query_text": "of omens",
+    "query_type": "PARTIAL",
+    "title": "a time of omens",
+    "author": "katharine kerr"
+  },
+  {
+    "query_id": "Q053",
+    "query_text": "great",
+    "query_type": "PARTIAL",
+    "title": "nate the great",
+    "author": "marjorie weinman sharmat"
+  },
+  {
+    "query_id": "Q054",
+    "query_text": "and",
+    "query_type": "PARTIAL",
+    "title": "the dirty life on farming food and love",
+    "author": "kristin kimball"
+  },
+  {
+    "query_id": "Q055",
+    "query_text": "murderer",
+    "query_type": "PARTIAL",
+    "title": "perfume the story of a murderer",
+    "author": "patrick s skind"
+  },
+  {
+    "query_id": "Q056",
+    "query_text": "warrior s",
+    "query_type": "PARTIAL",
+    "title": "without a front the warrior s challenge",
+    "author": "fletcher delancey"
+  },
+  {
+    "query_id": "Q057",
+    "query_text": "wolf",
+    "query_type": "PARTIAL",
+    "title": "my wolf protector",
+    "author": "rose wynters"
+  },
+  {
+    "query_id": "Q058",
+    "query_text": "women",
+    "query_type": "PARTIAL",
+    "title": "lean in women work and the will to lead",
+    "author": "sheryl sandberg"
+  },
+  {
+    "query_id": "Q059",
+    "query_text": "moon",
+    "query_type": "PARTIAL",
+    "title": "the graduation of jake moon",
+    "author": "barbara park"
+  },
+  {
+    "query_id": "Q060",
+    "query_text": "closed",
+    "query_type": "PARTIAL",
+    "title": "portrait of a killer jack the ripper case closed",
+    "author": "patricia cornwell"
+  },
+  {
+    "query_id": "Q061",
+    "query_text": "of",
+    "query_type": "PARTIAL",
+    "title": "night of the fae",
+    "author": "lyneal jenkins"
+  },
+  {
+    "query_id": "Q062",
+    "query_text": "dead",
+    "query_type": "PARTIAL",
+    "title": "god is dead",
+    "author": "ron currie jr"
+  },
+  {
+    "query_id": "Q063",
+    "query_text": "killers",
+    "query_type": "PARTIAL",
+    "title": "a cast of killers",
+    "author": "sidney d kirkpatrick"
+  },
+  {
+    "query_id": "Q064",
+    "query_text": "marple omnibus",
+    "query_type": "PARTIAL",
+    "title": "miss marple omnibus vol 1 body in the library moving finger murder is announced 4 50 from paddington",
+    "author": "agatha christie"
+  },
+  {
+    "query_id": "Q065",
+    "query_text": "starship",
+    "query_type": "PARTIAL",
+    "title": "the last starship from earth",
+    "author": "john boyd pseud"
+  },
+  {
+    "query_id": "Q066",
+    "query_text": "mites",
+    "query_type": "PARTIAL",
+    "title": "twelve mighty orphans the inspiring true story of the mighty mites who ruled texas football",
+    "author": "jim dent"
+  },
+  {
+    "query_id": "Q067",
+    "query_text": "true story",
+    "query_type": "PARTIAL",
+    "title": "a long walk to water based on a true story",
+    "author": "linda sue park"
+  },
+  {
+    "query_id": "Q068",
+    "query_text": "need you",
+    "query_type": "PARTIAL",
+    "title": "i need you more than i love you and i love you to bits",
+    "author": "gunnar ardelius"
+  },
+  {
+    "query_id": "Q069",
+    "query_text": "in",
+    "query_type": "PARTIAL",
+    "title": "half asleep in frog pajamas",
+    "author": "tom robbins"
+  },
+  {
+    "query_id": "Q070",
+    "query_text": "princess and",
+    "query_type": "PARTIAL",
+    "title": "the princess and the goblin",
+    "author": "george macdonald"
+  },
+  {
+    "query_id": "Q071",
+    "query_text": "1",
+    "query_type": "PARTIAL",
+    "title": "incidents of travel in yucatan vol 1",
+    "author": "john lloyd stephens"
+  },
+  {
+    "query_id": "Q072",
+    "query_text": "history of",
+    "query_type": "PARTIAL",
+    "title": "the history of the qur anic text from revelation to compilation a comparative study with the old and new testaments",
+    "author": "muhammad mustafa al azami"
+  },
+  {
+    "query_id": "Q073",
+    "query_text": "owls",
+    "query_type": "PARTIAL",
+    "title": "let s explore diabetes with owls",
+    "author": "david sedaris"
+  },
+  {
+    "query_id": "Q074",
+    "query_text": "drug",
+    "query_type": "PARTIAL",
+    "title": "prescription for nutritional healing a practical a to z reference to drug free remedies using vitamins minerals herbs food supplements",
+    "author": "phyllis a balch"
+  },
+  {
+    "query_id": "Q075",
+    "query_text": "for kate",
+    "query_type": "PARTIAL",
+    "title": "waiting for kate bush",
+    "author": "john mendelssohn"
+  },
+  {
+    "query_id": "Q076",
+    "query_text": "kind",
+    "query_type": "PARTIAL",
+    "title": "a unique kind of love",
+    "author": "jasmine rose"
+  },
+  {
+    "query_id": "Q077",
+    "query_text": "o",
+    "query_type": "PARTIAL",
+    "title": "the meghan o byrne chronicle fall from grace 1",
+    "author": "f scott andison"
+  },
+  {
+    "query_id": "Q078",
+    "query_text": "before columbus",
+    "query_type": "PARTIAL",
+    "title": "1491 new revelations of the americas before columbus",
+    "author": "charles c mann"
+  },
+  {
+    "query_id": "Q079",
+    "query_text": "eagle and",
+    "query_type": "PARTIAL",
+    "title": "the eagle and the raven",
+    "author": "pauline gedge"
+  },
+  {
+    "query_id": "Q080",
+    "query_text": "charles",
+    "query_type": "PARTIAL",
+    "title": "bright days dark nights with charles spurgeon in triumph over emotional pain",
+    "author": "elizabeth r skoglund"
+  },
+  {
+    "query_id": "Q081",
+    "query_text": "his to lead a life of crime",
+    "query_type": "TYPO",
+    "title": "how to lead a life of crime",
+    "author": "kirsten miller"
+  },
+  {
+    "query_id": "Q082",
+    "query_text": "the devil in maszadhusetts a modern enquiry into the salem witch trials",
+    "query_type": "TYPO",
+    "title": "the devil in massachusetts a modern enquiry into the salem witch trials",
+    "author": "marion l starkey"
+  },
+  {
+    "query_id": "Q083",
+    "query_text": "angel galld",
+    "query_type": "TYPO",
+    "title": "angel falls",
+    "author": "kristin hannah"
+  },
+  {
+    "query_id": "Q084",
+    "query_text": "avatar volume 7 the last aidbemder",
+    "query_type": "TYPO",
+    "title": "avatar volume 7 the last airbender",
+    "author": "michael dante dimartino"
+  },
+  {
+    "query_id": "Q085",
+    "query_text": "critique of practical reaspn",
+    "query_type": "TYPO",
+    "title": "critique of practical reason",
+    "author": "immanuel kant"
+  },
+  {
+    "query_id": "Q086",
+    "query_text": "the kirror king",
+    "query_type": "TYPO",
+    "title": "the mirror king",
+    "author": "jodi meadows"
+  },
+  {
+    "query_id": "Q087",
+    "query_text": "awareness a de mello spirituality conference in yjs own words",
+    "query_type": "TYPO",
+    "title": "awareness a de mello spirituality conference in his own words",
+    "author": "anthony de mello"
+  },
+  {
+    "query_id": "Q088",
+    "query_text": "daughter of the pirate ling",
+    "query_type": "TYPO",
+    "title": "daughter of the pirate king",
+    "author": "tricia levenseller"
+  },
+  {
+    "query_id": "Q089",
+    "query_text": "the lrime minister",
+    "query_type": "TYPO",
+    "title": "the prime minister",
+    "author": "anthony trollope"
+  },
+  {
+    "query_id": "Q090",
+    "query_text": "ehen dimple met rishi",
+    "query_type": "TYPO",
+    "title": "when dimple met rishi",
+    "author": "sandhya menon"
+  },
+  {
+    "query_id": "Q091",
+    "query_text": "rhe gaunting",
+    "query_type": "TYPO",
+    "title": "the haunting",
+    "author": "lynne ewing"
+  },
+  {
+    "query_id": "Q092",
+    "query_text": "all that sye xan see",
+    "query_type": "TYPO",
+    "title": "all that she can see",
+    "author": "carrie hope fletcher"
+  },
+  {
+    "query_id": "Q093",
+    "query_text": "oive blood",
+    "query_type": "TYPO",
+    "title": "life blood",
+    "author": "s jean brenner"
+  },
+  {
+    "query_id": "Q094",
+    "query_text": "retuen to the isle of the lost",
+    "query_type": "TYPO",
+    "title": "return to the isle of the lost",
+    "author": "melissa de la cruz"
+  },
+  {
+    "query_id": "Q095",
+    "query_text": "amohigoeey too",
+    "query_type": "TYPO",
+    "title": "amphigorey too",
+    "author": "edward gorey"
+  },
+  {
+    "query_id": "Q096",
+    "query_text": "crzving fonstellations",
+    "query_type": "TYPO",
+    "title": "craving constellations",
+    "author": "nicole jacquelyn"
+  },
+  {
+    "query_id": "Q097",
+    "query_text": "anptyer day",
+    "query_type": "TYPO",
+    "title": "another day",
+    "author": "david levithan"
+  },
+  {
+    "query_id": "Q098",
+    "query_text": "giodnye i love you",
+    "query_type": "TYPO",
+    "title": "goodbye i love you",
+    "author": "carol lynn pearson"
+  },
+  {
+    "query_id": "Q099",
+    "query_text": "wrapt in crywfal",
+    "query_type": "TYPO",
+    "title": "wrapt in crystal",
+    "author": "sharon shinn"
+  },
+  {
+    "query_id": "Q100",
+    "query_text": "tyw shack",
+    "query_type": "TYPO",
+    "title": "the shack",
+    "author": "william paul young"
+  }
+]
