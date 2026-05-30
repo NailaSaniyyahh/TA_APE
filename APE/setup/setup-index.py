@@ -11,7 +11,7 @@ client = OpenSearch(
     timeout=60
 )
 
-INDEX_NAME = "bookss"
+INDEX_NAME = "books2"
 
 mapping = {
     "mappings": {
@@ -19,6 +19,12 @@ mapping = {
             "title": {"type": "text"},
             "author": {"type": "text"},
             "description": {"type": "text"},
+            "numRatings": {
+                "type": "integer"         # jumlah rating mentah
+            },
+            "pop_weight": {
+                "type": "float"           # numRatings / max_numRatings (0-1)
+            },
             "suggest_title": {
                 "type": "completion",   # suggest khusus dari judul
                 "preserve_separators": False,
@@ -40,33 +46,62 @@ if client.indices.exists(index=INDEX_NAME):
 client.indices.create(index=INDEX_NAME, body=mapping)
 print(f"Index '{INDEX_NAME}' berhasil dibuat.")
 
-csv_path = os.path.join("..", "..", "..", "DATASET", "hasil_books.csv")
+csv_path = os.path.join("..", "..", "..", "DATASET", "hasil_books2.csv")
 df = pd.read_csv(csv_path)
 df.columns = df.columns.str.strip().str.lower()
 df = df.fillna("")
 
+if "numratings" not in df.columns:
+    print("⚠ WARNING: kolom numRatings tidak ditemukan!")
+    df["numratings"] = 0
+
+# normalisasi num rating
+max_ratings = pd.to_numeric(df["numratings"], errors="coerce").max()
+max_ratings = max_ratings if max_ratings > 0 else 1
+print(f"✓ Max numRatings: {max_ratings:,}")
+print(f"✓ Loaded {len(df):,} buku dari {csv_path}")
+
 success = 0
+failed  = 0
+
 for _, row in df.iterrows():
     title = row.get("title", "")
     author = row.get("author", "")
     description = row.get("description", "")
+    numRatings = row.get("numratings", 0)
 
     if not title:
+        failed += 1
         continue
+
+    # Normalisasi numRatings → weight integer (1-1000)
+    weight = max(1, int((numRatings / max_ratings) * 1000))
 
     doc = {
         "title": title,
         "author": author,
         "description": description,
+        "numRatings" : int (numRatings),
         "suggest_title": {
-            "input": [title]          # HANYA judul
+            "input": [title],
+            "weight": weight
         },
         "suggest_author": {
-            "input": [author] if author else []   # HANYA author
+            "input": [author] if author else [],
+            "weight": weight
         }
     }
 
-    client.index(index=INDEX_NAME, body=doc)
-    success += 1
+    try:
+        client.index(index=INDEX_NAME, body=doc)
+        success += 1
+    except Exception as e:
+        print(f"  ✗ Gagal index '{title}': {e}")
+        failed += 1
 
-print(f"Berhasil index {success} buku.")
+    if success % 1000 == 0:
+        print(f"  Progress: {success:,} buku terindeks...")
+
+print(f"\n✅ Indexing selesai!")
+print(f"   Berhasil : {success:,} buku")
+print(f"   Gagal    : {failed:,} buku")

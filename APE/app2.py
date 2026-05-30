@@ -34,7 +34,7 @@ try:
 except Exception as e:
     logger.error(f"✗ OpenSearch failed: {e}")
 
-INDEX_NAME  = "bookss"
+INDEX_NAME  = "books2"
 sbert_model = None
 
 def get_sbert_model():
@@ -99,7 +99,7 @@ def get_candidates(query: str) -> list[dict]:
             }
         },
         "size": 10,
-        "_source": ["title", "author", "description"]
+        "_source": ["title", "author", "description", "numRatings", "pop_weight"]
     }
 
     response = client.search(index=INDEX_NAME, body=body)
@@ -120,6 +120,8 @@ def get_candidates(query: str) -> list[dict]:
                 "title":       title,
                 "author":      src.get("author", ""),
                 "description": src.get("description", ""),
+                "numRatings":  int(src.get("numRatings", 0)),
+                "pop_weight":  float(src.get("pop_weight", 0.0)),
                 "source":      "completion"
             })
 
@@ -137,6 +139,8 @@ def get_candidates(query: str) -> list[dict]:
                 "title":       title,
                 "author":      src.get("author", ""),
                 "description": src.get("description", ""),
+                "numRatings":  int(src.get("numRatings", 0)),
+                "pop_weight":  float(src.get("pop_weight", 0.0)),
                 "source":      "fuzzy"
             })
 
@@ -186,7 +190,7 @@ def rerank_sbert(query, candidates):
         c["score_sbert"] = float(scores[i])
     return sorted(candidates, key=lambda x: x["score_sbert"], reverse=True)
 
-def rerank_hybrid(query, candidates, alpha=0.7):
+def rerank_hybrid(query, candidates, alpha=0.7, pop_boost=0.0):
     if not candidates:
         return candidates
 
@@ -195,19 +199,25 @@ def rerank_hybrid(query, candidates, alpha=0.7):
     bm25_norm    = normalize(list(bm25_scores))
     sbert_norm   = normalize([float(s) for s in sbert_scores])
 
+    pop_scores = [c.get("pop_weight", 0.0) for c in candidates]
+    pop_norm   = normalize(pop_scores) if max(pop_scores) > 0 else [0.0] * len(pop_scores)
+
     print(f"\n{'='*65}")
-    print(f"DEBUG HYBRID — query: '{query}', alpha={alpha}")
-    print(f"{'Title':<35} {'BM25':>8} {'SBERT':>8} {'BM25N':>8} {'SBERTN':>8} {'HYBRID':>8}")
+    print(f"DEBUG HYBRID — query: '{query}', alpha={alpha}, pop_boost={pop_boost}")
+    print(f"{'Title':<35} {'BM25':>8} {'SBERT':>8} {'BM25N':>8} {'SBERTN':>8} {'POPW':>8} {'HYBRID':>8}")
     print(f"{'-'*65}")
     for i, c in enumerate(candidates):
-        hybrid = float((1 - alpha) * bm25_norm[i] + alpha * sbert_norm[i])
-        print(f"{c['title'][:34]:<35} {float(bm25_scores[i]):>8.4f} {float(sbert_scores[i]):>8.4f} {bm25_norm[i]:>8.4f} {sbert_norm[i]:>8.4f} {hybrid:>8.4f}")
+        base   = float((1 - alpha) * bm25_norm[i] + alpha * sbert_norm[i])
+        hybrid = float(base * (1 - pop_boost) + pop_norm[i] * pop_boost)
+        print(f"{c['title'][:34]:<35} {float(bm25_scores[i]):>8.4f} {float(sbert_scores[i]):>8.4f} {bm25_norm[i]:>8.4f} {sbert_norm[i]:>8.4f} {pop_norm[i]:>8.4f} {hybrid:>8.4f}")
     print(f"{'='*65}\n")
 
     for i, c in enumerate(candidates):
+        base_hybrid       = float((1 - alpha) * bm25_norm[i] + alpha * sbert_norm[i])
         c["score_bm25"]   = float(bm25_scores[i])
         c["score_sbert"]  = float(sbert_scores[i])
-        c["score_hybrid"] = float((1 - alpha) * bm25_norm[i] + alpha * sbert_norm[i])
+        c["score_pop"]    = float(pop_scores[i])
+        c["score_hybrid"] = float(base_hybrid * (1 - pop_boost) + pop_norm[i] * pop_boost)
 
     return sorted(candidates, key=lambda x: x["score_hybrid"], reverse=True)
 
@@ -226,8 +236,9 @@ def compare_all_methods():
     - /run_experiment : otomasi eksperimen batch
     """
     try:
-        query = request.args.get("query", "").strip()
-        alpha = float(request.args.get("alpha", 0.7))
+        query     = request.args.get("query", "").strip()
+        alpha     = float(request.args.get("alpha", 0.7))
+        pop_boost = float(request.args.get("pop_boost", 0.0))
 
         if not query:
             return jsonify({"completion": [], "bm25": [], "sbert": [], "hybrid": []})
@@ -239,7 +250,7 @@ def compare_all_methods():
         completion_order = copy.deepcopy(candidates)
         bm25_order       = rerank_bm25(query,   copy.deepcopy(candidates))
         sbert_order      = rerank_sbert(query,  copy.deepcopy(candidates))
-        hybrid_order     = rerank_hybrid(query, copy.deepcopy(candidates), alpha=alpha)
+        hybrid_order     = rerank_hybrid(query, copy.deepcopy(candidates), alpha=alpha, pop_boost=pop_boost)
 
         # Hapus description dari response (tidak perlu di frontend)
         for lst in [completion_order, bm25_order, sbert_order, hybrid_order]:
@@ -277,7 +288,7 @@ def run_experiment():
     try:
         alpha      = float(request.args.get("alpha", 0.7))
         BASE_DIR   = Path(__file__).resolve().parent
-        input_file = BASE_DIR / "../../DATASET/test_queries_final.json"
+        input_file = BASE_DIR / "../../DATASET/v3test_queries_final.json"
         # input_file = "../../test_queries_final.json"
 
         if not os.path.exists(input_file):
@@ -287,7 +298,7 @@ def run_experiment():
             queries = json.load(f)
 
         alpha_str   = f"{alpha:.2f}".replace(".", "")
-        output_file = f"experiment_results_alpha{alpha_str}.json"
+        output_file = f"v4experiment_results_alpha{alpha_str}.json"
 
         results = []
         for i, q in enumerate(queries, 1):

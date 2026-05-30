@@ -33,7 +33,7 @@ except Exception as e:
     logger.error(f"✗ Failed to connect to OpenSearch: {e}")
     logger.warning("App will continue but queries may fail")
 
-INDEX_NAME = "bookss"
+INDEX_NAME = "books2"
 
 sbert_model = None  
 
@@ -104,14 +104,13 @@ def get_candidates(query: str) -> list[dict]:
             }
         },
         "size": 10,
-        "_source": ["title", "author", "description"]
+        "_source": ["title", "author", "description", "numRatings", "pop_weight"]
     }
 
     response = client.search(index=INDEX_NAME, body=body)
     seen      = set()
-    # candidates = []
 
-    completion_result =[]
+    completion_result = []
     for key in ["suggest_by_title", "suggest_by_author"]:
         for opt in response["suggest"][key][0]["options"]:
             src   = opt["_source"]
@@ -123,6 +122,8 @@ def get_candidates(query: str) -> list[dict]:
                 "title":       title,
                 "author":      src.get("author", ""),
                 "description": src.get("description", ""),
+                "numRatings":  int(src.get("numRatings", 0)),
+                "pop_weight":  float(src.get("pop_weight", 0.0)),
                 "source":      "completion"
             })
     match_result = []
@@ -136,6 +137,8 @@ def get_candidates(query: str) -> list[dict]:
             "title":       title,
             "author":      src.get("author", ""),
             "description": src.get("description", ""),
+            "numRatings":  int(src.get("numRatings", 0)),
+            "pop_weight":  float(src.get("pop_weight", 0.0)),
             "source":      "fuzzy"
         })
 
@@ -270,7 +273,7 @@ def rerank_sbert(query, candidates):
     
 #     return [(s - theoretical_min) / denominator for s in scores]
 
-def rerank_hybrid(query, candidates, alpha=0.5):
+def rerank_hybrid(query, candidates, alpha=0.5, pop_boost=0.0):
     # alphanya 0.5 dulu buat nampilin si hasil hybridnya / default
     # if not candidates:
     #     return candidates
@@ -344,10 +347,15 @@ def rerank_hybrid(query, candidates, alpha=0.5):
         print(f"{c['title'][:34]:<35} {bm25_norm[i]:>8.4f} {sbert_norm[i]:>8.4f} {hybrid:>8.4f}")
     print(f"{'='*65}\n")
 
+    pop_scores = [c.get("pop_weight", 0.0) for c in candidates]
+    pop_norm   = normalize(pop_scores) if max(pop_scores) > 0 else [0.0] * len(pop_scores)
+
     for i, c in enumerate(candidates):
         c["score_bm25"]   = float(bm25_scores[i])
         c["score_sbert"]  = float(sbert_scores[i])
-        c["score_hybrid"] = float((1 - alpha) * bm25_norm[i] + alpha * sbert_norm[i])
+        c["score_pop"]    = float(pop_scores[i])
+        base_hybrid       = float((1 - alpha) * bm25_norm[i] + alpha * sbert_norm[i])
+        c["score_hybrid"] = float(base_hybrid * (1 - pop_boost) + pop_norm[i] * pop_boost)
 
     return sorted(candidates, key=lambda x: x["score_hybrid"], reverse=True)
 
@@ -411,24 +419,32 @@ def compare_completion_bm25():
 
 @app.route("/compare_all_methods", methods=["GET"])
 def compare_all_methods():
-    query = request.args.get("query", "").strip()
+    query     = request.args.get("query", "").strip()
+    alpha     = float(request.args.get("alpha", 0.5))
+    pop_boost = float(request.args.get("pop_boost", 0.0))
+
     if not query:
         return jsonify({"completion": [], "bm25": [], "sbert": [], "hybrid": []})
 
     candidates = get_candidates(query)
     if not candidates:
         return jsonify({"completion": [], "bm25": [], "sbert": [], "hybrid": []})
-    
+
     completion_order = copy.deepcopy(candidates)
-    bm25_order = rerank_bm25(query, copy.deepcopy(candidates))
-    sbert_order = rerank_sbert(query, copy.deepcopy(candidates))
-    hybrid_order = rerank_hybrid(query, copy.deepcopy(candidates), alpha=0.5)
+    bm25_order       = rerank_bm25(query,   copy.deepcopy(candidates))
+    sbert_order      = rerank_sbert(query,  copy.deepcopy(candidates))
+    hybrid_order     = rerank_hybrid(query, copy.deepcopy(candidates), alpha=alpha, pop_boost=pop_boost)
+
+    # Hapus description dari response
+    for lst in [completion_order, bm25_order, sbert_order, hybrid_order]:
+        for c in lst:
+            c.pop("description", None)
 
     return jsonify({
         "completion": completion_order,
-        "bm25": bm25_order,
-        "sbert": sbert_order,
-        "hybrid": hybrid_order
+        "bm25":       bm25_order,
+        "sbert":      sbert_order,
+        "hybrid":     hybrid_order
     })
 
 
