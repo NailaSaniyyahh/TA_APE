@@ -1,0 +1,6252 @@
+[
+  {
+    "query_id": "Q001",
+    "query_text": "above",
+    "query_type": "PREFIX_TITLE",
+    "title": "above world",
+    "author": "jenn reese",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "above san diego",
+          "author": "robert w cameron",
+          "source": "completion"
+        },
+        {
+          "title": "above suspicion",
+          "author": "helen macinnes",
+          "source": "completion"
+        },
+        {
+          "title": "above the flames",
+          "author": "cassandra fear",
+          "source": "completion"
+        },
+        {
+          "title": "above the star",
+          "author": "alexis marie chute",
+          "source": "completion"
+        },
+        {
+          "title": "above the veil",
+          "author": "garth nix",
+          "source": "completion"
+        },
+        {
+          "title": "above us only sky liverpool fc s global revolution",
+          "author": "paul tomkins",
+          "source": "completion"
+        },
+        {
+          "title": "above world",
+          "author": "jenn reese",
+          "source": "completion"
+        },
+        {
+          "title": "moomin the complete tove jansson comic strip vol 1",
+          "author": "tove jansson",
+          "source": "fuzzy"
+        },
+        {
+          "title": "his majesty s opponent subhas chandra bose and india s struggle against empire",
+          "author": "sugata bose",
+          "source": "fuzzy"
+        },
+        {
+          "title": "sex in the title a comedy about dating sex and romance in nyc back when phones weren t so smart",
+          "author": "zack love",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q002",
+    "query_text": "the",
+    "query_type": "PREFIX_TITLE",
+    "title": "the graveyard book",
+    "author": "neil gaiman",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the 100",
+          "author": "kass morgan",
+          "source": "completion"
+        },
+        {
+          "title": "the a b c murders",
+          "author": "agatha christie",
+          "source": "completion"
+        },
+        {
+          "title": "the abbi glines rosemary beach collection",
+          "author": "abbi glines",
+          "source": "completion"
+        },
+        {
+          "title": "the abc s of positivity",
+          "author": "laura lynn doyle",
+          "source": "completion"
+        },
+        {
+          "title": "the abduction",
+          "author": "john grisham",
+          "source": "completion"
+        },
+        {
+          "title": "the abhorsen trilogy box set",
+          "author": "garth nix",
+          "source": "completion"
+        },
+        {
+          "title": "the ability",
+          "author": "m m vaughan",
+          "source": "completion"
+        },
+        {
+          "title": "the ables",
+          "author": "jeremy scott",
+          "source": "completion"
+        },
+        {
+          "title": "the abolition of man",
+          "author": "c s lewis",
+          "source": "completion"
+        },
+        {
+          "title": "the abominable sruvius",
+          "author": "glen solosky",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q003",
+    "query_text": "empress of",
+    "query_type": "PREFIX_TITLE",
+    "title": "empress of all seasons",
+    "author": "emiko jean",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "empress of all seasons",
+          "author": "emiko jean",
+          "source": "completion"
+        },
+        {
+          "title": "empress of rome",
+          "author": "kate quinn",
+          "source": "completion"
+        },
+        {
+          "title": "empress of the world",
+          "author": "sara ryan",
+          "source": "completion"
+        },
+        {
+          "title": "empress",
+          "author": "shan sa",
+          "source": "fuzzy"
+        },
+        {
+          "title": "empress orchid",
+          "author": "anchee min",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the empress",
+          "author": "s j kincaid",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the accidental empress",
+          "author": "allison pataki",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the last empress",
+          "author": "anchee min",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the will of the empress",
+          "author": "tamora pierce",
+          "source": "fuzzy"
+        },
+        {
+          "title": "nova express",
+          "author": "william s burroughs",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q004",
+    "query_text": "elric at the",
+    "query_type": "PREFIX_TITLE",
+    "title": "elric at the end of time",
+    "author": "michael moorcock",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "elric at the end of time",
+          "author": "michael moorcock",
+          "source": "completion"
+        },
+        {
+          "title": "elric of melnibon",
+          "author": "michael moorcock",
+          "source": "fuzzy"
+        },
+        {
+          "title": "nice is just a place in france how to win at basically everything",
+          "author": "the betches",
+          "source": "fuzzy"
+        },
+        {
+          "title": "24 01 one minute after free at smashwords com",
+          "author": "eric diehl",
+          "source": "fuzzy"
+        },
+        {
+          "title": "eric",
+          "author": "terry pratchett",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the guest cat",
+          "author": "takashi hiraide eric",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the elric saga part i",
+          "author": "michael moorcock",
+          "source": "fuzzy"
+        },
+        {
+          "title": "elric the stealer of souls",
+          "author": "michael moorcock john",
+          "source": "fuzzy"
+        },
+        {
+          "title": "moosewood restaurant cooks at home fast and easy recipes for any day",
+          "author": "the moosewood collective",
+          "source": "fuzzy"
+        },
+        {
+          "title": "bifocal",
+          "author": "deborah ellis eric",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q005",
+    "query_text": "the egos have landed",
+    "query_type": "PREFIX_TITLE",
+    "title": "the egos have landed rise and fall of palace pictures",
+    "author": "angus finney",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the egos have landed rise and fall of palace pictures",
+          "author": "angus finney",
+          "source": "completion"
+        },
+        {
+          "title": "a man named dave",
+          "author": "dave pelzer",
+          "source": "fuzzy"
+        },
+        {
+          "title": "save the date",
+          "author": "morgan matson",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the gods will have blood",
+          "author": "anatole france frederick",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the dogs i have kissed",
+          "author": "trista mateer",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the cave",
+          "author": "jos saramago margaret",
+          "source": "fuzzy"
+        },
+        {
+          "title": "dave ramsey s financial peace university",
+          "author": "dave ramsey",
+          "source": "fuzzy"
+        },
+        {
+          "title": "save of the game",
+          "author": "avon gale",
+          "source": "fuzzy"
+        },
+        {
+          "title": "dave barry s complete guide to guys",
+          "author": "dave barry",
+          "source": "fuzzy"
+        },
+        {
+          "title": "landry park",
+          "author": "bethany hagen",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q006",
+    "query_text": "the mark",
+    "query_type": "PREFIX_TITLE",
+    "title": "the mark on the door",
+    "author": "franklin w dixon",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the mark",
+          "author": "tim lahaye jerry",
+          "source": "completion"
+        },
+        {
+          "title": "the mark of athena",
+          "author": "rick riordan",
+          "source": "completion"
+        },
+        {
+          "title": "the mark of man",
+          "author": "owen h lewis",
+          "source": "completion"
+        },
+        {
+          "title": "the mark of the assassin",
+          "author": "daniel silva",
+          "source": "completion"
+        },
+        {
+          "title": "the mark of the crown",
+          "author": "jude watson",
+          "source": "completion"
+        },
+        {
+          "title": "the mark of the dragonfly",
+          "author": "jaleigh johnson",
+          "source": "completion"
+        },
+        {
+          "title": "the mark of the golden dragon being an account of the further adventures of jacky faber jewel of the east vexation of the west and pearl of the south china sea",
+          "author": "l a meyer",
+          "source": "completion"
+        },
+        {
+          "title": "the mark of the horse lord",
+          "author": "rosemary sutcliff",
+          "source": "completion"
+        },
+        {
+          "title": "the mark of the vampire queen",
+          "author": "joey w hill",
+          "source": "completion"
+        },
+        {
+          "title": "the mark of zorro",
+          "author": "johnston mcculley",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q007",
+    "query_text": "turn",
+    "query_type": "PREFIX_TITLE",
+    "title": "turn coat",
+    "author": "jim butcher",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "turn",
+          "author": "sara s girl",
+          "source": "completion"
+        },
+        {
+          "title": "turn back time",
+          "author": "radclyffe",
+          "source": "completion"
+        },
+        {
+          "title": "turn can t into next leadership",
+          "author": "gerry cadorath",
+          "source": "completion"
+        },
+        {
+          "title": "turn coat",
+          "author": "jim butcher",
+          "source": "completion"
+        },
+        {
+          "title": "turn of mind",
+          "author": "alice laplante",
+          "source": "completion"
+        },
+        {
+          "title": "turnabout",
+          "author": "margaret peterson haddix",
+          "source": "completion"
+        },
+        {
+          "title": "turned",
+          "author": "morgan rice",
+          "source": "completion"
+        },
+        {
+          "title": "turned at dark",
+          "author": "c c hunter",
+          "source": "completion"
+        },
+        {
+          "title": "turned on decorative lamps of the fifties",
+          "author": "leland payton crystal",
+          "source": "completion"
+        },
+        {
+          "title": "turned out",
+          "author": "angel m hunter",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q008",
+    "query_text": "god bless",
+    "query_type": "PREFIX_TITLE",
+    "title": "god bless you dr kevorkian",
+    "author": "kurt vonnegut jr",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "god bless the gargoyles",
+          "author": "dav pilkey",
+          "source": "completion"
+        },
+        {
+          "title": "god bless you dr kevorkian",
+          "author": "kurt vonnegut jr",
+          "source": "completion"
+        },
+        {
+          "title": "god bless you mr rosewater",
+          "author": "kurt vonnegut jr",
+          "source": "completion"
+        },
+        {
+          "title": "god bless you mr vonnegut",
+          "author": "bryan young",
+          "source": "completion"
+        },
+        {
+          "title": "best in hollywood the good the bad and the beautiful",
+          "author": "james best jim",
+          "source": "fuzzy"
+        },
+        {
+          "title": "bliss",
+          "author": "kathryn littlewood",
+          "source": "fuzzy"
+        },
+        {
+          "title": "god s blogs",
+          "author": "lanny donoho",
+          "source": "fuzzy"
+        },
+        {
+          "title": "bless this house",
+          "author": "norah lofts",
+          "source": "fuzzy"
+        },
+        {
+          "title": "bless me ultima",
+          "author": "rudolfo anaya",
+          "source": "fuzzy"
+        },
+        {
+          "title": "untangle me",
+          "author": "chelle bliss",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q009",
+    "query_text": "finnikin of",
+    "query_type": "PREFIX_TITLE",
+    "title": "finnikin of the rock",
+    "author": "melina marchetta",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "finnikin of the rock",
+          "author": "melina marchetta",
+          "source": "completion"
+        },
+        {
+          "title": "hymns of the church of jesus christ of latter day saints",
+          "author": "the church of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the dialogue of saint catherine of siena",
+          "author": "catherine of siena",
+          "source": "fuzzy"
+        },
+        {
+          "title": "city of god",
+          "author": "augustine of hippo",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the doctrine and covenants of the church of jesus christ of latter day saints",
+          "author": "the church of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the way of perfection",
+          "author": "teresa of vila",
+          "source": "fuzzy"
+        },
+        {
+          "title": "selected satires of lucian",
+          "author": "lucian of samosata",
+          "source": "fuzzy"
+        },
+        {
+          "title": "book of mormon doctrine and covenants pearl of great price",
+          "author": "the church of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the book of common prayer and administration of the sacraments and other rites and ceremonies of the church",
+          "author": "church of england",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the conference of the birds",
+          "author": "attar of nishapur",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q010",
+    "query_text": "requiem the fall",
+    "query_type": "PREFIX_TITLE",
+    "title": "requiem the fall of the templars",
+    "author": "robyn young",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "requiem the fall of the templars",
+          "author": "robyn young",
+          "source": "completion"
+        },
+        {
+          "title": "all fall down",
+          "author": "ally carter",
+          "source": "fuzzy"
+        },
+        {
+          "title": "requiem",
+          "author": "lauren oliver",
+          "source": "fuzzy"
+        },
+        {
+          "title": "requiem for immortals",
+          "author": "lee winter",
+          "source": "fuzzy"
+        },
+        {
+          "title": "warsaw requiem",
+          "author": "bodie thoene brock",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the requiem shark",
+          "author": "nicholas griffin",
+          "source": "fuzzy"
+        },
+        {
+          "title": "before the fall arrival",
+          "author": "ally carter",
+          "source": "fuzzy"
+        },
+        {
+          "title": "they all fall down",
+          "author": "roxanne st claire",
+          "source": "fuzzy"
+        },
+        {
+          "title": "requiem for the sun",
+          "author": "elizabeth haydon",
+          "source": "fuzzy"
+        },
+        {
+          "title": "requiem for the devil",
+          "author": "jeri smith ready",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q011",
+    "query_text": "girl out",
+    "query_type": "PREFIX_TITLE",
+    "title": "girl out of place",
+    "author": "syl van duyn",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "girl out of place",
+          "author": "syl van duyn",
+          "source": "completion"
+        },
+        {
+          "title": "girl a my story",
+          "author": "girl a",
+          "source": "fuzzy"
+        },
+        {
+          "title": "sweet girl",
+          "author": "sierra hill",
+          "source": "fuzzy"
+        },
+        {
+          "title": "push girl",
+          "author": "chelsie hill jessica",
+          "source": "fuzzy"
+        },
+        {
+          "title": "out",
+          "author": "natsuo kirino stephen",
+          "source": "fuzzy"
+        },
+        {
+          "title": "about a girl",
+          "author": "lindsey kelk",
+          "source": "fuzzy"
+        },
+        {
+          "title": "top girls",
+          "author": "caryl churchill bill",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the captain and the girl",
+          "author": "earl b pilgrim",
+          "source": "fuzzy"
+        },
+        {
+          "title": "fade out",
+          "author": "rachel caine",
+          "source": "fuzzy"
+        },
+        {
+          "title": "inside out",
+          "author": "maria v snyder",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q012",
+    "query_text": "wilde",
+    "query_type": "PREFIX_TITLE",
+    "title": "wilde women",
+    "author": "louise pentland",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "wil deft",
+          "author": "richard wolkomir",
+          "source": "completion"
+        },
+        {
+          "title": "wilde about the girl",
+          "author": "louise pentland",
+          "source": "completion"
+        },
+        {
+          "title": "wilde heart",
+          "author": "daphne clair",
+          "source": "completion"
+        },
+        {
+          "title": "wilde like me",
+          "author": "louise pentland",
+          "source": "completion"
+        },
+        {
+          "title": "wilde women",
+          "author": "louise pentland",
+          "source": "completion"
+        },
+        {
+          "title": "wildefire",
+          "author": "karsten knight",
+          "source": "completion"
+        },
+        {
+          "title": "wilder",
+          "author": "lena north",
+          "source": "completion"
+        },
+        {
+          "title": "wilder girls",
+          "author": "rory power",
+          "source": "completion"
+        },
+        {
+          "title": "wilderness the lost writings vol 1",
+          "author": "jim morrison",
+          "source": "completion"
+        },
+        {
+          "title": "wildest dreams",
+          "author": "kristen ashley",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q013",
+    "query_text": "robin in",
+    "query_type": "PREFIX_TITLE",
+    "title": "robin in the middle",
+    "author": "francine pascal creator",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "robin in the middle",
+          "author": "francine pascal creator",
+          "source": "completion"
+        },
+        {
+          "title": "toxin",
+          "author": "robin cook",
+          "source": "fuzzy"
+        },
+        {
+          "title": "rowan of rin",
+          "author": "emily rodda",
+          "source": "fuzzy"
+        },
+        {
+          "title": "in this rain",
+          "author": "s j rozan",
+          "source": "fuzzy"
+        },
+        {
+          "title": "a robin mckinley collection spindle s end the hero and the crown and the blue sword folktales 1 3",
+          "author": "robin mckinley",
+          "source": "fuzzy"
+        },
+        {
+          "title": "robin hood",
+          "author": "henry gilbert maria",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the door in the hedge",
+          "author": "robin mckinley",
+          "source": "fuzzy"
+        },
+        {
+          "title": "living in darkness",
+          "author": "robin renee ray",
+          "source": "fuzzy"
+        },
+        {
+          "title": "batman robin vol 2 batman vs robin",
+          "author": "grant morrison writer",
+          "source": "fuzzy"
+        },
+        {
+          "title": "black hearts in battersea",
+          "author": "joan aiken robin",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q014",
+    "query_text": "autobiography of a fat",
+    "query_type": "PREFIX_TITLE",
+    "title": "autobiography of a fat bride true tales of a pretend adulthood",
+    "author": "laurie notaro",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "autobiography of a fat bride true tales of a pretend adulthood",
+          "author": "laurie notaro",
+          "source": "completion"
+        },
+        {
+          "title": "wings of fire an autobiography",
+          "author": "a p j",
+          "source": "fuzzy"
+        },
+        {
+          "title": "autobiography of a yogi",
+          "author": "paramahansa yogananda",
+          "source": "fuzzy"
+        },
+        {
+          "title": "autobiography of a face",
+          "author": "lucy grealy",
+          "source": "fuzzy"
+        },
+        {
+          "title": "autobiography of a geisha",
+          "author": "sayo masuda",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the autobiography of james t kirk",
+          "author": "david a goodman",
+          "source": "fuzzy"
+        },
+        {
+          "title": "fat cat",
+          "author": "robin brande",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the art of raising a puppy",
+          "author": "monks of new",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the autobiography of foudini m cat",
+          "author": "susan fromberg schaeffer",
+          "source": "fuzzy"
+        },
+        {
+          "title": "summary of eat fat get thin by mark hyman includes analysis",
+          "author": "not a book",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q015",
+    "query_text": "love",
+    "query_type": "PREFIX_TITLE",
+    "title": "love overboard",
+    "author": "janet evanovich",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "love",
+          "author": "toni morrison",
+          "source": "completion"
+        },
+        {
+          "title": "love acceptance forgiveness",
+          "author": "jerry cook stanley",
+          "source": "completion"
+        },
+        {
+          "title": "love after dust",
+          "author": "james mclaughlin ward",
+          "source": "completion"
+        },
+        {
+          "title": "love after pain",
+          "author": "torrie robles",
+          "source": "completion"
+        },
+        {
+          "title": "love always",
+          "author": "harriet evans",
+          "source": "completion"
+        },
+        {
+          "title": "love amid the ashes",
+          "author": "mesu andrews",
+          "source": "completion"
+        },
+        {
+          "title": "love among lavender",
+          "author": "ava miles",
+          "source": "completion"
+        },
+        {
+          "title": "love among the stars",
+          "author": "nick spalding",
+          "source": "completion"
+        },
+        {
+          "title": "love among the walnuts",
+          "author": "jean ferris",
+          "source": "completion"
+        },
+        {
+          "title": "love and compassion is my religion a beginner s book into spirituality",
+          "author": "jane zarse",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q016",
+    "query_text": "mostly",
+    "query_type": "PREFIX_TITLE",
+    "title": "mostly harmless",
+    "author": "douglas adams",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "mostly harmless",
+          "author": "douglas adams",
+          "source": "completion"
+        },
+        {
+          "title": "still mostly true",
+          "author": "brian andreas",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the mostly true story of jack",
+          "author": "kelly barnhill",
+          "source": "fuzzy"
+        },
+        {
+          "title": "ghostly guardian",
+          "author": "rachel m humphrey",
+          "source": "fuzzy"
+        },
+        {
+          "title": "a fine balance",
+          "author": "rohinton mistry",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the boy who sneaks in my bedroom window",
+          "author": "kirsty moseley",
+          "source": "fuzzy"
+        },
+        {
+          "title": "family matters",
+          "author": "rohinton mistry",
+          "source": "fuzzy"
+        },
+        {
+          "title": "nothing left to lose",
+          "author": "kirsty moseley",
+          "source": "fuzzy"
+        },
+        {
+          "title": "always you",
+          "author": "kirsty moseley",
+          "source": "fuzzy"
+        },
+        {
+          "title": "47",
+          "author": "walter mosley",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q017",
+    "query_text": "the girl",
+    "query_type": "PREFIX_TITLE",
+    "title": "the girl i was before",
+    "author": "ginger scott",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the girl",
+          "author": "lola st vil",
+          "source": "completion"
+        },
+        {
+          "title": "the girl at midnight",
+          "author": "melissa grey",
+          "source": "completion"
+        },
+        {
+          "title": "the girl at the center of the world",
+          "author": "austin aslan",
+          "source": "completion"
+        },
+        {
+          "title": "the girl before",
+          "author": "j p delaney",
+          "source": "completion"
+        },
+        {
+          "title": "the girl from aleppo nujeen s escape from war to freedom",
+          "author": "nujeen mustafa christina",
+          "source": "completion"
+        },
+        {
+          "title": "the girl from america",
+          "author": "ephantus mwenda",
+          "source": "completion"
+        },
+        {
+          "title": "the girl from midfoxfields",
+          "author": "michael wyndham thomas",
+          "source": "completion"
+        },
+        {
+          "title": "the girl from penny lane",
+          "author": "katie flynn",
+          "source": "completion"
+        },
+        {
+          "title": "the girl from summer hill",
+          "author": "jude deveraux",
+          "source": "completion"
+        },
+        {
+          "title": "the girl from the train",
+          "author": "irma joubert elsa",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q018",
+    "query_text": "first break all the rules what",
+    "query_type": "PREFIX_TITLE",
+    "title": "first break all the rules what the world s greatest managers do differently",
+    "author": "marcus buckingham",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "first break all the rules what the world s greatest managers do differently",
+          "author": "marcus buckingham curt",
+          "source": "completion"
+        },
+        {
+          "title": "the rules to break",
+          "author": "richard templar",
+          "source": "fuzzy"
+        },
+        {
+          "title": "all fall down",
+          "author": "ally carter",
+          "source": "fuzzy"
+        },
+        {
+          "title": "first frost",
+          "author": "sarah addison allen",
+          "source": "fuzzy"
+        },
+        {
+          "title": "night fall what rises must fall",
+          "author": "tina smith",
+          "source": "fuzzy"
+        },
+        {
+          "title": "fire in frost",
+          "author": "alicia rades",
+          "source": "fuzzy"
+        },
+        {
+          "title": "first day",
+          "author": "ally condie",
+          "source": "fuzzy"
+        },
+        {
+          "title": "wizard s first rule",
+          "author": "terry goodkind",
+          "source": "fuzzy"
+        },
+        {
+          "title": "a fire that burns",
+          "author": "kirsty anne still",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the first last kiss",
+          "author": "ali harris",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q019",
+    "query_text": "entebbe a defining moment in",
+    "query_type": "PREFIX_TITLE",
+    "title": "entebbe a defining moment in the war on terrorism the jonathan netanyahu story",
+    "author": "iddo netanyahu",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "entebbe a defining moment in the war on terrorism the jonathan netanyahu story",
+          "author": "iddo netanyahu",
+          "source": "completion"
+        },
+        {
+          "title": "reining her in",
+          "author": "dani wyatt",
+          "source": "fuzzy"
+        },
+        {
+          "title": "a moment",
+          "author": "marie hall anne",
+          "source": "fuzzy"
+        },
+        {
+          "title": "deafening",
+          "author": "frances itani",
+          "source": "fuzzy"
+        },
+        {
+          "title": "in this moment",
+          "author": "autumn doughton",
+          "source": "fuzzy"
+        },
+        {
+          "title": "a shattered moment",
+          "author": "tiffany king",
+          "source": "fuzzy"
+        },
+        {
+          "title": "true spirituality how to live for jesus moment by moment",
+          "author": "francis a schaeffer",
+          "source": "fuzzy"
+        },
+        {
+          "title": "defending jacob",
+          "author": "william landay",
+          "source": "fuzzy"
+        },
+        {
+          "title": "defending india",
+          "author": "jaswant singh",
+          "source": "fuzzy"
+        },
+        {
+          "title": "designing woman",
+          "author": "elaine raco chase",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q020",
+    "query_text": "broken",
+    "query_type": "PREFIX_TITLE",
+    "title": "broken city",
+    "author": "d d chant",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "broken",
+          "author": "kelley armstrong",
+          "source": "completion"
+        },
+        {
+          "title": "broken and screwed",
+          "author": "tijan",
+          "source": "completion"
+        },
+        {
+          "title": "broken and screwed 2",
+          "author": "tijan",
+          "source": "completion"
+        },
+        {
+          "title": "broken angels",
+          "author": "richard k morgan",
+          "source": "completion"
+        },
+        {
+          "title": "broken april",
+          "author": "ismail kadare",
+          "source": "completion"
+        },
+        {
+          "title": "broken beautiful hearts",
+          "author": "kami garcia",
+          "source": "completion"
+        },
+        {
+          "title": "broken by truth",
+          "author": "jeri fink donna",
+          "source": "completion"
+        },
+        {
+          "title": "broken chains",
+          "author": "julie trettel",
+          "source": "completion"
+        },
+        {
+          "title": "broken circle",
+          "author": "amy mckinley",
+          "source": "completion"
+        },
+        {
+          "title": "broken city",
+          "author": "d d chant",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q021",
+    "query_text": "stori",
+    "query_type": "PREFIX_TITLE",
+    "title": "stori telling",
+    "author": "tori spelling",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "28 stories of aids in africa",
+          "author": "stephanie nolen",
+          "source": "completion"
+        },
+        {
+          "title": "stori telling",
+          "author": "tori spelling",
+          "source": "completion"
+        },
+        {
+          "title": "stories",
+          "author": "t coraghessan boyle",
+          "source": "completion"
+        },
+        {
+          "title": "stories 1904 1924",
+          "author": "franz kafka j",
+          "source": "completion"
+        },
+        {
+          "title": "stories from the life of joseph smith",
+          "author": "richard e turley",
+          "source": "completion"
+        },
+        {
+          "title": "stories i only tell my friends",
+          "author": "rob lowe",
+          "source": "completion"
+        },
+        {
+          "title": "stories i stole",
+          "author": "wendell steavenson",
+          "source": "completion"
+        },
+        {
+          "title": "stories of the prophets peace be upon them",
+          "author": "ibn kathir",
+          "source": "completion"
+        },
+        {
+          "title": "stories of your life and others",
+          "author": "ted chiang",
+          "source": "completion"
+        },
+        {
+          "title": "stories we never told",
+          "author": "sonja yoerg",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q022",
+    "query_text": "dirty love",
+    "query_type": "PREFIX_TITLE",
+    "title": "dirty love in a doomsday shelter",
+    "author": "spunky buttons",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "dirty love in a doomsday shelter",
+          "author": "spunky buttons darla",
+          "source": "completion"
+        },
+        {
+          "title": "love life",
+          "author": "rob lowe",
+          "source": "fuzzy"
+        },
+        {
+          "title": "dirty filthy rich love",
+          "author": "laurelin paige",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the dirt diary",
+          "author": "anna staniszewski",
+          "source": "fuzzy"
+        },
+        {
+          "title": "nothing left to lose",
+          "author": "kirsty moseley",
+          "source": "fuzzy"
+        },
+        {
+          "title": "dirty",
+          "author": "megan hart",
+          "source": "fuzzy"
+        },
+        {
+          "title": "fifty seven reasons not to have a nuclear war",
+          "author": "marty asher",
+          "source": "fuzzy"
+        },
+        {
+          "title": "five s legacy",
+          "author": "pittacus lore",
+          "source": "fuzzy"
+        },
+        {
+          "title": "five s betrayal",
+          "author": "pittacus lore",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the dirty life on farming food and love",
+          "author": "kristin kimball",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q023",
+    "query_text": "his last bow the",
+    "query_type": "PREFIX_TITLE",
+    "title": "his last bow the case book of sherlock holmes",
+    "author": "arthur conan doyle",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "his last bow the case book of sherlock holmes",
+          "author": "arthur conan doyle",
+          "source": "completion"
+        },
+        {
+          "title": "his last bow",
+          "author": "arthur conan doyle",
+          "source": "fuzzy"
+        },
+        {
+          "title": "his last bow single story",
+          "author": "arthur conan doyle",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the last sunset",
+          "author": "bob atkinson",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the last question",
+          "author": "isaac asimov bob",
+          "source": "fuzzy"
+        },
+        {
+          "title": "last hit",
+          "author": "jessica clare jen",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the last child",
+          "author": "john hart",
+          "source": "fuzzy"
+        },
+        {
+          "title": "nella last s peace the post war diaries of housewife 49",
+          "author": "nella last robert",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the twins big pow wow",
+          "author": "francine pascal",
+          "source": "fuzzy"
+        },
+        {
+          "title": "nella last s war the second world war diaries of housewife 49",
+          "author": "nella last suzie",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q024",
+    "query_text": "god got",
+    "query_type": "PREFIX_TITLE",
+    "title": "god got a dog",
+    "author": "cynthia rylant",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "god got a dog",
+          "author": "cynthia rylant marla",
+          "source": "completion"
+        },
+        {
+          "title": "hot rod hundley you gotta love it baby",
+          "author": "hot rod hundley",
+          "source": "fuzzy"
+        },
+        {
+          "title": "forged by fire how god shapes those he loves",
+          "author": "bob reccord bob",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the god box",
+          "author": "alex sanchez",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the god boy",
+          "author": "ian cross joan",
+          "source": "fuzzy"
+        },
+        {
+          "title": "letting go of god",
+          "author": "julia sweeney",
+          "source": "fuzzy"
+        },
+        {
+          "title": "river god",
+          "author": "wilbur smith",
+          "source": "fuzzy"
+        },
+        {
+          "title": "knowing god",
+          "author": "j i packer",
+          "source": "fuzzy"
+        },
+        {
+          "title": "god knows",
+          "author": "joseph heller",
+          "source": "fuzzy"
+        },
+        {
+          "title": "tin god",
+          "author": "stacy green",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q025",
+    "query_text": "sons of",
+    "query_type": "PREFIX_TITLE",
+    "title": "sons of fire volume 1",
+    "author": "adam lance garcia",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "sons of anarchy and philosophy brains before bullets the blackwell philosophy and pop culture series",
+          "author": "george a dunn",
+          "source": "completion"
+        },
+        {
+          "title": "sons of destiny",
+          "author": "darren shan",
+          "source": "completion"
+        },
+        {
+          "title": "sons of entropy",
+          "author": "christopher golden nancy",
+          "source": "completion"
+        },
+        {
+          "title": "sons of fire volume 1",
+          "author": "adam lance garcia",
+          "source": "completion"
+        },
+        {
+          "title": "sons of fortune",
+          "author": "jeffrey archer",
+          "source": "completion"
+        },
+        {
+          "title": "sons of liberty",
+          "author": "raymond benson",
+          "source": "completion"
+        },
+        {
+          "title": "sons of waywould",
+          "author": "albert john asaro",
+          "source": "completion"
+        },
+        {
+          "title": "song of songs",
+          "author": "beverley hughesdon",
+          "source": "fuzzy"
+        },
+        {
+          "title": "sins of the son",
+          "author": "linda poitevin",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the art of raising a puppy",
+          "author": "monks of new",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q026",
+    "query_text": "a",
+    "query_type": "PREFIX_TITLE",
+    "title": "a christmas carol",
+    "author": "charles dickens",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "a baby s cry",
+          "author": "cathy glass",
+          "source": "completion"
+        },
+        {
+          "title": "a bad case of stripes",
+          "author": "david shannon",
+          "source": "completion"
+        },
+        {
+          "title": "a bad spell for the worst witch",
+          "author": "jill murphy",
+          "source": "completion"
+        },
+        {
+          "title": "a banner is unfurled",
+          "author": "marcie gallacher kerri",
+          "source": "completion"
+        },
+        {
+          "title": "a beautiful mind",
+          "author": "sylvia nasar",
+          "source": "completion"
+        },
+        {
+          "title": "a beautiful wedding",
+          "author": "jamie mcguire",
+          "source": "completion"
+        },
+        {
+          "title": "a being so gentle the frontier love story of rachel and andrew jackson",
+          "author": "patricia brady",
+          "source": "completion"
+        },
+        {
+          "title": "a bend in the road",
+          "author": "nicholas sparks",
+          "source": "completion"
+        },
+        {
+          "title": "a betrayal in winter",
+          "author": "daniel abraham",
+          "source": "completion"
+        },
+        {
+          "title": "a bird in the hand",
+          "author": "diana henry",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q027",
+    "query_text": "for",
+    "query_type": "PREFIX_TITLE",
+    "title": "for his pleasure",
+    "author": "kelly favor",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "for a few demons more",
+          "author": "kim harrison",
+          "source": "completion"
+        },
+        {
+          "title": "for a glory and a covering a practical theology of marriage",
+          "author": "douglas wilson",
+          "source": "completion"
+        },
+        {
+          "title": "for a new liberty the libertarian manifesto",
+          "author": "murray n rothbard",
+          "source": "completion"
+        },
+        {
+          "title": "for all the tea in china espionage empire and the secret formula for the world s favourite drink",
+          "author": "sarah rose",
+          "source": "completion"
+        },
+        {
+          "title": "for all their lives",
+          "author": "fern michaels",
+          "source": "completion"
+        },
+        {
+          "title": "for all time",
+          "author": "jude deveraux",
+          "source": "completion"
+        },
+        {
+          "title": "for beau the sarah ashdown story",
+          "author": "simon gandossi",
+          "source": "completion"
+        },
+        {
+          "title": "for better for worse",
+          "author": "carole matthews",
+          "source": "completion"
+        },
+        {
+          "title": "for better or for worse",
+          "author": "krissy v",
+          "source": "completion"
+        },
+        {
+          "title": "for one more day",
+          "author": "mitch albom",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q028",
+    "query_text": "eragon",
+    "query_type": "PREFIX_TITLE",
+    "title": "eragon eldest brisingr",
+    "author": "christopher paolini",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "eragon",
+          "author": "christopher paolini",
+          "source": "completion"
+        },
+        {
+          "title": "eragon eldest",
+          "author": "christopher paolini",
+          "source": "completion"
+        },
+        {
+          "title": "eragon eldest brisingr",
+          "author": "christopher paolini",
+          "source": "completion"
+        },
+        {
+          "title": "eragon s guide to alaga sia",
+          "author": "christopher paolini",
+          "source": "completion"
+        },
+        {
+          "title": "the heroes of time a new beginning",
+          "author": "blue dragon alex",
+          "source": "fuzzy"
+        },
+        {
+          "title": "coada",
+          "author": "dragos voicu",
+          "source": "fuzzy"
+        },
+        {
+          "title": "dragon",
+          "author": "clive cussler",
+          "source": "fuzzy"
+        },
+        {
+          "title": "fireshadow",
+          "author": "anthony eaton",
+          "source": "fuzzy"
+        },
+        {
+          "title": "when the smoke clears",
+          "author": "lynette eason",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the ghost of hannah mendes",
+          "author": "naomi ragen",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q029",
+    "query_text": "midnight",
+    "query_type": "PREFIX_TITLE",
+    "title": "midnight s children",
+    "author": "salman rushdie",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "midnight",
+          "author": "l j smith",
+          "source": "completion"
+        },
+        {
+          "title": "midnight alias",
+          "author": "elle kennedy",
+          "source": "completion"
+        },
+        {
+          "title": "midnight alley",
+          "author": "rachel caine",
+          "source": "completion"
+        },
+        {
+          "title": "midnight awakening",
+          "author": "lara adrian",
+          "source": "completion"
+        },
+        {
+          "title": "midnight bayou",
+          "author": "nora roberts",
+          "source": "completion"
+        },
+        {
+          "title": "midnight blue light special",
+          "author": "seanan mcguire",
+          "source": "completion"
+        },
+        {
+          "title": "midnight bride",
+          "author": "susan carroll",
+          "source": "completion"
+        },
+        {
+          "title": "midnight caller",
+          "author": "leslie tentler",
+          "source": "completion"
+        },
+        {
+          "title": "midnight champagne",
+          "author": "a manette ansay",
+          "source": "completion"
+        },
+        {
+          "title": "midnight come again",
+          "author": "dana stabenow",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q030",
+    "query_text": "in the",
+    "query_type": "PREFIX_TITLE",
+    "title": "in the deep end",
+    "author": "kate cann",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "in the absence of light",
+          "author": "adrienne wilder",
+          "source": "completion"
+        },
+        {
+          "title": "in the absence of the sun",
+          "author": "emily curtis",
+          "source": "completion"
+        },
+        {
+          "title": "in the aeroplane over the sea",
+          "author": "kim cooper",
+          "source": "completion"
+        },
+        {
+          "title": "in the after",
+          "author": "demitria lunetta",
+          "source": "completion"
+        },
+        {
+          "title": "in the afterlight",
+          "author": "alexandra bracken",
+          "source": "completion"
+        },
+        {
+          "title": "in the arms of mr darcy",
+          "author": "sharon lathan",
+          "source": "completion"
+        },
+        {
+          "title": "in the bedroom seven stories",
+          "author": "andre dubus todd",
+          "source": "completion"
+        },
+        {
+          "title": "in the beginning",
+          "author": "chaim potok",
+          "source": "completion"
+        },
+        {
+          "title": "in the belly of the bloodhound being an account of a particularly peculiar adventure in the life of jacky faber",
+          "author": "l a meyer",
+          "source": "completion"
+        },
+        {
+          "title": "in the belly of the elephant",
+          "author": "susan corbett",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q031",
+    "query_text": "j",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "killing sarai",
+    "author": "j a redmerski",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "jacinda s challenge",
+          "author": "m k eidem",
+          "source": "completion"
+        },
+        {
+          "title": "jacinto s remnant",
+          "author": "karen traviss",
+          "source": "completion"
+        },
+        {
+          "title": "jack",
+          "author": "fox chapman pyxi",
+          "source": "completion"
+        },
+        {
+          "title": "jack a life of c s lewis",
+          "author": "george sayer",
+          "source": "completion"
+        },
+        {
+          "title": "jack and rochelle a holocaust story of love and resistance",
+          "author": "jack sutin rochelle",
+          "source": "completion"
+        },
+        {
+          "title": "jack frost",
+          "author": "william joyce",
+          "source": "completion"
+        },
+        {
+          "title": "jack glass",
+          "author": "adam roberts",
+          "source": "completion"
+        },
+        {
+          "title": "jack jill",
+          "author": "james patterson",
+          "source": "completion"
+        },
+        {
+          "title": "jack kirby s fourth world omnibus vol 1",
+          "author": "jack kir creator",
+          "source": "completion"
+        },
+        {
+          "title": "jack the ripper",
+          "author": "mark whitehead miriam",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q032",
+    "query_text": "gail",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "collide",
+    "author": "gail mchugh",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "slaughterhouse the shocking story of greed neglect and inhumane treatment inside the u s meat industry",
+          "author": "gail a eisnitz",
+          "source": "completion"
+        },
+        {
+          "title": "the cure for death by lightning",
+          "author": "gail anderson dargatz",
+          "source": "completion"
+        },
+        {
+          "title": "is elvis alive book and audio cassette",
+          "author": "gail brewer giorgio",
+          "source": "completion"
+        },
+        {
+          "title": "soulless",
+          "author": "gail carriger",
+          "source": "completion"
+        },
+        {
+          "title": "soulless the manga vol 1",
+          "author": "gail carriger rem",
+          "source": "completion"
+        },
+        {
+          "title": "ella enchanted",
+          "author": "gail carson levine",
+          "source": "completion"
+        },
+        {
+          "title": "the compass rose",
+          "author": "gail dayton",
+          "source": "completion"
+        },
+        {
+          "title": "right behind you",
+          "author": "gail giles",
+          "source": "completion"
+        },
+        {
+          "title": "father melancholy s daughter",
+          "author": "gail godwin",
+          "source": "completion"
+        },
+        {
+          "title": "inkheart movie reader",
+          "author": "gail herman",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q033",
+    "query_text": "ronald c",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "a lincoln",
+    "author": "ronald c white jr",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "a lincoln",
+          "author": "ronald c white",
+          "source": "completion"
+        },
+        {
+          "title": "the roald dahl collection",
+          "author": "roald dahl",
+          "source": "fuzzy"
+        },
+        {
+          "title": "a teddy for jackie jr bedtime story books about teddy bear and parents love",
+          "author": "ronald destra renald",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the best of roald dahl",
+          "author": "roald dahl",
+          "source": "fuzzy"
+        },
+        {
+          "title": "two classics by roald dahl",
+          "author": "roald dahl",
+          "source": "fuzzy"
+        },
+        {
+          "title": "roald dahl s wonderful mr willy wonka",
+          "author": "roald dahl",
+          "source": "fuzzy"
+        },
+        {
+          "title": "madame roland",
+          "author": "john s c",
+          "source": "fuzzy"
+        },
+        {
+          "title": "lucy the beginnings of humankind",
+          "author": "donald c johanson",
+          "source": "fuzzy"
+        },
+        {
+          "title": "royal theft",
+          "author": "a c harrah",
+          "source": "fuzzy"
+        },
+        {
+          "title": "damascus road",
+          "author": "ellen c maze",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q034",
+    "query_text": "elizabeth",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "intersect",
+    "author": "elizabeth o roark",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "elizabeth and after",
+          "author": "matt cohen",
+          "source": "completion"
+        },
+        {
+          "title": "elizabeth and her german garden",
+          "author": "elizabeth von arnim",
+          "source": "completion"
+        },
+        {
+          "title": "elizabeth and jessica run away",
+          "author": "francine pascal creator",
+          "source": "completion"
+        },
+        {
+          "title": "elizabeth and mary cousins rivals queens",
+          "author": "jane dunn",
+          "source": "completion"
+        },
+        {
+          "title": "elizabeth i red rose of the house of tudor england 1544",
+          "author": "kathryn lasky",
+          "source": "completion"
+        },
+        {
+          "title": "elizabeth is missing",
+          "author": "emma healey",
+          "source": "completion"
+        },
+        {
+          "title": "elizabeth meets her hero",
+          "author": "francine pascal creator",
+          "source": "completion"
+        },
+        {
+          "title": "elizabeth s broken arm",
+          "author": "francine pascal creator",
+          "source": "completion"
+        },
+        {
+          "title": "elizabeth s horseback adventure",
+          "author": "francine pascal",
+          "source": "completion"
+        },
+        {
+          "title": "elizabeth s piano lessons",
+          "author": "francine pascal molly",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q035",
+    "query_text": "elspeth",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "the flame trees of thika memories of an african childhood",
+    "author": "elspeth huxley",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the flame trees of thika memories of an african childhood",
+          "author": "elspeth huxley",
+          "source": "completion"
+        },
+        {
+          "title": "the light heart",
+          "author": "elswyth thane",
+          "source": "fuzzy"
+        },
+        {
+          "title": "remember today",
+          "author": "elswyth thane",
+          "source": "fuzzy"
+        },
+        {
+          "title": "yankee stranger",
+          "author": "elswyth thane",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q036",
+    "query_text": "julia",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "the duke and i",
+    "author": "julia quinn",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "julia s story",
+          "author": "ruth elwin harris",
+          "source": "completion"
+        },
+        {
+          "title": "julian",
+          "author": "gore vidal",
+          "source": "completion"
+        },
+        {
+          "title": "undercover with the hottie",
+          "author": "juli alexander",
+          "source": "completion"
+        },
+        {
+          "title": "a glamorously unglamorous life",
+          "author": "julia albain",
+          "source": "completion"
+        },
+        {
+          "title": "in the time of the butterflies",
+          "author": "julia alvarez",
+          "source": "completion"
+        },
+        {
+          "title": "the legacy of luna the story of a tree a woman and the struggle to save the redwoods",
+          "author": "julia butterfly hill",
+          "source": "completion"
+        },
+        {
+          "title": "the artist s way a spiritual path to higher creativity",
+          "author": "julia cameron",
+          "source": "completion"
+        },
+        {
+          "title": "my life in france",
+          "author": "julia child alex",
+          "source": "completion"
+        },
+        {
+          "title": "mastering the art of french cooking",
+          "author": "julia child simone",
+          "source": "completion"
+        },
+        {
+          "title": "coexist",
+          "author": "julia crane",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q037",
+    "query_text": "john",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "the other side of dawn",
+    "author": "john marsden",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "john",
+          "author": "cynthia lennon julian",
+          "source": "completion"
+        },
+        {
+          "title": "john 3 16",
+          "author": "nancy moser",
+          "source": "completion"
+        },
+        {
+          "title": "john adams",
+          "author": "david mccullough",
+          "source": "completion"
+        },
+        {
+          "title": "john barleycorn alcoholic memoirs",
+          "author": "jack london john",
+          "source": "completion"
+        },
+        {
+          "title": "john boorman s the emerald forest",
+          "author": "robert holdstock john",
+          "source": "completion"
+        },
+        {
+          "title": "john brown",
+          "author": "w e b",
+          "source": "completion"
+        },
+        {
+          "title": "john brown rose and the midnight cat",
+          "author": "jenny wagner ron",
+          "source": "completion"
+        },
+        {
+          "title": "john brown s body",
+          "author": "stephen vincent ben",
+          "source": "completion"
+        },
+        {
+          "title": "john caldigate",
+          "author": "anthony trollope n",
+          "source": "completion"
+        },
+        {
+          "title": "john deakin photographs",
+          "author": "john deakin robin",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q038",
+    "query_text": "thomas",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "intellectuals and race",
+    "author": "thomas sowell",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "thomas",
+          "author": "robin jarvis",
+          "source": "completion"
+        },
+        {
+          "title": "thomas gainsborough artist of england",
+          "author": "sally glendinning",
+          "source": "completion"
+        },
+        {
+          "title": "thomas hardy tess of the d urbervilles the mayor of casterbridge far from the madding crowd",
+          "author": "thomas hardy",
+          "source": "completion"
+        },
+        {
+          "title": "thomas s choice",
+          "author": "tina folsom",
+          "source": "completion"
+        },
+        {
+          "title": "thomas s first memory of the flare",
+          "author": "james dashner",
+          "source": "completion"
+        },
+        {
+          "title": "thomas snowsuit",
+          "author": "robert munsch michael",
+          "source": "completion"
+        },
+        {
+          "title": "thomas the obscure",
+          "author": "maurice blanchot robert",
+          "source": "completion"
+        },
+        {
+          "title": "thomas the rhymer",
+          "author": "ellen kushner",
+          "source": "completion"
+        },
+        {
+          "title": "an introduction to the policy process theories concepts and models of public policy making",
+          "author": "thomas a birkland",
+          "source": "completion"
+        },
+        {
+          "title": "a grey moon over china",
+          "author": "thomas a day",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q039",
+    "query_text": "andrea",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "the stuart vampire",
+    "author": "andrea zuvich",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "open",
+          "author": "andre agassi j",
+          "source": "completion"
+        },
+        {
+          "title": "the last list of miss judith kratt",
+          "author": "andrea bobotis",
+          "source": "completion"
+        },
+        {
+          "title": "born under a million shadows",
+          "author": "andrea busfield",
+          "source": "completion"
+        },
+        {
+          "title": "the revolution of the moon",
+          "author": "andrea camilleri stephen",
+          "source": "completion"
+        },
+        {
+          "title": "marika",
+          "author": "andrea cheng",
+          "source": "completion"
+        },
+        {
+          "title": "the year of the book",
+          "author": "andrea cheng abigail",
+          "source": "completion"
+        },
+        {
+          "title": "nightshade",
+          "author": "andrea cremer",
+          "source": "completion"
+        },
+        {
+          "title": "invisibility",
+          "author": "andrea cremer david",
+          "source": "completion"
+        },
+        {
+          "title": "a venetian affair a true tale of forbidden love in the 18th century",
+          "author": "andrea di robilant",
+          "source": "completion"
+        },
+        {
+          "title": "pornography men possessing women",
+          "author": "andrea dworkin",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q040",
+    "query_text": "aaron",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "we are the monsters",
+    "author": "aaron polson",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "aaron",
+          "author": "j p barna",
+          "source": "completion"
+        },
+        {
+          "title": "aaron s story",
+          "author": "mason dodd",
+          "source": "completion"
+        },
+        {
+          "title": "stephen colbert and philosophy i am philosophy",
+          "author": "aaron allen schiller",
+          "source": "completion"
+        },
+        {
+          "title": "wraith squadron",
+          "author": "aaron allston",
+          "source": "completion"
+        },
+        {
+          "title": "voluntary",
+          "author": "aaron b powell",
+          "source": "completion"
+        },
+        {
+          "title": "in china with green day",
+          "author": "aaron cometbus",
+          "source": "completion"
+        },
+        {
+          "title": "what to listen for in music",
+          "author": "aaron copland alan",
+          "source": "completion"
+        },
+        {
+          "title": "weapon of choice",
+          "author": "aaron d este",
+          "source": "completion"
+        },
+        {
+          "title": "night lords the omnibus",
+          "author": "aaron dembski bowden",
+          "source": "completion"
+        },
+        {
+          "title": "what we saw",
+          "author": "aaron hartzler",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q041",
+    "query_text": "rug",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "it was time to turn back a short story",
+    "author": "rugranger",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "rugrats in paris storybook",
+          "author": "kiki thorpe",
+          "source": "completion"
+        },
+        {
+          "title": "rugrats in paris the movie",
+          "author": "cathy east dubowski",
+          "source": "completion"
+        },
+        {
+          "title": "erimentha parker s to do list a bullying story",
+          "author": "rugranger",
+          "source": "completion"
+        },
+        {
+          "title": "the rug merchant",
+          "author": "meg mullins",
+          "source": "fuzzy"
+        },
+        {
+          "title": "run baby run",
+          "author": "nicky cruz jamie",
+          "source": "fuzzy"
+        },
+        {
+          "title": "cut run",
+          "author": "madeleine urban abigail",
+          "source": "fuzzy"
+        },
+        {
+          "title": "cut and run",
+          "author": "mary burton",
+          "source": "fuzzy"
+        },
+        {
+          "title": "run mummy run",
+          "author": "cathy glass",
+          "source": "fuzzy"
+        },
+        {
+          "title": "run",
+          "author": "ann patchett",
+          "source": "fuzzy"
+        },
+        {
+          "title": "rua",
+          "author": "miranda kavi",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q042",
+    "query_text": "andy",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "traitor",
+    "author": "andy mcnab",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "andy and the alien",
+          "author": "francine pascal creator",
+          "source": "completion"
+        },
+        {
+          "title": "andy goldsworthy a collaboration with nature",
+          "author": "andy goldsworthy",
+          "source": "completion"
+        },
+        {
+          "title": "the noticer sometimes all a person needs is a little perspective",
+          "author": "andy andrews",
+          "source": "completion"
+        },
+        {
+          "title": "the value of life",
+          "author": "andy crowson",
+          "source": "completion"
+        },
+        {
+          "title": "robin williams a biography",
+          "author": "andy dougan",
+          "source": "completion"
+        },
+        {
+          "title": "the 26 storey treehouse",
+          "author": "andy griffiths terry",
+          "source": "completion"
+        },
+        {
+          "title": "disney s darkwing duck the darkest night",
+          "author": "andy helfer",
+          "source": "completion"
+        },
+        {
+          "title": "the pragmatic programmer from journeyman to master",
+          "author": "andy hunt dave",
+          "source": "completion"
+        },
+        {
+          "title": "the pioni affair",
+          "author": "andy james",
+          "source": "completion"
+        },
+        {
+          "title": "savate the deadly old boots kicking art from france and bartitsu the martial arts used by sherlock holmes steam punk edition historical european martial arts book 1",
+          "author": "andy kunz kenneth",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q043",
+    "query_text": "mosetta m",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "the magic of laven rock",
+    "author": "mosetta m penick phillips cermak",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the magic of laven rock",
+          "author": "mosetta m penick",
+          "source": "completion"
+        },
+        {
+          "title": "loretta lynn coal miner s daughter",
+          "author": "loretta lynn george",
+          "source": "fuzzy"
+        },
+        {
+          "title": "m lusine",
+          "author": "sarah monette",
+          "source": "fuzzy"
+        },
+        {
+          "title": "simple truths a self help guide to help you find your own success peace and happiness",
+          "author": "thomas m coletta",
+          "source": "fuzzy"
+        },
+        {
+          "title": "moreta dragonlady of pern",
+          "author": "anne mccaffrey",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the penderwicks at point mouette",
+          "author": "jeanne birdsall",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the last hellion",
+          "author": "loretta chase",
+          "source": "fuzzy"
+        },
+        {
+          "title": "lord of scoundrels",
+          "author": "loretta chase",
+          "source": "fuzzy"
+        },
+        {
+          "title": "being the bad boy s victim",
+          "author": "claire monette",
+          "source": "fuzzy"
+        },
+        {
+          "title": "are men the weaker sex",
+          "author": "josette sona",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q044",
+    "query_text": "jan",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "a common life the wedding story",
+    "author": "jan karon",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "jan karon s mitford cookbook and kitchen reader recipes from mitford cooks favorite tales from mitford books",
+          "author": "jan karon martha",
+          "source": "completion"
+        },
+        {
+          "title": "jane",
+          "author": "april lindner",
+          "source": "completion"
+        },
+        {
+          "title": "jane and the man of the cloth",
+          "author": "stephanie barron",
+          "source": "completion"
+        },
+        {
+          "title": "jane and the wandering eye",
+          "author": "stephanie barron",
+          "source": "completion"
+        },
+        {
+          "title": "jane austen and the archangel",
+          "author": "pamela aares",
+          "source": "completion"
+        },
+        {
+          "title": "jane austen fashion",
+          "author": "penelope byrde",
+          "source": "completion"
+        },
+        {
+          "title": "jane austen s letters",
+          "author": "jane austen deirdre",
+          "source": "completion"
+        },
+        {
+          "title": "jane austen the complete collection",
+          "author": "jane austen",
+          "source": "completion"
+        },
+        {
+          "title": "jane doe and the cradle of all worlds",
+          "author": "jeremy lachlan",
+          "source": "completion"
+        },
+        {
+          "title": "jane eyre",
+          "author": "charlotte bront michael",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q045",
+    "query_text": "washington",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "the legend of sleepy hollow",
+    "author": "washington irving",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "washington goes to war",
+          "author": "david brinkley",
+          "source": "completion"
+        },
+        {
+          "title": "washington s crossing",
+          "author": "david hackett fischer",
+          "source": "completion"
+        },
+        {
+          "title": "washington square",
+          "author": "henry james michael",
+          "source": "completion"
+        },
+        {
+          "title": "washington the indispensable man",
+          "author": "james thomas flexner",
+          "source": "completion"
+        },
+        {
+          "title": "the legend of sleepy hollow",
+          "author": "washington irving",
+          "source": "completion"
+        },
+        {
+          "title": "the legend of sleepy hollow and other stories",
+          "author": "washington irving geoffrey",
+          "source": "completion"
+        },
+        {
+          "title": "george washington s rules of civility and decent behavior and other writings",
+          "author": "george washington",
+          "source": "fuzzy"
+        },
+        {
+          "title": "charcoal tears",
+          "author": "jane washington",
+          "source": "fuzzy"
+        },
+        {
+          "title": "legend of sleepy hollow and rip van winkle",
+          "author": "washington irving",
+          "source": "fuzzy"
+        },
+        {
+          "title": "being george washington",
+          "author": "glenn beck",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q046",
+    "query_text": "bras",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "henry miller the paris years",
+    "author": "brassa",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "bras broomsticks",
+          "author": "sarah mlynowski",
+          "source": "completion"
+        },
+        {
+          "title": "brass man",
+          "author": "neal asher",
+          "source": "completion"
+        },
+        {
+          "title": "henry miller the paris years",
+          "author": "brassa timothy bent",
+          "source": "completion"
+        },
+        {
+          "title": "brat pack",
+          "author": "rick veitch",
+          "source": "fuzzy"
+        },
+        {
+          "title": "baat umar bhar ki hai",
+          "author": "umera ahmed",
+          "source": "fuzzy"
+        },
+        {
+          "title": "carl barks greatest ducktales stories volume 1",
+          "author": "carl barks walt",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the brass verdict",
+          "author": "michael connelly",
+          "source": "fuzzy"
+        },
+        {
+          "title": "behind the bars",
+          "author": "brittainy c cherry",
+          "source": "fuzzy"
+        },
+        {
+          "title": "stars and bars",
+          "author": "william boyd",
+          "source": "fuzzy"
+        },
+        {
+          "title": "a great and terrible beauty",
+          "author": "libba bray",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q047",
+    "query_text": "maria",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "the violin of auschwitz",
+    "author": "maria ngels anglada",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "mariana",
+          "author": "susanna kearsley",
+          "source": "completion"
+        },
+        {
+          "title": "lucrezia borgia",
+          "author": "maria bellonci bernard",
+          "source": "completion"
+        },
+        {
+          "title": "will",
+          "author": "maria boyd",
+          "source": "completion"
+        },
+        {
+          "title": "little house in brookfield",
+          "author": "maria d wilkes",
+          "source": "completion"
+        },
+        {
+          "title": "magonia",
+          "author": "maria dahvana headley",
+          "source": "completion"
+        },
+        {
+          "title": "the ten thousand things",
+          "author": "maria dermo t",
+          "source": "completion"
+        },
+        {
+          "title": "diary of saint maria faustina kowalska divine mercy in my soul",
+          "author": "maria faustyna kowalska",
+          "source": "completion"
+        },
+        {
+          "title": "reparation a spiritual journey",
+          "author": "maria hall",
+          "source": "completion"
+        },
+        {
+          "title": "unravelled life as a mother",
+          "author": "maria housden",
+          "source": "completion"
+        },
+        {
+          "title": "freelancing and outsourcing how to outsource excessive workload",
+          "author": "maria johnsen",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q048",
+    "query_text": "scott",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "a developed prophetic perspective a fresh look at prophetic operations from a kingdom viewpoint",
+    "author": "scott webster",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "scott pilgrim volume 1 scott pilgrim s precious little life",
+          "author": "bryan lee o",
+          "source": "completion"
+        },
+        {
+          "title": "scott pilgrim volume 2 scott pilgrim vs the world",
+          "author": "bryan lee o",
+          "source": "completion"
+        },
+        {
+          "title": "scott pilgrim volume 3 scott pilgrim the infinite sadness",
+          "author": "bryan lee o",
+          "source": "completion"
+        },
+        {
+          "title": "scott pilgrim volume 4 scott pilgrim gets it together",
+          "author": "bryan lee o",
+          "source": "completion"
+        },
+        {
+          "title": "scott pilgrim volume 5 scott pilgrim vs the universe",
+          "author": "bryan lee o",
+          "source": "completion"
+        },
+        {
+          "title": "scott pilgrim volume 6 scott pilgrim s finest hour",
+          "author": "bryan lee o",
+          "source": "completion"
+        },
+        {
+          "title": "the book of jerusha rising",
+          "author": "scott a mckenzie",
+          "source": "completion"
+        },
+        {
+          "title": "god s debris a thought experiment",
+          "author": "scott adams",
+          "source": "completion"
+        },
+        {
+          "title": "hellboy weird tales vol 2",
+          "author": "scott allie john",
+          "source": "completion"
+        },
+        {
+          "title": "triage",
+          "author": "scott anderson",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q049",
+    "query_text": "renee",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "sweet thing",
+    "author": "renee carlino",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "stumbling toward faith",
+          "author": "renee altson",
+          "source": "completion"
+        },
+        {
+          "title": "shadow mountain a memoir of wolves a woman and the wild",
+          "author": "renee askins",
+          "source": "completion"
+        },
+        {
+          "title": "super intelligence getting ahead with super intelligence",
+          "author": "renee b williams",
+          "source": "completion"
+        },
+        {
+          "title": "sweet thing",
+          "author": "renee carlino",
+          "source": "completion"
+        },
+        {
+          "title": "his eyes",
+          "author": "renee carter",
+          "source": "completion"
+        },
+        {
+          "title": "sensuality",
+          "author": "renee denise austin",
+          "source": "completion"
+        },
+        {
+          "title": "more than water",
+          "author": "renee ericson",
+          "source": "completion"
+        },
+        {
+          "title": "nephilim genesis of evil",
+          "author": "renee pawlish",
+          "source": "completion"
+        },
+        {
+          "title": "purpose for the pain",
+          "author": "renee yohe",
+          "source": "completion"
+        },
+        {
+          "title": "reese chronological bible kjv",
+          "author": "edward reese",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q050",
+    "query_text": "maya",
+    "query_type": "PREFIX_AUTHOR",
+    "title": "the collected autobiographies of maya angelou",
+    "author": "maya angelou",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "maya",
+          "author": "jostein gaarder james",
+          "source": "completion"
+        },
+        {
+          "title": "maya of the inbetween",
+          "author": "sita bennett",
+          "source": "completion"
+        },
+        {
+          "title": "maya s notebook",
+          "author": "isabel allende anne",
+          "source": "completion"
+        },
+        {
+          "title": "mayada daughter of iraq one woman s survival under saddam hussein",
+          "author": "jean sasson",
+          "source": "completion"
+        },
+        {
+          "title": "i know why the caged bird sings",
+          "author": "maya angelou",
+          "source": "completion"
+        },
+        {
+          "title": "rush",
+          "author": "maya banks",
+          "source": "completion"
+        },
+        {
+          "title": "put it down",
+          "author": "maya claridge",
+          "source": "completion"
+        },
+        {
+          "title": "locked",
+          "author": "maya cross",
+          "source": "completion"
+        },
+        {
+          "title": "divine horsemen the living gods of haiti",
+          "author": "maya deren",
+          "source": "completion"
+        },
+        {
+          "title": "essential deren collected writings on film",
+          "author": "maya deren bruce",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q051",
+    "query_text": "ghost",
+    "query_type": "PARTIAL",
+    "title": "the ghost files",
+    "author": "apryl baker",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "ghost",
+          "author": "jason reynolds",
+          "source": "completion"
+        },
+        {
+          "title": "ghost cat",
+          "author": "kevan atteberry",
+          "source": "completion"
+        },
+        {
+          "title": "ghost country",
+          "author": "patrick lee",
+          "source": "completion"
+        },
+        {
+          "title": "ghost dog secrets",
+          "author": "peg kehret",
+          "source": "completion"
+        },
+        {
+          "title": "ghost girl",
+          "author": "torey l hayden",
+          "source": "completion"
+        },
+        {
+          "title": "ghost hand",
+          "author": "ripley patton",
+          "source": "completion"
+        },
+        {
+          "title": "ghost hold",
+          "author": "ripley patton",
+          "source": "completion"
+        },
+        {
+          "title": "ghost hunter",
+          "author": "michelle paver",
+          "source": "completion"
+        },
+        {
+          "title": "ghost light",
+          "author": "joseph o connor",
+          "source": "completion"
+        },
+        {
+          "title": "ghost rider",
+          "author": "bonnie bryant",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q052",
+    "query_text": "princess x",
+    "query_type": "PARTIAL",
+    "title": "i am princess x",
+    "author": "cherie priest",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "clockwork angel clockwork prince clockwork princess",
+          "author": "cassandra clare",
+          "source": "fuzzy"
+        },
+        {
+          "title": "i am princess x",
+          "author": "cherie priest",
+          "source": "fuzzy"
+        },
+        {
+          "title": "clockwork princess",
+          "author": "cassandra clare",
+          "source": "fuzzy"
+        },
+        {
+          "title": "princess academy",
+          "author": "shannon hale",
+          "source": "fuzzy"
+        },
+        {
+          "title": "poison princess",
+          "author": "kresley cole",
+          "source": "fuzzy"
+        },
+        {
+          "title": "paper princess",
+          "author": "erin watt pseudonym",
+          "source": "fuzzy"
+        },
+        {
+          "title": "forever princess",
+          "author": "meg cabot",
+          "source": "fuzzy"
+        },
+        {
+          "title": "princess ben",
+          "author": "catherine gilbert murdock",
+          "source": "fuzzy"
+        },
+        {
+          "title": "ash princess",
+          "author": "laura sebastian",
+          "source": "fuzzy"
+        },
+        {
+          "title": "undercover princess",
+          "author": "connie glynn",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q053",
+    "query_text": "river",
+    "query_type": "PARTIAL",
+    "title": "a river moves forward",
+    "author": "selena haskins",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "river cast",
+          "author": "samantha young",
+          "source": "completion"
+        },
+        {
+          "title": "river cottage every day",
+          "author": "hugh fearnley whittingstall",
+          "source": "completion"
+        },
+        {
+          "title": "river cottage veg every day",
+          "author": "hugh fearnley whittingstall",
+          "source": "completion"
+        },
+        {
+          "title": "river god",
+          "author": "wilbur smith",
+          "source": "completion"
+        },
+        {
+          "title": "river horse",
+          "author": "william least heat",
+          "source": "completion"
+        },
+        {
+          "title": "river marked",
+          "author": "patricia briggs",
+          "source": "completion"
+        },
+        {
+          "title": "river of blue fire",
+          "author": "tad williams",
+          "source": "completion"
+        },
+        {
+          "title": "river of darkness francisco orellana s legendary voyage of death and discovery down the amazon",
+          "author": "buddy levy",
+          "source": "completion"
+        },
+        {
+          "title": "river of earth",
+          "author": "james still",
+          "source": "completion"
+        },
+        {
+          "title": "river of fire",
+          "author": "erin hunter",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q054",
+    "query_text": "s stroke",
+    "query_type": "PARTIAL",
+    "title": "fortune s stroke",
+    "author": "eric flint",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "fortune s stroke",
+          "author": "eric flint david",
+          "source": "fuzzy"
+        },
+        {
+          "title": "halo first strike",
+          "author": "eric s nylund",
+          "source": "fuzzy"
+        },
+        {
+          "title": "heat stroke",
+          "author": "rachel caine",
+          "source": "fuzzy"
+        },
+        {
+          "title": "stryker s war",
+          "author": "josh hayes jason",
+          "source": "fuzzy"
+        },
+        {
+          "title": "stoker s shadow",
+          "author": "paul butler",
+          "source": "fuzzy"
+        },
+        {
+          "title": "ptolemy s gate",
+          "author": "jonathan stroud",
+          "source": "fuzzy"
+        },
+        {
+          "title": "saturn s children",
+          "author": "charles stross",
+          "source": "fuzzy"
+        },
+        {
+          "title": "stroke of midnight",
+          "author": "olivia drake",
+          "source": "fuzzy"
+        },
+        {
+          "title": "past sins",
+          "author": "pen stroke",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the golem s eye",
+          "author": "jonathan stroud",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q055",
+    "query_text": "the illustrated",
+    "query_type": "PARTIAL",
+    "title": "no ordinary genius the illustrated richard feynman",
+    "author": "richard p feynman",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the illustrated a brief history of time the universe in a nutshell",
+          "author": "stephen hawking",
+          "source": "completion"
+        },
+        {
+          "title": "the illustrated collector s guide to kate bush",
+          "author": "robert godwin",
+          "source": "completion"
+        },
+        {
+          "title": "the illustrated man",
+          "author": "ray bradbury",
+          "source": "completion"
+        },
+        {
+          "title": "the illustrated mum",
+          "author": "jacqueline wilson nick",
+          "source": "completion"
+        },
+        {
+          "title": "the illustrated vivian stanshall a fairytale of grimm art",
+          "author": "ki longfellow ben",
+          "source": "completion"
+        },
+        {
+          "title": "the illustrated world of mortal engines",
+          "author": "philip reeve jeremy",
+          "source": "completion"
+        },
+        {
+          "title": "the new best recipe",
+          "author": "cook s illustrated",
+          "source": "fuzzy"
+        },
+        {
+          "title": "romeo x juliet omnibus",
+          "author": "com illustrated by",
+          "source": "fuzzy"
+        },
+        {
+          "title": "illustrated true crime",
+          "author": "nick yapp",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the original illustrated sherlock holmes",
+          "author": "arthur conan doyle",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q056",
+    "query_text": "in",
+    "query_type": "PARTIAL",
+    "title": "an ember in the ashes",
+    "author": "sabaa tahir",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "i never promised you a rose garden",
+          "author": "hannah green joanne",
+          "source": "completion"
+        },
+        {
+          "title": "in a child s name the legacy of a mother s murder",
+          "author": "peter maas",
+          "source": "completion"
+        },
+        {
+          "title": "in a cold sweat",
+          "author": "roy glenn",
+          "source": "completion"
+        },
+        {
+          "title": "in a dark dark wood",
+          "author": "ruth ware",
+          "source": "completion"
+        },
+        {
+          "title": "in a glass grimmly",
+          "author": "adam gidwitz",
+          "source": "completion"
+        },
+        {
+          "title": "in a grove",
+          "author": "ry nosuke akutagawa",
+          "source": "completion"
+        },
+        {
+          "title": "in a heartbeat",
+          "author": "loretta ellsworth",
+          "source": "completion"
+        },
+        {
+          "title": "in a sunburned country",
+          "author": "bill bryson",
+          "source": "completion"
+        },
+        {
+          "title": "in an absent dream",
+          "author": "seanan mcguire",
+          "source": "completion"
+        },
+        {
+          "title": "in an antique land",
+          "author": "amitav ghosh",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q057",
+    "query_text": "ahead in",
+    "query_type": "PARTIAL",
+    "title": "the rules of work the unspoken truth about getting ahead in business",
+    "author": "richard templar",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "thea stilton and the mystery in paris",
+          "author": "thea stilton",
+          "source": "fuzzy"
+        },
+        {
+          "title": "third grave dead ahead",
+          "author": "darynda jones",
+          "source": "fuzzy"
+        },
+        {
+          "title": "how to fall in love",
+          "author": "cecelia ahern",
+          "source": "fuzzy"
+        },
+        {
+          "title": "in blissful hell",
+          "author": "humayun ahmed mohammad",
+          "source": "fuzzy"
+        },
+        {
+          "title": "succubus heat",
+          "author": "richelle mead",
+          "source": "fuzzy"
+        },
+        {
+          "title": "head in the clouds",
+          "author": "karen witemeyer",
+          "source": "fuzzy"
+        },
+        {
+          "title": "barefoot in the head",
+          "author": "brian w aldiss",
+          "source": "fuzzy"
+        },
+        {
+          "title": "shadow of a dead star",
+          "author": "michael shean",
+          "source": "fuzzy"
+        },
+        {
+          "title": "head on",
+          "author": "john scalzi",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the bride s mirror a tale of life in delhi a hundred years ago",
+          "author": "deputy nazir ahmad",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q058",
+    "query_text": "a monastery",
+    "query_type": "PARTIAL",
+    "title": "the book of mirdad the strange story of a monastery which was once called the ark",
+    "author": "mikhail naimy",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "a monster calls",
+          "author": "patrick ness",
+          "source": "fuzzy"
+        },
+        {
+          "title": "monsters",
+          "author": "emerald fennell",
+          "source": "fuzzy"
+        },
+        {
+          "title": "mastery",
+          "author": "robert greene",
+          "source": "fuzzy"
+        },
+        {
+          "title": "monster",
+          "author": "frank e peretti",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the genesee diary report from a trappist monastery",
+          "author": "henri j m",
+          "source": "fuzzy"
+        },
+        {
+          "title": "invisible monsters",
+          "author": "chuck palahniuk",
+          "source": "fuzzy"
+        },
+        {
+          "title": "monsters past",
+          "author": "laney cairo",
+          "source": "fuzzy"
+        },
+        {
+          "title": "gods monsters",
+          "author": "lyn benedict",
+          "source": "fuzzy"
+        },
+        {
+          "title": "creating monsters",
+          "author": "christopher rankin",
+          "source": "fuzzy"
+        },
+        {
+          "title": "gogo monster",
+          "author": "taiyo matsumoto",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q059",
+    "query_text": "vol",
+    "query_type": "PARTIAL",
+    "title": "yotsuba vol 2",
+    "author": "kiyohiko azuma",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "volcrian s hunt",
+          "author": "t l shreffler",
+          "source": "completion"
+        },
+        {
+          "title": "volition",
+          "author": "lily paradis",
+          "source": "completion"
+        },
+        {
+          "title": "volpone",
+          "author": "ben jonson robert",
+          "source": "completion"
+        },
+        {
+          "title": "voltaire s bastards the dictatorship of reason in the west",
+          "author": "john ralston saul",
+          "source": "completion"
+        },
+        {
+          "title": "volume a from antiquity to 1500 volume of mckay a history of world societies",
+          "author": "john p mckay",
+          "source": "completion"
+        },
+        {
+          "title": "voluntary",
+          "author": "aaron b powell",
+          "source": "completion"
+        },
+        {
+          "title": "voluntary madness",
+          "author": "vicki hendricks",
+          "source": "completion"
+        },
+        {
+          "title": "voluntary servitude poems",
+          "author": "mark wunderlich",
+          "source": "completion"
+        },
+        {
+          "title": "voluptuous vindication",
+          "author": "rose wynters",
+          "source": "completion"
+        },
+        {
+          "title": "unknown revolution",
+          "author": "voline",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q060",
+    "query_text": "chance",
+    "query_type": "PARTIAL",
+    "title": "second chance pass",
+    "author": "robyn carr",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "chance and necessity",
+          "author": "jacques monod",
+          "source": "completion"
+        },
+        {
+          "title": "chance for home",
+          "author": "traci hunter abramson",
+          "source": "completion"
+        },
+        {
+          "title": "chance fortune and the outlaws",
+          "author": "shane berryhill",
+          "source": "completion"
+        },
+        {
+          "title": "chance fortune in the shadow zone",
+          "author": "shane berryhill",
+          "source": "completion"
+        },
+        {
+          "title": "chance of a lifetime",
+          "author": "joey w hill",
+          "source": "completion"
+        },
+        {
+          "title": "chances",
+          "author": "jackie collins",
+          "source": "completion"
+        },
+        {
+          "title": "the riverside chaucer",
+          "author": "geoffrey chaucer larry",
+          "source": "fuzzy"
+        },
+        {
+          "title": "one chance",
+          "author": "daniel patterson",
+          "source": "fuzzy"
+        },
+        {
+          "title": "second chance",
+          "author": "heather brewer z",
+          "source": "fuzzy"
+        },
+        {
+          "title": "2nd chance",
+          "author": "james patterson andrew",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q061",
+    "query_text": "club",
+    "query_type": "PARTIAL",
+    "title": "the sunday philosophy club",
+    "author": "alexander mccall smith",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "club dead",
+          "author": "charlaine harris",
+          "source": "completion"
+        },
+        {
+          "title": "club shadowlands",
+          "author": "cherise sinclair",
+          "source": "completion"
+        },
+        {
+          "title": "club vampyre",
+          "author": "laurell k hamilton",
+          "source": "completion"
+        },
+        {
+          "title": "the crab flower club",
+          "author": "cao xueqin david",
+          "source": "fuzzy"
+        },
+        {
+          "title": "fight club",
+          "author": "chuck palahniuk",
+          "source": "fuzzy"
+        },
+        {
+          "title": "bite club",
+          "author": "rachel caine",
+          "source": "fuzzy"
+        },
+        {
+          "title": "geography club",
+          "author": "brent hartinger",
+          "source": "fuzzy"
+        },
+        {
+          "title": "cemetery club",
+          "author": "j g faherty",
+          "source": "fuzzy"
+        },
+        {
+          "title": "coot club",
+          "author": "arthur ransome",
+          "source": "fuzzy"
+        },
+        {
+          "title": "inventory 16 films featuring manic pixie dream girls 10 great songs nearly ruined by saxophone and 100 more obsessively specific pop culture lists",
+          "author": "a v club",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q062",
+    "query_text": "lights",
+    "query_type": "PARTIAL",
+    "title": "under the lights",
+    "author": "abbi glines",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "lights of polaris",
+          "author": "melodie ramone",
+          "source": "completion"
+        },
+        {
+          "title": "lights on the sea",
+          "author": "miquel reina catherine",
+          "source": "completion"
+        },
+        {
+          "title": "lights out in wonderland",
+          "author": "d b c",
+          "source": "completion"
+        },
+        {
+          "title": "lights to my siren",
+          "author": "lani lynn vale",
+          "source": "completion"
+        },
+        {
+          "title": "lightsabers",
+          "author": "kevin j anderson",
+          "source": "completion"
+        },
+        {
+          "title": "night light",
+          "author": "terri blackstock",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the upside of falling",
+          "author": "alex light",
+          "source": "fuzzy"
+        },
+        {
+          "title": "night flight",
+          "author": "antoine de saint",
+          "source": "fuzzy"
+        },
+        {
+          "title": "fight and flight",
+          "author": "scott meyer",
+          "source": "fuzzy"
+        },
+        {
+          "title": "might is right",
+          "author": "ragnar redbeard",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q063",
+    "query_text": "bundle",
+    "query_type": "PARTIAL",
+    "title": "providence trilogy bundle",
+    "author": "jamie mcguire",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "hot rod hundley you gotta love it baby",
+          "author": "hot rod hundley",
+          "source": "fuzzy"
+        },
+        {
+          "title": "providence trilogy bundle",
+          "author": "jamie mcguire ginger",
+          "source": "fuzzy"
+        },
+        {
+          "title": "fatal storm the inside story of the tragic sydney hobart race",
+          "author": "rob mundle",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the study series bundle",
+          "author": "maria v snyder",
+          "source": "fuzzy"
+        },
+        {
+          "title": "bachelors of bear creek bundle",
+          "author": "lori wilde",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the highlander series 7 book bundle",
+          "author": "karen marie moning",
+          "source": "fuzzy"
+        },
+        {
+          "title": "uncle",
+          "author": "j p martin",
+          "source": "fuzzy"
+        },
+        {
+          "title": "always",
+          "author": "kindle alexander",
+          "source": "fuzzy"
+        },
+        {
+          "title": "texas pride",
+          "author": "kindle alexander",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the undiscovered hanakuso",
+          "author": "ben hundley",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q064",
+    "query_text": "dreamland chronicles",
+    "query_type": "PARTIAL",
+    "title": "the dreamland chronicles",
+    "author": "wm mark simmons",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the dreamland chronicles",
+          "author": "wm mark simmons",
+          "source": "fuzzy"
+        },
+        {
+          "title": "dreamland",
+          "author": "sarah dessen",
+          "source": "fuzzy"
+        },
+        {
+          "title": "dreamland burning",
+          "author": "jennifer latham",
+          "source": "fuzzy"
+        },
+        {
+          "title": "dreamland social club",
+          "author": "tara altebrando",
+          "source": "fuzzy"
+        },
+        {
+          "title": "agents of dreamland",
+          "author": "caitl n r",
+          "source": "fuzzy"
+        },
+        {
+          "title": "dreamlander",
+          "author": "k m weiland",
+          "source": "fuzzy"
+        },
+        {
+          "title": "dragonlance chronicles",
+          "author": "margaret weis tracy",
+          "source": "fuzzy"
+        },
+        {
+          "title": "burma chronicles",
+          "author": "guy delisle",
+          "source": "fuzzy"
+        },
+        {
+          "title": "downfall chronicles",
+          "author": "jonaxx",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the martian chronicles",
+          "author": "ray bradbury",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q065",
+    "query_text": "s",
+    "query_type": "PARTIAL",
+    "title": "zero s return",
+    "author": "sara king",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "s",
+          "author": "j j abrams",
+          "source": "completion"
+        },
+        {
+          "title": "saaye mein dhoop",
+          "author": "dushyant kumar",
+          "source": "completion"
+        },
+        {
+          "title": "sabbath s theater",
+          "author": "philip roth",
+          "source": "completion"
+        },
+        {
+          "title": "sabine s notebook",
+          "author": "nick bantock",
+          "source": "completion"
+        },
+        {
+          "title": "sabotage",
+          "author": "joe craig",
+          "source": "completion"
+        },
+        {
+          "title": "sabotaged",
+          "author": "margaret peterson haddix",
+          "source": "completion"
+        },
+        {
+          "title": "sabriel",
+          "author": "garth nix",
+          "source": "completion"
+        },
+        {
+          "title": "sabrina",
+          "author": "lori wick",
+          "source": "completion"
+        },
+        {
+          "title": "sabrina fair",
+          "author": "samuel taylor",
+          "source": "completion"
+        },
+        {
+          "title": "sacajawea",
+          "author": "anna lee waldo",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q066",
+    "query_text": "god",
+    "query_type": "PARTIAL",
+    "title": "under the eye of god",
+    "author": "david gerrold",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "go dog go",
+          "author": "p d eastman",
+          "source": "completion"
+        },
+        {
+          "title": "god a biography",
+          "author": "jack miles",
+          "source": "completion"
+        },
+        {
+          "title": "god a debate between a christian and an atheist",
+          "author": "william lane craig",
+          "source": "completion"
+        },
+        {
+          "title": "god and stephen hawking whose design is it anyway",
+          "author": "john c lennox",
+          "source": "completion"
+        },
+        {
+          "title": "god and the big bang 1st edition discovering harmony between science spirituality",
+          "author": "daniel c matt",
+          "source": "completion"
+        },
+        {
+          "title": "god and the state",
+          "author": "mikhail bakunin paul",
+          "source": "completion"
+        },
+        {
+          "title": "god at work your christian vocation in all of life",
+          "author": "gene edward veith",
+          "source": "completion"
+        },
+        {
+          "title": "god bless the gargoyles",
+          "author": "dav pilkey",
+          "source": "completion"
+        },
+        {
+          "title": "god bless you dr kevorkian",
+          "author": "kurt vonnegut jr",
+          "source": "completion"
+        },
+        {
+          "title": "god bless you mr rosewater",
+          "author": "kurt vonnegut jr",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q067",
+    "query_text": "don t",
+    "query_type": "PARTIAL",
+    "title": "nice girls don t date dead men",
+    "author": "molly harper",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "don t",
+          "author": "jack l pyke",
+          "source": "completion"
+        },
+        {
+          "title": "don t be afraid gringo",
+          "author": "elvia alvarado medea",
+          "source": "completion"
+        },
+        {
+          "title": "don t be envious",
+          "author": "darussalam",
+          "source": "completion"
+        },
+        {
+          "title": "don t become angry",
+          "author": "darussalam",
+          "source": "completion"
+        },
+        {
+          "title": "don t bet against me beating the odds against breast cancer and in life",
+          "author": "deanna favre angela",
+          "source": "completion"
+        },
+        {
+          "title": "don t bet on the prince contemporary feminist fairy tales in north america and england",
+          "author": "jack d zipes",
+          "source": "completion"
+        },
+        {
+          "title": "don t bite the sun",
+          "author": "tanith lee",
+          "source": "completion"
+        },
+        {
+          "title": "don t blink",
+          "author": "james patterson howard",
+          "source": "completion"
+        },
+        {
+          "title": "don t breathe a word",
+          "author": "jennifer mcmahon",
+          "source": "completion"
+        },
+        {
+          "title": "don t call me ishmael",
+          "author": "michael gerard bauer",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q068",
+    "query_text": "reason",
+    "query_type": "PARTIAL",
+    "title": "one good reason",
+    "author": "julie johnson",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "50 reasons people give for believing in a god",
+          "author": "guy p harrison",
+          "source": "completion"
+        },
+        {
+          "title": "52 reasons to hate my father",
+          "author": "jessica brody",
+          "source": "completion"
+        },
+        {
+          "title": "reason for existence",
+          "author": "richard botelho",
+          "source": "completion"
+        },
+        {
+          "title": "reason for hope a spiritual journey",
+          "author": "jane goodall phillip",
+          "source": "completion"
+        },
+        {
+          "title": "reason to breathe",
+          "author": "rebecca donovan",
+          "source": "completion"
+        },
+        {
+          "title": "reasonable doubt volume 1",
+          "author": "whitney g",
+          "source": "completion"
+        },
+        {
+          "title": "reasonable doubt volume 2",
+          "author": "whitney g",
+          "source": "completion"
+        },
+        {
+          "title": "reasonable doubt volume 3",
+          "author": "whitney g",
+          "source": "completion"
+        },
+        {
+          "title": "reasonable faith",
+          "author": "william lane craig",
+          "source": "completion"
+        },
+        {
+          "title": "reasons i fell for the funny fat friend",
+          "author": "cassie mae becca",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q069",
+    "query_text": "after man",
+    "query_type": "PARTIAL",
+    "title": "man after man an anthropology of the future",
+    "author": "dougal dixon",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "after many a summer dies the swan",
+          "author": "aldous huxley",
+          "source": "completion"
+        },
+        {
+          "title": "man after man an anthropology of the future",
+          "author": "dougal dixon philip",
+          "source": "fuzzy"
+        },
+        {
+          "title": "everything beautiful began after",
+          "author": "simon van booy",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the hollow man",
+          "author": "dan simmons",
+          "source": "fuzzy"
+        },
+        {
+          "title": "brass man",
+          "author": "neal asher",
+          "source": "fuzzy"
+        },
+        {
+          "title": "after the end",
+          "author": "amy plum",
+          "source": "fuzzy"
+        },
+        {
+          "title": "after ever after",
+          "author": "jordan sonnenblick",
+          "source": "fuzzy"
+        },
+        {
+          "title": "homo faber",
+          "author": "max frisch",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the fan man",
+          "author": "william kotzwinkle",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the mad man",
+          "author": "samuel r delany",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q070",
+    "query_text": "these",
+    "query_type": "PARTIAL",
+    "title": "rabbletown life in these united christian states of holy america",
+    "author": "randy attwood",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the sea",
+          "author": "john banville",
+          "source": "completion"
+        },
+        {
+          "title": "the sea house",
+          "author": "esther freud",
+          "source": "completion"
+        },
+        {
+          "title": "the sea of fertility",
+          "author": "yukio mishima michael",
+          "source": "completion"
+        },
+        {
+          "title": "the sea of monsters",
+          "author": "rick riordan",
+          "source": "completion"
+        },
+        {
+          "title": "the sea of monsters the graphic novel",
+          "author": "robert venditti adaptor",
+          "source": "completion"
+        },
+        {
+          "title": "the sea of skeleton voices poetry 7",
+          "author": "vanessa m chattman",
+          "source": "completion"
+        },
+        {
+          "title": "the sea of trolls",
+          "author": "nancy farmer",
+          "source": "completion"
+        },
+        {
+          "title": "the sea wolf",
+          "author": "jack london",
+          "source": "completion"
+        },
+        {
+          "title": "the seagull",
+          "author": "anton chekhov laurence",
+          "source": "completion"
+        },
+        {
+          "title": "the seahorse legacy",
+          "author": "serena chase",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q071",
+    "query_text": "1",
+    "query_type": "PARTIAL",
+    "title": "wizard rainbow s end 1",
+    "author": "corrie mitchell",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "1 2 1",
+          "author": "yu wo choi",
+          "source": "fuzzy"
+        },
+        {
+          "title": "chandrakanta 1",
+          "author": "babu devakinandan khatri",
+          "source": "fuzzy"
+        },
+        {
+          "title": "saga 1",
+          "author": "brian k vaughan",
+          "source": "fuzzy"
+        },
+        {
+          "title": "groot 1",
+          "author": "jeff loveness brian",
+          "source": "fuzzy"
+        },
+        {
+          "title": "grooks 1",
+          "author": "piet hein",
+          "source": "fuzzy"
+        },
+        {
+          "title": "power 1",
+          "author": "claire adams",
+          "source": "fuzzy"
+        },
+        {
+          "title": "claw 1",
+          "author": "lucian bane",
+          "source": "fuzzy"
+        },
+        {
+          "title": "anima 1",
+          "author": "natsumi mukai",
+          "source": "fuzzy"
+        },
+        {
+          "title": "deathworld 1",
+          "author": "harry harrison",
+          "source": "fuzzy"
+        },
+        {
+          "title": "rurouni kenshin vol 1 1 3",
+          "author": "nobuhiro watsuki kenichiro",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q072",
+    "query_text": "adversary",
+    "query_type": "PARTIAL",
+    "title": "the secret adversary",
+    "author": "agatha christie",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the adversary",
+          "author": "julian may",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the secret adversary",
+          "author": "agatha christie",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the death of the adversary",
+          "author": "hans keilson ivo",
+          "source": "fuzzy"
+        },
+        {
+          "title": "and then there were none the secret adversary towards zero n or m",
+          "author": "agatha christie",
+          "source": "fuzzy"
+        },
+        {
+          "title": "population one autism adversity and the will to succeed",
+          "author": "tyler mcnamer",
+          "source": "fuzzy"
+        },
+        {
+          "title": "adversity builds character an inspirational true life story of disability addiction and acceptance",
+          "author": "tom ufert",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q073",
+    "query_text": "natural",
+    "query_type": "PARTIAL",
+    "title": "coyote america a natural and supernatural history",
+    "author": "dan flores",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "natural body detox how to naturally cleanse and detox your body",
+          "author": "laura serio",
+          "source": "completion"
+        },
+        {
+          "title": "natural body scrubs at home exfoliates to make your skin smooth and soft",
+          "author": "megan coulter",
+          "source": "completion"
+        },
+        {
+          "title": "natural born angel",
+          "author": "scott speer",
+          "source": "completion"
+        },
+        {
+          "title": "natural born charmer",
+          "author": "susan elizabeth phillips",
+          "source": "completion"
+        },
+        {
+          "title": "natural disaster",
+          "author": "chris owen",
+          "source": "completion"
+        },
+        {
+          "title": "natural law",
+          "author": "joey w hill",
+          "source": "completion"
+        },
+        {
+          "title": "natural order",
+          "author": "brian francis",
+          "source": "completion"
+        },
+        {
+          "title": "naturalis historia naturgeschichte",
+          "author": "pliny the elder",
+          "source": "completion"
+        },
+        {
+          "title": "naturalizing epistemology",
+          "author": "hilary kornblith",
+          "source": "completion"
+        },
+        {
+          "title": "naturally charlie",
+          "author": "s l scott",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q074",
+    "query_text": "of",
+    "query_type": "PARTIAL",
+    "title": "the life and times of the heir and the keeper",
+    "author": "etta king",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "of beast and beauty",
+          "author": "stacey jay",
+          "source": "completion"
+        },
+        {
+          "title": "of bees and mist",
+          "author": "erick setiawan",
+          "source": "completion"
+        },
+        {
+          "title": "of beetles angels a boy s remarkable journey from a refugee camp to harvard",
+          "author": "mawi asgedom dave",
+          "source": "completion"
+        },
+        {
+          "title": "of course i love you till i find someone better",
+          "author": "durjoy datta maanvi",
+          "source": "completion"
+        },
+        {
+          "title": "of fire and stars",
+          "author": "audrey coulthurst",
+          "source": "completion"
+        },
+        {
+          "title": "of goodly parents",
+          "author": "h b moore",
+          "source": "completion"
+        },
+        {
+          "title": "of human bondage",
+          "author": "w somerset maugham",
+          "source": "completion"
+        },
+        {
+          "title": "of letting go",
+          "author": "le an lai",
+          "source": "completion"
+        },
+        {
+          "title": "of love and evil",
+          "author": "anne rice",
+          "source": "completion"
+        },
+        {
+          "title": "of love and other demons",
+          "author": "gabriel garc a",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q075",
+    "query_text": "red tent",
+    "query_type": "PARTIAL",
+    "title": "the red tent",
+    "author": "anita diamant",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the red tent",
+          "author": "anita diamant",
+          "source": "fuzzy"
+        },
+        {
+          "title": "stalking jack the hunt begins",
+          "author": "madison kent",
+          "source": "fuzzy"
+        },
+        {
+          "title": "ten days that shook the world",
+          "author": "john reed",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the junction boys how 10 days in hell with bear bryant forged a champion team",
+          "author": "jim dent gene",
+          "source": "fuzzy"
+        },
+        {
+          "title": "ten thousand devils",
+          "author": "s a hunt",
+          "source": "fuzzy"
+        },
+        {
+          "title": "elements of chemistry heat",
+          "author": "penny reid",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the tent",
+          "author": "margaret atwood",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the red box",
+          "author": "rex stout",
+          "source": "fuzzy"
+        },
+        {
+          "title": "ten cents a dance",
+          "author": "christine fletcher",
+          "source": "fuzzy"
+        },
+        {
+          "title": "red the heroic rescue",
+          "author": "ted dekker",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q076",
+    "query_text": "moira orfei",
+    "query_type": "PARTIAL",
+    "title": "circus or moira orfei in aigues mortes",
+    "author": "wayne koestenbaum",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "circus or moira orfei in aigues mortes",
+          "author": "wayne koestenbaum rachel",
+          "source": "fuzzy"
+        },
+        {
+          "title": "conversations with peter rosei",
+          "author": "peter rosei wilhelm",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the hero strikes back",
+          "author": "moira j moore",
+          "source": "fuzzy"
+        },
+        {
+          "title": "heroes at risk",
+          "author": "moira j moore",
+          "source": "fuzzy"
+        },
+        {
+          "title": "resenting the hero",
+          "author": "moira j moore",
+          "source": "fuzzy"
+        },
+        {
+          "title": "orfeo",
+          "author": "richard powers",
+          "source": "fuzzy"
+        },
+        {
+          "title": "more than friends",
+          "author": "monica murphy",
+          "source": "fuzzy"
+        },
+        {
+          "title": "smile no more",
+          "author": "james a moore",
+          "source": "fuzzy"
+        },
+        {
+          "title": "blood red road",
+          "author": "moira young",
+          "source": "fuzzy"
+        },
+        {
+          "title": "rebel heart",
+          "author": "moira young",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q077",
+    "query_text": "vampire",
+    "query_type": "PARTIAL",
+    "title": "the vampire king s mate",
+    "author": "toaden",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "vampire",
+          "author": "john steakley",
+          "source": "completion"
+        },
+        {
+          "title": "vampire academy",
+          "author": "richelle mead",
+          "source": "completion"
+        },
+        {
+          "title": "vampire academy box set",
+          "author": "richelle mead",
+          "source": "completion"
+        },
+        {
+          "title": "vampire academy collection",
+          "author": "richelle mead",
+          "source": "completion"
+        },
+        {
+          "title": "vampire academy the graphic novel",
+          "author": "richelle mead emma",
+          "source": "completion"
+        },
+        {
+          "title": "vampire academy the ultimate guide",
+          "author": "michelle rowen richelle",
+          "source": "completion"
+        },
+        {
+          "title": "vampire blood trilogy",
+          "author": "darren shan",
+          "source": "completion"
+        },
+        {
+          "title": "vampire box set 8 books",
+          "author": "h t night",
+          "source": "completion"
+        },
+        {
+          "title": "vampire chronicles interview with the vampire the vampire lestat the queen of the damned",
+          "author": "anne rice robert",
+          "source": "completion"
+        },
+        {
+          "title": "vampire crush",
+          "author": "a m robinson",
+          "source": "completion"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q078",
+    "query_text": "of may",
+    "query_type": "PARTIAL",
+    "title": "one thousand white women the journals of may dodd",
+    "author": "jim fergus",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the way of perfection",
+          "author": "teresa of vila",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the mystical city of god 4 volume set",
+          "author": "mary of agreda",
+          "source": "fuzzy"
+        },
+        {
+          "title": "pengembaraan dr karl may llano estacado",
+          "author": "karl may",
+          "source": "fuzzy"
+        },
+        {
+          "title": "hymns of the church of jesus christ of latter day saints",
+          "author": "the church of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the many coloured land",
+          "author": "julian may",
+          "source": "fuzzy"
+        },
+        {
+          "title": "ina may s guide to childbirth",
+          "author": "ina may gaskin",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the doctrine and covenants of the church of jesus christ of latter day saints",
+          "author": "the church of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "man s search for himself",
+          "author": "rollo may",
+          "source": "fuzzy"
+        },
+        {
+          "title": "off the map",
+          "author": "max davine",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the films of peter greenaway",
+          "author": "amy lawrence ray",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q079",
+    "query_text": "a diary",
+    "query_type": "PARTIAL",
+    "title": "i will bear witness 1942 45 a diary of the nazi years",
+    "author": "victor klemperer",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "dark knights and dingy castles",
+          "author": "terry deary",
+          "source": "fuzzy"
+        },
+        {
+          "title": "danielle the daisy fairy",
+          "author": "daisy meadows georgie",
+          "source": "fuzzy"
+        },
+        {
+          "title": "diary of a teenage fairy godmother",
+          "author": "kathleen baldwin andrea",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the dirt diary",
+          "author": "anna staniszewski",
+          "source": "fuzzy"
+        },
+        {
+          "title": "fairy tales written by rabbits",
+          "author": "mary a parker",
+          "source": "fuzzy"
+        },
+        {
+          "title": "mr darcy s diary",
+          "author": "amanda grange",
+          "source": "fuzzy"
+        },
+        {
+          "title": "dear george dear mary a novel of george washington s first love",
+          "author": "mary calvi",
+          "source": "fuzzy"
+        },
+        {
+          "title": "a writer s diary",
+          "author": "virginia woolf leonard",
+          "source": "fuzzy"
+        },
+        {
+          "title": "diary of a madman",
+          "author": "nikolai gogol",
+          "source": "fuzzy"
+        },
+        {
+          "title": "diary of a fly",
+          "author": "doreen cronin harry",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q080",
+    "query_text": "birdsong usa",
+    "query_type": "PARTIAL",
+    "title": "the unsung hero of birdsong usa",
+    "author": "brenda woods",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the unsung hero of birdsong usa",
+          "author": "brenda woods",
+          "source": "fuzzy"
+        },
+        {
+          "title": "firesong",
+          "author": "william nicholson",
+          "source": "fuzzy"
+        },
+        {
+          "title": "birdwing",
+          "author": "rafe martin",
+          "source": "fuzzy"
+        },
+        {
+          "title": "birdsong a novel of love and war",
+          "author": "sebastian faulks",
+          "source": "fuzzy"
+        },
+        {
+          "title": "living in the usa",
+          "author": "alison r lanier",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the meghad ta of k lid sa",
+          "author": "k lid sa",
+          "source": "fuzzy"
+        },
+        {
+          "title": "asa",
+          "author": "jay crownover",
+          "source": "fuzzy"
+        },
+        {
+          "title": "insatiable porn a love story",
+          "author": "asa akira",
+          "source": "fuzzy"
+        },
+        {
+          "title": "letters and lectures of idries shah",
+          "author": "adam musa",
+          "source": "fuzzy"
+        },
+        {
+          "title": "fighting out of new milford usa",
+          "author": "g b hope",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q081",
+    "query_text": "fwkse step",
+    "query_type": "TYPO",
+    "title": "false step",
+    "author": "victoria helen stone",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "false step",
+          "author": "victoria helen stone",
+          "source": "fuzzy"
+        },
+        {
+          "title": "options the secret life of steve jobs",
+          "author": "fake steve jobs",
+          "source": "fuzzy"
+        },
+        {
+          "title": "6 steps to forgiveness a live forgiveness session with a step by step process",
+          "author": "josephine hasan kerr",
+          "source": "fuzzy"
+        },
+        {
+          "title": "teenage murderer alyssa bustamante true crime bus stop reads 29",
+          "author": "bus stop guides",
+          "source": "fuzzy"
+        },
+        {
+          "title": "deep desires",
+          "author": "charlotte stein",
+          "source": "fuzzy"
+        },
+        {
+          "title": "sheep manual the complete step by step guide to caring for your flock",
+          "author": "liz shankland kate",
+          "source": "fuzzy"
+        },
+        {
+          "title": "step into magic",
+          "author": "day leitao",
+          "source": "fuzzy"
+        },
+        {
+          "title": "one step behind",
+          "author": "henning mankell ebba",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the wicked deep",
+          "author": "shea ernshaw",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the star dwellers",
+          "author": "david estes",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q082",
+    "query_text": "etarless night",
+    "query_type": "TYPO",
+    "title": "starless night",
+    "author": "r a salvatore",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "starless night",
+          "author": "r a salvatore",
+          "source": "fuzzy"
+        },
+        {
+          "title": "night light",
+          "author": "terri blackstock",
+          "source": "fuzzy"
+        },
+        {
+          "title": "master of the night",
+          "author": "angela knight",
+          "source": "fuzzy"
+        },
+        {
+          "title": "night flight",
+          "author": "antoine de saint",
+          "source": "fuzzy"
+        },
+        {
+          "title": "fright night",
+          "author": "john skipp craig",
+          "source": "fuzzy"
+        },
+        {
+          "title": "fearless",
+          "author": "tim lott",
+          "source": "fuzzy"
+        },
+        {
+          "title": "everless",
+          "author": "sara holland",
+          "source": "fuzzy"
+        },
+        {
+          "title": "might is right",
+          "author": "ragnar redbeard",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the starless sea",
+          "author": "erin morgenstern",
+          "source": "fuzzy"
+        },
+        {
+          "title": "light in my darkest night",
+          "author": "catherine marshall",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q083",
+    "query_text": "the hugher power of lucku",
+    "query_type": "TYPO",
+    "title": "the higher power of lucky",
+    "author": "susan patron",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the higher power of lucky",
+          "author": "susan patron",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the doctrine and covenants of the church of jesus christ of latter day saints",
+          "author": "the church of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "hymns of the church of jesus christ of latter day saints",
+          "author": "the church of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the lds scriptures unabridged complete king james version holy bible the book of mormon doctrine and covenants the pearl of great price",
+          "author": "the church of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "book of mormon doctrine and covenants pearl of great price",
+          "author": "the church of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "lucky number eleven",
+          "author": "adriana locke",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the reagan paradox",
+          "author": "the editors of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the poison diaries",
+          "author": "the duchess of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "we were the lucky ones",
+          "author": "georgia hunter",
+          "source": "fuzzy"
+        },
+        {
+          "title": "two times lucky",
+          "author": "piper vaughn",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q084",
+    "query_text": "fewr us",
+    "query_type": "TYPO",
+    "title": "fear us",
+    "author": "b b reid",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "fear us",
+          "author": "b b reid",
+          "source": "fuzzy"
+        },
+        {
+          "title": "feel the fear",
+          "author": "lauren child",
+          "source": "fuzzy"
+        },
+        {
+          "title": "love is fear",
+          "author": "caroline hanson",
+          "source": "fuzzy"
+        },
+        {
+          "title": "dear emily",
+          "author": "fern michaels",
+          "source": "fuzzy"
+        },
+        {
+          "title": "fear is the key",
+          "author": "alistair maclean",
+          "source": "fuzzy"
+        },
+        {
+          "title": "us",
+          "author": "sarina bowen elle",
+          "source": "fuzzy"
+        },
+        {
+          "title": "one of us is lying",
+          "author": "karen m mcmanus",
+          "source": "fuzzy"
+        },
+        {
+          "title": "one of us is next",
+          "author": "karen m mcmanus",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the complete nonsense of edward lear",
+          "author": "edward lear",
+          "source": "fuzzy"
+        },
+        {
+          "title": "fear",
+          "author": "michael grant",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q085",
+    "query_text": "antigragule things that gain from fiaoeder",
+    "query_type": "TYPO",
+    "title": "antifragile things that gain from disorder",
+    "author": "nassim nicholas taleb",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "antifragile things that gain from disorder",
+          "author": "nassim nicholas taleb",
+          "source": "fuzzy"
+        },
+        {
+          "title": "things that are",
+          "author": "andrew clements",
+          "source": "fuzzy"
+        },
+        {
+          "title": "zen pencils cartoon quotes from inspirational folks",
+          "author": "gavin aung than",
+          "source": "fuzzy"
+        },
+        {
+          "title": "what book buddha poems from beat to hiphop",
+          "author": "gary gach peter",
+          "source": "fuzzy"
+        },
+        {
+          "title": "escape from freedom",
+          "author": "erich fromm",
+          "source": "fuzzy"
+        },
+        {
+          "title": "from gods",
+          "author": "mary ting",
+          "source": "fuzzy"
+        },
+        {
+          "title": "beauty from pain",
+          "author": "georgia cates",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the gift of fear survival signals that protect us from violence",
+          "author": "gavin de becker",
+          "source": "fuzzy"
+        },
+        {
+          "title": "i m thinking of ending things",
+          "author": "iain reid",
+          "source": "fuzzy"
+        },
+        {
+          "title": "mom what s that",
+          "author": "atlas jordan",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q086",
+    "query_text": "jousd magic",
+    "query_type": "TYPO",
+    "title": "mouse magic",
+    "author": "stefano ambrosio",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "puella magi madoka magica vol 1",
+          "author": "magica quartet story",
+          "source": "fuzzy"
+        },
+        {
+          "title": "mouse magic",
+          "author": "stefano ambrosio lorenzo",
+          "source": "fuzzy"
+        },
+        {
+          "title": "magic study",
+          "author": "maria v snyder",
+          "source": "fuzzy"
+        },
+        {
+          "title": "scent of magic",
+          "author": "maria v snyder",
+          "source": "fuzzy"
+        },
+        {
+          "title": "magic lost trouble found",
+          "author": "lisa shearin",
+          "source": "fuzzy"
+        },
+        {
+          "title": "house of hope international cookbook",
+          "author": "denise marie mari",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the magic labyrinth",
+          "author": "philip jos farmer",
+          "source": "fuzzy"
+        },
+        {
+          "title": "maniac magee",
+          "author": "jerry spinelli",
+          "source": "fuzzy"
+        },
+        {
+          "title": "magic tree house 1 4",
+          "author": "mary pope osborne",
+          "source": "fuzzy"
+        },
+        {
+          "title": "bound together",
+          "author": "marie coulson",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q087",
+    "query_text": "fjd clue in the crumbling wall",
+    "query_type": "TYPO",
+    "title": "the clue in the crumbling wall",
+    "author": "carolyn keene",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the clue in the crumbling wall",
+          "author": "carolyn keene",
+          "source": "fuzzy"
+        },
+        {
+          "title": "all fall down",
+          "author": "ally carter",
+          "source": "fuzzy"
+        },
+        {
+          "title": "stumbling on happiness",
+          "author": "daniel todd gilbert",
+          "source": "fuzzy"
+        },
+        {
+          "title": "walt disney s alice in wonderland",
+          "author": "walt disney company",
+          "source": "fuzzy"
+        },
+        {
+          "title": "all is well",
+          "author": "gerald n lund",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the end of your life book club",
+          "author": "will schwalbe",
+          "source": "fuzzy"
+        },
+        {
+          "title": "fin de si cle vienna politics and culture",
+          "author": "carl e schorske",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the clue in the diary",
+          "author": "carolyn keene",
+          "source": "fuzzy"
+        },
+        {
+          "title": "in the tall grass",
+          "author": "stephen king joe",
+          "source": "fuzzy"
+        },
+        {
+          "title": "fear and trembling",
+          "author": "s ren kierkegaard",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q088",
+    "query_text": "tge hglg",
+    "query_type": "TYPO",
+    "title": "the ugly",
+    "author": "alexander boldizar",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "hell s half acre",
+          "author": "will christopher baer",
+          "source": "fuzzy"
+        },
+        {
+          "title": "lord of the white hell book 1",
+          "author": "ginn hale",
+          "source": "fuzzy"
+        },
+        {
+          "title": "lord of the white hell book 2",
+          "author": "ginn hale",
+          "source": "fuzzy"
+        },
+        {
+          "title": "half the world",
+          "author": "joe abercrombie",
+          "source": "fuzzy"
+        },
+        {
+          "title": "jerusalem chronicles from the holy city",
+          "author": "guy delisle helge",
+          "source": "fuzzy"
+        },
+        {
+          "title": "harry hill s tv burp book",
+          "author": "harry hill",
+          "source": "fuzzy"
+        },
+        {
+          "title": "help wanted",
+          "author": "meg silver",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the fireman",
+          "author": "joe hill",
+          "source": "fuzzy"
+        },
+        {
+          "title": "myrtle mae and the mirror in the attic the mae chronicles 1",
+          "author": "joe egly",
+          "source": "fuzzy"
+        },
+        {
+          "title": "this wheel s on fire levon helm and the story of the band",
+          "author": "levon helm",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q089",
+    "query_text": "the vdeghreb",
+    "query_type": "TYPO",
+    "title": "the brethren",
+    "author": "john grisham",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the tao of wu",
+          "author": "the rza",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the reagan paradox",
+          "author": "the editors of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the beatles anthology",
+          "author": "the beatles john",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the poison diaries",
+          "author": "the duchess of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the anatomy of peace resolving the heart of conflict",
+          "author": "the arbinger institute",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the wu tang manual",
+          "author": "the rza chris",
+          "source": "fuzzy"
+        },
+        {
+          "title": "nice is just a place in france how to win at basically everything",
+          "author": "the betches",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the doctrine and covenants of the church of jesus christ of latter day saints",
+          "author": "the church of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the lds scriptures unabridged complete king james version holy bible the book of mormon doctrine and covenants the pearl of great price",
+          "author": "the church of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "bored of the rings a parody of j r r tolkien s lord of the rings",
+          "author": "the harvard lampoon",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q090",
+    "query_text": "vita brevis a lertde to st augustine",
+    "query_type": "TYPO",
+    "title": "vita brevis a letter to st augustine",
+    "author": "jostein gaarder",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "vita brevis a letter to st augustine",
+          "author": "jostein gaarder anne",
+          "source": "fuzzy"
+        },
+        {
+          "title": "to catch a cheat",
+          "author": "kelley st john",
+          "source": "fuzzy"
+        },
+        {
+          "title": "a wolf at the table",
+          "author": "augusten burroughs",
+          "source": "fuzzy"
+        },
+        {
+          "title": "click to subscribe",
+          "author": "l m augustine",
+          "source": "fuzzy"
+        },
+        {
+          "title": "city of god",
+          "author": "augustine of hippo",
+          "source": "fuzzy"
+        },
+        {
+          "title": "trans mission my quest to a beard",
+          "author": "alex bertie",
+          "source": "fuzzy"
+        },
+        {
+          "title": "story of a soul the autobiography of st therese of lisieux",
+          "author": "th r se",
+          "source": "fuzzy"
+        },
+        {
+          "title": "eternal i v pole my last gift of wisdom i give to the world i love given to me by the god i love",
+          "author": "milkweed l augustine",
+          "source": "fuzzy"
+        },
+        {
+          "title": "a million suns",
+          "author": "beth revis",
+          "source": "fuzzy"
+        },
+        {
+          "title": "a world without you",
+          "author": "beth revis",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q091",
+    "query_text": "the middle east bedside bokk",
+    "query_type": "TYPO",
+    "title": "the middle east bedside book",
+    "author": "tahir shah",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the middle east bedside book",
+          "author": "tahir shah",
+          "source": "fuzzy"
+        },
+        {
+          "title": "polar bears past bedtime",
+          "author": "mary pope osborne",
+          "source": "fuzzy"
+        },
+        {
+          "title": "cambodia and the year of untac essential essays book 67",
+          "author": "tom riddle",
+          "source": "fuzzy"
+        },
+        {
+          "title": "beside the sea",
+          "author": "v ronique olmi",
+          "source": "fuzzy"
+        },
+        {
+          "title": "beside myself",
+          "author": "ann morgan",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the dust feast",
+          "author": "gregory ashe",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the riddle of the third mile",
+          "author": "colin dexter",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the middle place",
+          "author": "kelly corrigan",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the middle passage",
+          "author": "v s naipaul",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the last mile",
+          "author": "david baldacci",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q092",
+    "query_text": "the brewing storn",
+    "query_type": "TYPO",
+    "title": "the brewing storm",
+    "author": "paul ruditis",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the brewing storm",
+          "author": "paul ruditis constance",
+          "source": "fuzzy"
+        },
+        {
+          "title": "breaking the rules",
+          "author": "lucy score",
+          "source": "fuzzy"
+        },
+        {
+          "title": "storm breaking",
+          "author": "mercedes lackey",
+          "source": "fuzzy"
+        },
+        {
+          "title": "brewing",
+          "author": "ian s hornsey",
+          "source": "fuzzy"
+        },
+        {
+          "title": "storm warning storm rising storm breaking",
+          "author": "mercedes lackey",
+          "source": "fuzzy"
+        },
+        {
+          "title": "what you are not being told about vaccines the year of truth 2019",
+          "author": "sharon storm",
+          "source": "fuzzy"
+        },
+        {
+          "title": "55 celebrities with anxiety the secret weapon cure that is being concealed",
+          "author": "sharon storm",
+          "source": "fuzzy"
+        },
+        {
+          "title": "what you are not being told about vaccines find out now before its too late welcome to the year of truth 2019 what you are not being told about vacines 1",
+          "author": "sharon storm",
+          "source": "fuzzy"
+        },
+        {
+          "title": "stori telling",
+          "author": "tori spelling",
+          "source": "fuzzy"
+        },
+        {
+          "title": "down the shore",
+          "author": "stan parish",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q093",
+    "query_text": "under the esgow",
+    "query_type": "TYPO",
+    "title": "under the eagle",
+    "author": "simon scarrow",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "kissing under the mistletoe",
+          "author": "bella andre",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the giant under the snow",
+          "author": "john gordon gary",
+          "source": "fuzzy"
+        },
+        {
+          "title": "fornicating under the order of the king",
+          "author": "coletha albert",
+          "source": "fuzzy"
+        },
+        {
+          "title": "blake hunter under the veil of darkness",
+          "author": "austin star mar",
+          "source": "fuzzy"
+        },
+        {
+          "title": "warriors enter the clans",
+          "author": "erin hunter",
+          "source": "fuzzy"
+        },
+        {
+          "title": "thunder rising",
+          "author": "erin hunter",
+          "source": "fuzzy"
+        },
+        {
+          "title": "under a painted sky",
+          "author": "stacey lee",
+          "source": "fuzzy"
+        },
+        {
+          "title": "dee snider s teenage survival guide",
+          "author": "dee snider philip",
+          "source": "fuzzy"
+        },
+        {
+          "title": "under the dome",
+          "author": "stephen king",
+          "source": "fuzzy"
+        },
+        {
+          "title": "under the volcano",
+          "author": "malcolm lowry",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q094",
+    "query_text": "a grief onsrrved",
+    "query_type": "TYPO",
+    "title": "a grief observed",
+    "author": "c s lewis",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "a grief observed",
+          "author": "c s lewis",
+          "source": "fuzzy"
+        },
+        {
+          "title": "a brief illustrated guide to understanding islam",
+          "author": "i a ibrahim",
+          "source": "fuzzy"
+        },
+        {
+          "title": "a grey moon over china",
+          "author": "thomas a day",
+          "source": "fuzzy"
+        },
+        {
+          "title": "a brief life",
+          "author": "juan carlos onetti",
+          "source": "fuzzy"
+        },
+        {
+          "title": "comfort a journey through grief",
+          "author": "ann hood",
+          "source": "fuzzy"
+        },
+        {
+          "title": "good grief",
+          "author": "lolly winston",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the john green esampler",
+          "author": "john green",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the green years",
+          "author": "a j cronin",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the water of life a tale from the brothers grimm",
+          "author": "jacob grimm wilhelm",
+          "source": "fuzzy"
+        },
+        {
+          "title": "grimm s fairy tales",
+          "author": "jacob grimm wilhelm",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q095",
+    "query_text": "w srrestcar named desire",
+    "query_type": "TYPO",
+    "title": "a streetcar named desire",
+    "author": "tennessee williams",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "a streetcar named desire",
+          "author": "tennessee williams",
+          "source": "fuzzy"
+        },
+        {
+          "title": "a streetcar named desire and other plays",
+          "author": "tennessee williams",
+          "source": "fuzzy"
+        },
+        {
+          "title": "desire untamed",
+          "author": "pamela palmer",
+          "source": "fuzzy"
+        },
+        {
+          "title": "desire",
+          "author": "kailin gow",
+          "source": "fuzzy"
+        },
+        {
+          "title": "sensual desires",
+          "author": "james sillwood",
+          "source": "fuzzy"
+        },
+        {
+          "title": "theo and a horse named rocket",
+          "author": "w h raymond",
+          "source": "fuzzy"
+        },
+        {
+          "title": "dark desire",
+          "author": "christine feehan",
+          "source": "fuzzy"
+        },
+        {
+          "title": "desire unchained",
+          "author": "larissa ione",
+          "source": "fuzzy"
+        },
+        {
+          "title": "deadly desire",
+          "author": "keri arthur",
+          "source": "fuzzy"
+        },
+        {
+          "title": "forbidden desire",
+          "author": "helen barth villareal",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q096",
+    "query_text": "reign of shine",
+    "query_type": "TYPO",
+    "title": "reign or shine",
+    "author": "michelle rowen",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "reign or shine",
+          "author": "michelle rowen",
+          "source": "fuzzy"
+        },
+        {
+          "title": "shane filan my autobiography",
+          "author": "shane filan",
+          "source": "fuzzy"
+        },
+        {
+          "title": "rain reign",
+          "author": "ann m martin",
+          "source": "fuzzy"
+        },
+        {
+          "title": "shine",
+          "author": "lauren myracle",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the dialogue of saint catherine of siena",
+          "author": "catherine of siena",
+          "source": "fuzzy"
+        },
+        {
+          "title": "shinjo reflections",
+          "author": "shinjo ito",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the anatomy of being",
+          "author": "shinji moon",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the saint",
+          "author": "tiffany reisz",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the reagan paradox",
+          "author": "the editors of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "reign",
+          "author": "chanda hahn",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q097",
+    "query_text": "the whlfhum fhke",
+    "query_type": "TYPO",
+    "title": "the shotgun rule",
+    "author": "charlie huston",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the tao of wu",
+          "author": "the rza",
+          "source": "fuzzy"
+        },
+        {
+          "title": "nice is just a place in france how to win at basically everything",
+          "author": "the betches",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the reagan paradox",
+          "author": "the editors of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the beatles anthology",
+          "author": "the beatles john",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the poison diaries",
+          "author": "the duchess of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the anatomy of peace resolving the heart of conflict",
+          "author": "the arbinger institute",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the wu tang manual",
+          "author": "the rza chris",
+          "source": "fuzzy"
+        },
+        {
+          "title": "face the fire",
+          "author": "nora roberts",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the doctrine and covenants of the church of jesus christ of latter day saints",
+          "author": "the church of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the lds scriptures unabridged complete king james version holy bible the book of mormon doctrine and covenants the pearl of great price",
+          "author": "the church of",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q098",
+    "query_text": "thw bainbridge killings",
+    "query_type": "TYPO",
+    "title": "the bainbridge killings",
+    "author": "rick soper",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "the bainbridge killings",
+          "author": "rick soper",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the killing",
+          "author": "robert muchamore",
+          "source": "fuzzy"
+        },
+        {
+          "title": "killing floor",
+          "author": "lee child",
+          "source": "fuzzy"
+        },
+        {
+          "title": "killing sarai",
+          "author": "j a redmerski",
+          "source": "fuzzy"
+        },
+        {
+          "title": "killing rachel",
+          "author": "anne cassidy",
+          "source": "fuzzy"
+        },
+        {
+          "title": "killing hope",
+          "author": "keith houghton",
+          "source": "fuzzy"
+        },
+        {
+          "title": "killing grounds",
+          "author": "dana stabenow",
+          "source": "fuzzy"
+        },
+        {
+          "title": "killing rocks",
+          "author": "d d barant",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the killing dance",
+          "author": "laurell k hamilton",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the killing jar",
+          "author": "jennifer bosworth",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q099",
+    "query_text": "the posr labyuagw of cranes",
+    "query_type": "TYPO",
+    "title": "the lost language of cranes",
+    "author": "david leavitt",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "works of stephen crane",
+          "author": "stephen crane",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the lost language of cranes",
+          "author": "david leavitt",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the doctrine and covenants of the church of jesus christ of latter day saints",
+          "author": "the church of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "hymns of the church of jesus christ of latter day saints",
+          "author": "the church of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "descendant of the crane",
+          "author": "joan he",
+          "source": "fuzzy"
+        },
+        {
+          "title": "craven manor",
+          "author": "darcy coates",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the lds scriptures unabridged complete king james version holy bible the book of mormon doctrine and covenants the pearl of great price",
+          "author": "the church of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "book of mormon doctrine and covenants pearl of great price",
+          "author": "the church of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the reagan paradox",
+          "author": "the editors of",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the poison diaries",
+          "author": "the duchess of",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  },
+  {
+    "query_id": "Q100",
+    "query_text": "batman volume 5 aefo year dark city",
+    "query_type": "TYPO",
+    "title": "batman volume 5 zero year dark city",
+    "author": "scott snyder",
+    "alpha": 0.6,
+    "status": "OK",
+    "candidates": {
+      "completion": [
+        {
+          "title": "batman volume 5 zero year dark city",
+          "author": "scott snyder greg",
+          "source": "fuzzy"
+        },
+        {
+          "title": "batman volume 4 zero year secret city",
+          "author": "scott snyder writer",
+          "source": "fuzzy"
+        },
+        {
+          "title": "batman volume 2 the city of owls",
+          "author": "scott snyder writer",
+          "source": "fuzzy"
+        },
+        {
+          "title": "batman year one",
+          "author": "frank miller writer",
+          "source": "fuzzy"
+        },
+        {
+          "title": "batman dark victory",
+          "author": "jeph loeb tim",
+          "source": "fuzzy"
+        },
+        {
+          "title": "carl barks greatest ducktales stories volume 1",
+          "author": "carl barks walt",
+          "source": "fuzzy"
+        },
+        {
+          "title": "the dark city",
+          "author": "catherine fisher",
+          "source": "fuzzy"
+        },
+        {
+          "title": "batman the dark knight returns",
+          "author": "frank miller klaus",
+          "source": "fuzzy"
+        },
+        {
+          "title": "disney presents carl barks greatest ducktales stories volume 2",
+          "author": "carl barks john",
+          "source": "fuzzy"
+        },
+        {
+          "title": "batman earth one volume 2",
+          "author": "geoff johns writer",
+          "source": "fuzzy"
+        }
+      ]
+    }
+  }
+]

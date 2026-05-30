@@ -27,7 +27,7 @@ try:
         retry_on_timeout=True
     )
     # Test connection
-    info = client.info()
+    client.info()
     logger.info("✓ OpenSearch connected successfully")
 except Exception as e:
     logger.error(f"✗ Failed to connect to OpenSearch: {e}")
@@ -38,7 +38,6 @@ INDEX_NAME = "bookss"
 sbert_model = None  
 
 def get_sbert_model():
-    """Load SBERT model hanya sekali, lazy loading"""
     global sbert_model
     if sbert_model is None:
         logger.info("📦 Loading SBERT model for the first time...")
@@ -53,13 +52,12 @@ def clear_sbert_memory():
         import gc
         del sbert_model
         sbert_model = None
-        gc.collect()  # Force garbage collection
+        gc.collect() 
         logger.info("🧹 SBERT model cleared from memory")
-    else:
-        logger.info("ℹ️ SBERT model not loaded, nothing to clear")
-logger.info("⏳ Pre-loading SBERT model on server startup...")
+
+logger.info("⏳ Pre-loading SBERT ...")
 get_sbert_model()
-logger.info("✓ SBERT pre-loaded and ready!")
+logger.info("✓ SBERT ready!")
 
 
 def get_candidates(query: str) -> list[dict]:
@@ -114,9 +112,8 @@ def get_candidates(query: str) -> list[dict]:
     # candidates = []
 
     completion_result =[]
-    for suggest_key in ["suggest_by_title", "suggest_by_author"]:
-        options = response["suggest"][suggest_key][0]["options"]
-        for opt in options:
+    for key in ["suggest_by_title", "suggest_by_author"]:
+        for opt in response["suggest"][key][0]["options"]:
             src   = opt["_source"]
             title = src.get("title", "")
             if not title or title in seen:
@@ -129,8 +126,7 @@ def get_candidates(query: str) -> list[dict]:
                 "source":      "completion"
             })
     match_result = []
-    hits = response.get("hits", {}).get("hits", [])
-    for hit in hits:
+    for hit in response.get("hits", {}).get("hits", []):
         src   = hit["_source"]
         title = src.get("title", "")
         if not title or title in seen:
@@ -151,7 +147,7 @@ def compute_bm25_scores(query, candidates):
     tokenized_corpus = [doc.lower().split() for doc in corpus]
     tokenized_query  = query.lower().split()
     bm25 = BM25Okapi(tokenized_corpus)
-    return bm25.get_scores(tokenized_query)  # return scores saja, tidak di-sort
+    return bm25.get_scores(tokenized_query)  
 
 def compute_sbert_scores(query, candidates):
     model = get_sbert_model()
@@ -184,6 +180,12 @@ def compute_sbert_scores(query, candidates):
 #         candidate["score_bm25"] = float(scores[i])
 
 #     reranked = sorted(candidates, key=lambda x: x["score_bm25"], reverse=True)
+
+def normalize(scores):
+    min_s, max_s = min(scores), max(scores)
+    if max_s - min_s == 0:
+        return [0.0] * len(scores)
+    return [(s - min_s) / (max_s - min_s) for s in scores]
 
 #     return reranked
 def rerank_bm25(query, candidates):
@@ -267,12 +269,6 @@ def rerank_sbert(query, candidates):
 #         return [0.0] * len(scores)
     
 #     return [(s - theoretical_min) / denominator for s in scores]
-
-def normalize(scores):
-    min_s, max_s = min(scores), max(scores)
-    if max_s - min_s == 0:
-        return [0.0] * len(scores)
-    return [(s - min_s) / (max_s - min_s) for s in scores]
 
 def rerank_hybrid(query, candidates, alpha=0.5):
     # alphanya 0.5 dulu buat nampilin si hasil hybridnya / default
