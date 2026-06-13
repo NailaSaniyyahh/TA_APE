@@ -1,7 +1,7 @@
-[2026-06-13 09:55:53] Loading CSV: C:\Users\Naila\OneDrive - Politeknik Negeri Bandung\TA\DATASET\hasil_books2.csv
-[2026-06-13 09:55:53] Dataset: 43,446 records unik
-[2026-06-13 09:55:53] Rumus Slovin -> N=43,446, e=10% -> n=100
-[2026-06-13 09:55:54] Tersimpan -> ./v11test_queries_final.json  (100 queries)
-[2026-06-13 09:55:54] ==============================================================
-[2026-06-13 09:55:54] DONE! 100 query uji tersimpan -> ./v11test_queries_final.json
-[2026-06-13 09:55:54] ==============================================================
+[2026-06-13 10:01:23] Loading CSV: C:\Users\Naila\OneDrive - Politeknik Negeri Bandung\TA\DATASET\hasil_books2.csv
+[2026-06-13 10:01:23] Dataset: 43,446 records unik
+[2026-06-13 10:01:23] Rumus Slovin -> N=43,446, e=10% -> n=100
+[2026-06-13 10:01:24] Tersimpan -> ./v11test_queries_final.json  (100 queries)
+[2026-06-13 10:01:24] ==============================================================
+[2026-06-13 10:01:24] DONE! 100 query uji tersimpan -> ./v11test_queries_final.json
+[2026-06-13 10:01:24] ==============================================================
