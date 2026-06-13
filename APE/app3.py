@@ -6,6 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import logging
 from pathlib import Path
 import argparse, copy, json, logging, os
+import math
 
 
 INDEX_NAME  = "books2"
@@ -140,10 +141,24 @@ def compute_sbert_scores(query, candidates):
     return cosine_similarity(query_vec, candidate_vec)[0]
 
 def normalize(scores):
-    min_s, max_s = min(scores), max(scores)
-    if max_s - min_s == 0:
-        return [0.0] * len(scores)
-    return [(s - min_s) / (max_s - min_s) for s in scores]
+    n = len(scores)
+    if n <= 1:
+        return [0.0] * n
+
+    # 1. Hitung Rata-rata (Mean)
+    mean = sum(scores) / n
+
+    # 2. Hitung Varians & Standar Deviasi (Sigma)
+    variance = sum((x - mean) ** 2 for x in scores) / n
+    std_dev = math.sqrt(variance)
+
+    # Jika semua skor kembar/sama persis, std_dev akan bernilai 0.
+    # Kita langsung kembalikan list berisi 0.0 agar tidak terjadi ZeroDivisionError.
+    if std_dev == 0:
+        return [0.0] * n
+
+    # 3. Hitung nilai Z-Score untuk masing-masing skor
+    return [(x - mean) / std_dev for x in scores]
 
 def rerank_bm25(query, candidates):
     scores = compute_bm25_scores(query, candidates)
@@ -184,8 +199,8 @@ def run(alpha: float):
         return
 
     queries = json.loads(input_file.read_text(encoding="utf-8"))
-    out_json = BASE_DIR / f"0.55Eksperimen.json"
-    out_html = BASE_DIR / f"0.55Eksperimen.html"
+    out_json = BASE_DIR / f"0.05Eksperimenv2.json"
+    out_html = BASE_DIR / f"0.05Eksperimenv2.html"
 
     # logger.info(f" Eksperimen — {len(queries)} query, alpha={alpha}")
     results = []

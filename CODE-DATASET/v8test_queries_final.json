@@ -1,0 +1,902 @@
+[
+  {
+    "query_id": "Q0001",
+    "query_text": "monster hunter",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "monster hunter international",
+    "author": "larry correia"
+  },
+  {
+    "query_id": "Q0002",
+    "query_text": "the pillars",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the pillars of the earth",
+    "author": "ken follett"
+  },
+  {
+    "query_id": "Q0003",
+    "query_text": "the girl",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the girl in times square",
+    "author": "paullina simons"
+  },
+  {
+    "query_id": "Q0004",
+    "query_text": "the anatomy",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the anatomy of wings",
+    "author": "karen foxlee"
+  },
+  {
+    "query_id": "Q0005",
+    "query_text": "alice i",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "alice i have been",
+    "author": "melanie benjamin"
+  },
+  {
+    "query_id": "Q0006",
+    "query_text": "the pox",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the pox party",
+    "author": "m t anderson"
+  },
+  {
+    "query_id": "Q0007",
+    "query_text": "the medusa and the snail",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the medusa and the snail more notes of a biology watcher",
+    "author": "lewis thomas"
+  },
+  {
+    "query_id": "Q0008",
+    "query_text": "meow te ching",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "meow te ching by meow tzu",
+    "author": "meow tzu"
+  },
+  {
+    "query_id": "Q0009",
+    "query_text": "the confessions",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the confessions of ars ne lupin",
+    "author": "maurice leblanc"
+  },
+  {
+    "query_id": "Q0010",
+    "query_text": "the small house",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the small house at allington volume 2",
+    "author": "anthony trollope"
+  },
+  {
+    "query_id": "Q0011",
+    "query_text": "the arctic grail the quest for the",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the arctic grail the quest for the northwest passage and the north pole 1818 1909",
+    "author": "pierre berton"
+  },
+  {
+    "query_id": "Q0012",
+    "query_text": "stars and",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "stars and bars",
+    "author": "william boyd"
+  },
+  {
+    "query_id": "Q0013",
+    "query_text": "between the",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "between the lines",
+    "author": "jodi picoult"
+  },
+  {
+    "query_id": "Q0014",
+    "query_text": "the vile",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the vile village",
+    "author": "lemony snicket"
+  },
+  {
+    "query_id": "Q0015",
+    "query_text": "bill of",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "bill of human wrongs",
+    "author": "c michaels"
+  },
+  {
+    "query_id": "Q0016",
+    "query_text": "wind chime",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "wind chime point",
+    "author": "sherryl woods"
+  },
+  {
+    "query_id": "Q0017",
+    "query_text": "baden powell",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "baden powell s beads",
+    "author": "paul d parsons"
+  },
+  {
+    "query_id": "Q0018",
+    "query_text": "a world named utopia will he be",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "a world named utopia will he be able to save himself and his utopia",
+    "author": "subhajit ganguly"
+  },
+  {
+    "query_id": "Q0019",
+    "query_text": "the lady",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the lady or the tiger",
+    "author": "frank r stockton"
+  },
+  {
+    "query_id": "Q0020",
+    "query_text": "halley s bible",
+    "mode_qac": "MODE1_PREFIX_TITLE",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "halley s bible handbook with the new international version",
+    "author": "henry h halley"
+  },
+  {
+    "query_id": "Q0021",
+    "query_text": "isabel all",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "city of the beasts",
+    "author": "isabel allende"
+  },
+  {
+    "query_id": "Q0022",
+    "query_text": "gill lew",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "scarlet ibis",
+    "author": "gill lewis"
+  },
+  {
+    "query_id": "Q0023",
+    "query_text": "steven pre",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "gates of fire",
+    "author": "steven pressfield"
+  },
+  {
+    "query_id": "Q0024",
+    "query_text": "frances hard",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "a skinful of shadows",
+    "author": "frances hardinge"
+  },
+  {
+    "query_id": "Q0025",
+    "query_text": "john gris",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the pelican brief",
+    "author": "john grisham"
+  },
+  {
+    "query_id": "Q0026",
+    "query_text": "adam nov",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the avian gospels book i",
+    "author": "adam novy"
+  },
+  {
+    "query_id": "Q0027",
+    "query_text": "stephen brigg",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "guards guards the play",
+    "author": "stephen briggs adaptor"
+  },
+  {
+    "query_id": "Q0028",
+    "query_text": "robin wasserm",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "meggie s journal",
+    "author": "robin wasserman"
+  },
+  {
+    "query_id": "Q0029",
+    "query_text": "elizabeth eulb",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "prom prejudice",
+    "author": "elizabeth eulberg"
+  },
+  {
+    "query_id": "Q0030",
+    "query_text": "kentaro miur",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "berserk vol 5",
+    "author": "kentaro miura"
+  },
+  {
+    "query_id": "Q0031",
+    "query_text": "austin erk",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "how to buy sell and make a fortune on ebay make money online from home on ebay",
+    "author": "austin erkl"
+  },
+  {
+    "query_id": "Q0032",
+    "query_text": "andy gri",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the 26 storey treehouse",
+    "author": "andy griffiths"
+  },
+  {
+    "query_id": "Q0033",
+    "query_text": "george man",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "doctor who engines of war",
+    "author": "george mann"
+  },
+  {
+    "query_id": "Q0034",
+    "query_text": "jules ver",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "robur the conqueror",
+    "author": "jules verne"
+  },
+  {
+    "query_id": "Q0035",
+    "query_text": "ted dek",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "white the great pursuit",
+    "author": "ted dekker"
+  },
+  {
+    "query_id": "Q0036",
+    "query_text": "skyler whi",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "and falling fly",
+    "author": "skyler white"
+  },
+  {
+    "query_id": "Q0037",
+    "query_text": "marie coul",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "bound together",
+    "author": "marie coulson"
+  },
+  {
+    "query_id": "Q0038",
+    "query_text": "wendy hea",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "hunting annabelle",
+    "author": "wendy heard"
+  },
+  {
+    "query_id": "Q0039",
+    "query_text": "rebecca moe",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "anakin s quest",
+    "author": "rebecca moesta"
+  },
+  {
+    "query_id": "Q0040",
+    "query_text": "jill murp",
+    "mode_qac": "MODE1_PREFIX_AUTHOR",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "first prize for the worst witch",
+    "author": "jill murphy"
+  },
+  {
+    "query_id": "Q0041",
+    "query_text": "guardia",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "sword of the guardian",
+    "author": "merry shannon"
+  },
+  {
+    "query_id": "Q0042",
+    "query_text": "seductio water",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the seduction of water",
+    "author": "carol goodman"
+  },
+  {
+    "query_id": "Q0043",
+    "query_text": "countr women",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "in the country of women",
+    "author": "susan straight"
+  },
+  {
+    "query_id": "Q0044",
+    "query_text": "editio encyclo",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "cupping therapy encyclopedia new edition",
+    "author": "dr tamer shaban"
+  },
+  {
+    "query_id": "Q0045",
+    "query_text": "spirit assump",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "overcoming assumptions that inhibit spiritual development",
+    "author": "idries shah"
+  },
+  {
+    "query_id": "Q0046",
+    "query_text": "autobiog poetr",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the autobiography truth and poetry from my own life",
+    "author": "johann wolfgang von goethe"
+  },
+  {
+    "query_id": "Q0047",
+    "query_text": "reven jinni",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the hakima s tale the revenge of the blue jinni",
+    "author": "dedra l stevenson"
+  },
+  {
+    "query_id": "Q0048",
+    "query_text": "heart lonel",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the lonely hearts club",
+    "author": "elizabeth eulberg"
+  },
+  {
+    "query_id": "Q0049",
+    "query_text": "walki desti",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "churchill walking with destiny",
+    "author": "andrew roberts"
+  },
+  {
+    "query_id": "Q0050",
+    "query_text": "power words",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "churchill the power of words",
+    "author": "winston s churchill"
+  },
+  {
+    "query_id": "Q0051",
+    "query_text": "conse surdity",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "ain t nobody s business if you do the absurdity of consensual crimes in a free society",
+    "author": "peter mcwilliams"
+  },
+  {
+    "query_id": "Q0052",
+    "query_text": "tinkere daught",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the tinkerer s daughter",
+    "author": "jamie sedgwick"
+  },
+  {
+    "query_id": "Q0053",
+    "query_text": "photograph leadi",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "a day in the life of africa photographed by the world s leading photojournalists on one day",
+    "author": "david elliot cohen director"
+  },
+  {
+    "query_id": "Q0054",
+    "query_text": "actical reaso",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "critique of practical reason",
+    "author": "immanuel kant"
+  },
+  {
+    "query_id": "Q0055",
+    "query_text": "matter elson",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "mike nelson s mind over matters",
+    "author": "michael j nelson"
+  },
+  {
+    "query_id": "Q0056",
+    "query_text": "russe bertr",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "the autobiography of bertrand russell",
+    "author": "bertrand russell"
+  },
+  {
+    "query_id": "Q0057",
+    "query_text": "greate drink",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "tasting beer an insider s guide to the world s greatest drink",
+    "author": "randy mosher"
+  },
+  {
+    "query_id": "Q0058",
+    "query_text": "respec desire",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "love and respect the love she most desires the respect he desperately needs",
+    "author": "emerson eggerichs"
+  },
+  {
+    "query_id": "Q0059",
+    "query_text": "close serio",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "time to get serious daily devotions to keep you close to god",
+    "author": "tony evans"
+  },
+  {
+    "query_id": "Q0060",
+    "query_text": "millenni",
+    "mode_qac": "MODE3_PARTIAL",
+    "model_gen": "LR",
+    "typo_level": null,
+    "title": "ethics for the new millennium",
+    "author": "dalai lama xiv"
+  },
+  {
+    "query_id": "Q0061",
+    "query_text": "never minc a twin novel",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "never mind a twin novel",
+    "author": "avi"
+  },
+  {
+    "query_id": "Q0062",
+    "query_text": "into the datkness",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "into the darkness",
+    "author": "kira adams"
+  },
+  {
+    "query_id": "Q0063",
+    "query_text": "misd match",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "miss match",
+    "author": "erynn mangum"
+  },
+  {
+    "query_id": "Q0064",
+    "query_text": "daek frost",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "dark frost",
+    "author": "jennifer estep"
+  },
+  {
+    "query_id": "Q0065",
+    "query_text": "miss marple omnibus vol 1 body in the libeary moving finger murder is announced 4 50 from padsington",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 2,
+    "title": "miss marple omnibus vol 1 body in the library moving finger murder is announced 4 50 from paddington",
+    "author": "agatha christie"
+  },
+  {
+    "query_id": "Q0066",
+    "query_text": "the sckence of interstellar",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "the science of interstellar",
+    "author": "kip s thorne"
+  },
+  {
+    "query_id": "Q0067",
+    "query_text": "the day lasts more thah a hundred years",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "the day lasts more than a hundred years",
+    "author": "chingiz aitmatov"
+  },
+  {
+    "query_id": "Q0068",
+    "query_text": "the commhnist manifesto",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "the communist manifesto",
+    "author": "karl marx"
+  },
+  {
+    "query_id": "Q0069",
+    "query_text": "the lodds of discopline",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 2,
+    "title": "the lords of discipline",
+    "author": "pat conroy"
+  },
+  {
+    "query_id": "Q0070",
+    "query_text": "the pink triangle the nazi war against homodexuals",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "the pink triangle the nazi war against homosexuals",
+    "author": "richard plant"
+  },
+  {
+    "query_id": "Q0071",
+    "query_text": "barbarians at the gats the fall of rjr nabisco",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "barbarians at the gate the fall of rjr nabisco",
+    "author": "bryan burrough"
+  },
+  {
+    "query_id": "Q0072",
+    "query_text": "talk into you",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 2,
+    "title": "fall into you",
+    "author": "roni loren"
+  },
+  {
+    "query_id": "Q0073",
+    "query_text": "doctor who timewurm revelation",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "doctor who timewyrm revelation",
+    "author": "paul cornell"
+  },
+  {
+    "query_id": "Q0074",
+    "query_text": "when the bough hreaks",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "when the bough breaks",
+    "author": "jonathan kellerman"
+  },
+  {
+    "query_id": "Q0075",
+    "query_text": "mastering mountain bime skills",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "mastering mountain bike skills",
+    "author": "brian lopes"
+  },
+  {
+    "query_id": "Q0076",
+    "query_text": "the sockology of religion",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "the sociology of religion",
+    "author": "max weber"
+  },
+  {
+    "query_id": "Q0077",
+    "query_text": "four past midniyht",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "four past midnight",
+    "author": "stephen king"
+  },
+  {
+    "query_id": "Q0078",
+    "query_text": "jogham s journey a srorybook for advent",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 2,
+    "title": "jotham s journey a storybook for advent",
+    "author": "arnold ytreeide"
+  },
+  {
+    "query_id": "Q0079",
+    "query_text": "blasd soup",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 2,
+    "title": "glass soup",
+    "author": "jonathan carroll"
+  },
+  {
+    "query_id": "Q0080",
+    "query_text": "paths of gkory",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "paths of glory",
+    "author": "jeffrey archer"
+  },
+  {
+    "query_id": "Q0081",
+    "query_text": "sikver vengeance gabrielle gayle 1",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "silver vengeance gabrielle gayle 1",
+    "author": "kasey shoemaker"
+  },
+  {
+    "query_id": "Q0082",
+    "query_text": "taled from the eadt",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 2,
+    "title": "tales from the east",
+    "author": "l t suzuki"
+  },
+  {
+    "query_id": "Q0083",
+    "query_text": "that frequent visifor",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "that frequent visitor",
+    "author": "k hari kumar"
+  },
+  {
+    "query_id": "Q0084",
+    "query_text": "soldief dog",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "soldier dog",
+    "author": "sam angus"
+  },
+  {
+    "query_id": "Q0085",
+    "query_text": "in pidces",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "in pieces",
+    "author": "sally field"
+  },
+  {
+    "query_id": "Q0086",
+    "query_text": "the pne and only ivan",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "the one and only ivan",
+    "author": "katherine applegate"
+  },
+  {
+    "query_id": "Q0087",
+    "query_text": "scar yisshe",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 2,
+    "title": "scar tissue",
+    "author": "anthony kiedis"
+  },
+  {
+    "query_id": "Q0088",
+    "query_text": "the wource",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "the source",
+    "author": "james a michener"
+  },
+  {
+    "query_id": "Q0089",
+    "query_text": "musgishi vol 5",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "mushishi vol 5",
+    "author": "yuki urushibara"
+  },
+  {
+    "query_id": "Q0090",
+    "query_text": "the zecret diaries of miss miranda cheever",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "the secret diaries of miss miranda cheever",
+    "author": "julia quinn"
+  },
+  {
+    "query_id": "Q0091",
+    "query_text": "zdn buddhism selected writings of d t suzuki",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "zen buddhism selected writings of d t suzuki",
+    "author": "d t suzuki"
+  },
+  {
+    "query_id": "Q0092",
+    "query_text": "the sh t no one tells you a guide to survivinb your baby s first year",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "the sh t no one tells you a guide to surviving your baby s first year",
+    "author": "dawn dais"
+  },
+  {
+    "query_id": "Q0093",
+    "query_text": "this broken wonsrous world",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "this broken wondrous world",
+    "author": "jon skovron"
+  },
+  {
+    "query_id": "Q0094",
+    "query_text": "if forevef comes",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "if forever comes",
+    "author": "a l jackson"
+  },
+  {
+    "query_id": "Q0095",
+    "query_text": "home fite",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "home fire",
+    "author": "kamila shamsie"
+  },
+  {
+    "query_id": "Q0096",
+    "query_text": "blind eolf",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "blind wolf",
+    "author": "aubrey rose"
+  },
+  {
+    "query_id": "Q0097",
+    "query_text": "mokminvalley in november",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "moominvalley in november",
+    "author": "tove jansson"
+  },
+  {
+    "query_id": "Q0098",
+    "query_text": "vampire blood trjlogy",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "vampire blood trilogy",
+    "author": "darren shan"
+  },
+  {
+    "query_id": "Q0099",
+    "query_text": "the queem s necklacr",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 2,
+    "title": "the queen s necklace",
+    "author": "alexandre dumas"
+  },
+  {
+    "query_id": "Q0100",
+    "query_text": "the divime conspiracy rediscovering our hidden life in god",
+    "mode_qac": "MODE4_TYPO",
+    "model_gen": "GEN",
+    "typo_level": 1,
+    "title": "the divine conspiracy rediscovering our hidden life in god",
+    "author": "dallas willard"
+  }
+]

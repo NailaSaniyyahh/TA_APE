@@ -1,6 +1,7 @@
 from opensearchpy import OpenSearch
 import pandas as pd
 import os
+import math
 
 client = OpenSearch(
     hosts=[{"host": "localhost", "port": 9200}],
@@ -21,9 +22,6 @@ mapping = {
             "description": {"type": "text"},
             "numRatings": {
                 "type": "integer"         # jumlah rating mentah
-            },
-            "pop_weight": {
-                "type": "float"           # numRatings / max_numRatings (0-1)
             },
             "suggest_title": {
                 "type": "completion",   # suggest khusus dari judul
@@ -58,36 +56,45 @@ if "numratings" not in df.columns:
 # normalisasi num rating
 max_ratings = pd.to_numeric(df["numratings"], errors="coerce").max()
 max_ratings = max_ratings if max_ratings > 0 else 1
+log_max = math.log1p(float(max_ratings))
+
 print(f"✓ Max numRatings: {max_ratings:,}")
 print(f"✓ Loaded {len(df):,} buku dari {csv_path}")
+
+def make_suggest_inputs(title: str) -> list:
+    tokens = title.lower().split()
+    inputs = [title.lower()]
+    for i in range(1, min(len(tokens), 4)):   # max 3 variasi tambahan
+        inputs.append(" ".join(tokens[i:]))
+    return list(dict.fromkeys(inputs))      
 
 success = 0
 failed  = 0
 
 for _, row in df.iterrows():
-    title = row.get("title", "")
-    author = row.get("author", "")
-    description = row.get("description", "")
-    numRatings = row.get("numratings", 0)
+    title      = str(row.get("title", "")).strip()
+    author     = str(row.get("author", "")).strip()
+    description = str(row.get("description", "")).strip()
+    numRatings = int(row.get("numratings", 0) or 0)
 
     if not title:
         failed += 1
         continue
 
-    # Normalisasi numRatings → weight integer (1-1000)
-    weight = max(1, int((numRatings / max_ratings) * 1000))
+    log_ratings = math.log1p(float(numRatings))
+    weight      = max(1, int((log_ratings / log_max) * 1000))
 
     doc = {
         "title": title,
         "author": author,
         "description": description,
-        "numRatings" : int (numRatings),
+        "numRatings" : numRatings,
         "suggest_title": {
-            "input": [title],
+            "input": make_suggest_inputs(title),
             "weight": weight
         },
         "suggest_author": {
-            "input": [author] if author else [],
+            "input": [author.lower()] if author else [],
             "weight": weight
         }
     }

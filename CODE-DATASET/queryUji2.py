@@ -1157,20 +1157,6 @@ Justifikasi:
 # if __name__ == "__main__":
 #     main()
 
-"""
-queryUji.py
-===========
-Pembentukan Query Uji untuk Eksperimen Search Suggestion
-
-Justifikasi:
-- Jumlah query  : Rumus Slovin (Nurjannah Syakrani & Naufal Athaya, JACOST 2025)
-- Kategori query: Taksonomi QAC Krishnan et al. (ADCS 2017)
-    * PREFIX_TITLE  → Mode 1 (Prefix Match),          Model LR
-    * PREFIX_AUTHOR → Mode 1 (Prefix Match),          Model LR
-    * PARTIAL       → Mode 3 (Pattern Match),         Model LR
-    * TYPO          → Mode 4 (Relaxed Pattern Match), Model GEN
-"""
-
 import pandas as pd
 import random
 import json
@@ -1178,16 +1164,10 @@ import math
 import os
 from datetime import datetime
 
-# ─────────────────────────────────────────────────────────────────
-# KONFIGURASI PATH  →  sesuaikan dengan struktur folder kamu
-# ─────────────────────────────────────────────────────────────────
 CSV_FILE    = "../hasil_books2.csv"          # ganti dengan path CSV kamu
 OUTPUT_JSON = "../v3test_queries_final.json"   # output query uji
 LOG_FILE    = "../query_generation.log"
 
-# ─────────────────────────────────────────────────────────────────
-# PROPORSI KATEGORI
-# ─────────────────────────────────────────────────────────────────
 PROPORSI = {
     "PREFIX_TITLE" : 0.30,   # 30%
     "PREFIX_AUTHOR": 0.20,   # 20%
@@ -1195,10 +1175,6 @@ PROPORSI = {
     "TYPO"         : 0.20,   # 20%
 }
 
-# ─────────────────────────────────────────────────────────────────
-# QWERTY NEIGHBORS  (untuk simulasi typo Model GEN)
-# Sumber: Krishnan et al. (2017) Section 5
-# ─────────────────────────────────────────────────────────────────
 QWERTY = {
     'a':'sqwz',  'b':'vghn',  'c':'xdfv',  'd':'srfce',
     'e':'wrsdf', 'f':'dcvgt', 'g':'ftbhy', 'h':'gynj',
@@ -1209,44 +1185,13 @@ QWERTY = {
     'y':'tghu',  'z':'asx',
 }
 
-# =================================================================
-# 1. RUMUS SLOVIN
-#    Referensi: Nurjannah Syakrani & Naufal Athaya (2025)
-#               JACOST Vol.6 No.1 — Persamaan (4)
-#    n = N / (1 + N * e²)
-# =================================================================
 def slovin(N: int, e: float = 0.10) -> int:
-    """
-    Menghitung ukuran sampel menggunakan rumus Slovin.
-
-    Parameter
-    ----------
-    N : int   — jumlah populasi (total records dataset)
-    e : float — margin error (default 0.10 = 10%)
-
-    Return
-    ------
-    n : int   — jumlah query uji yang harus dibentuk
-    """
     n = N / (1 + N * (e ** 2))
     return math.ceil(n)
 
 
-# =================================================================
-# 2. MODEL LR — PREFIX  (Mode 1, Krishnan et al. 2017)
-#    Mengambil potongan dari bagian AWAL teks (kiri ke kanan).
-#    Merepresentasikan pengguna yang mengetik kata secara bertahap.
-#
-#    FIX: minimum 2 kata agar query tidak ambigu (misal "the" saja
-#         bisa match ribuan buku → tidak representatif).
-#         for_author=True: minimal nama depan + belakang.
-# =================================================================
 def generate_prefix_LR(text: str, for_author: bool = False) -> str:
     """
-    Model LR dari Krishnan et al. (2017) Section 5, Tabel 4.
-    Append karakter dari kiri ke kanan → ambil prefix 30-50%
-    dari total kata, MINIMUM 2 kata agar tidak ambigu.
-
     Justifikasi panjang prefix:
     - Paper menyebut minimum length = 3 karakter (Bast & Weber
       dalam Krishnan et al. 2017 Section 5).
@@ -1308,17 +1253,8 @@ def generate_prefix_LR(text: str, for_author: bool = False) -> str:
     return " ".join(words[:n_take])
 
 
-# =================================================================
-# 3. MODEL LR — PARTIAL  (Mode 3, Krishnan et al. 2017)
-#    Mengambil kata dari posisi TENGAH atau AKHIR judul.
-#    Merepresentasikan pengguna yang hanya ingat sebagian kata.
-# =================================================================
 def generate_partial_LR(text: str) -> str:
     """
-    Model LR untuk Mode 3 (Pattern Match).
-    Kata diambil bukan dari posisi awal (index > 0),
-    sehingga tidak bisa ditangkap prefix match biasa.
-
     FIX PARTIAL:
     - Pool dijamin >= 4 kata dari generate_queries.
     - Selalu ambil MINIMAL 2 kata (start..start+1) agar query
@@ -1368,22 +1304,9 @@ def generate_partial_LR(text: str) -> str:
     return " ".join(chunk)
 
 
-# =================================================================
-# 4. MODEL GEN — TYPO  (Mode 4, Krishnan et al. 2017)
-#    Simulasi kesalahan ketik berdasarkan kedekatan karakter
-#    pada layout QWERTY (distribusi Gaussian, σ = 0.19).
-#    P_append = 0.80, P_delete = 0.04 (Section 5)
-#
-#    FIX: batasi maksimal 2 karakter yang ditypo per query
-#         agar hasil typo masih mirip kata aslinya dan sistem
-#         masih bisa menemukannya (Relaxed Pattern Match).
-# =================================================================
 def generate_typo_GEN(text: str, typo_prob: float = 0.25,
                       max_typo_chars: int = 2) -> str:
     """
-    Model GEN dari Krishnan et al. (2017) Section 5.
-    Mensimulasikan typo ringan pada 1-2 kata dalam query,
-    dengan MAKSIMAL 2 karakter yang berubah per query.
 
     typo_prob     = probabilitas tiap karakter mengalami typo.
     max_typo_chars = batas atas jumlah karakter yang boleh ditypo
@@ -1444,16 +1367,9 @@ def generate_typo_GEN(text: str, typo_prob: float = 0.25,
     return " ".join(result)
 
 
-# =================================================================
-# 5. GENERATE QUERY UJI
-# =================================================================
 def generate_queries(df: pd.DataFrame, n_total: int,
                      seed: int = 42) -> list[dict]:
     """
-    Membentuk query uji sesuai jumlah Slovin dan 4 kategori.
-
-    Parameter
-    ----------
     df      : DataFrame dengan kolom 'title' dan 'author'
     n_total : jumlah total query (hasil Slovin)
     seed    : random seed untuk reprodusibilitas
@@ -1480,7 +1396,6 @@ def generate_queries(df: pd.DataFrame, n_total: int,
     used_texts = set()   # cegah duplikat
 
     def try_add(query_text, qtype, book, difficulty, mode_ref) -> bool:
-        """Tambahkan query jika belum duplikat dan tidak kosong."""
         qt = query_text.strip().lower()
         if not qt or qt in used_texts:
             return False

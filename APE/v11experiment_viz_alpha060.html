@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Experiment — alpha=0.60</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:#f4f6fb;padding:32px 16px;color:#1a1a2e}
+.wrap{max-width:1200px;margin:0 auto}
+h1{font-size:22px;margin-bottom:4px}
+.sub{color:#888;font-size:13px;margin-bottom:24px}
+/* nav */
+.nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.btn{padding:7px 16px;border-radius:8px;border:1.5px solid #ddd;background:#fff;
+      cursor:pointer;font-size:13px;color:#555;font-family:inherit;transition:.15s}
+.btn:hover{background:#eef2ff;border-color:#4c6ef5;color:#4c6ef5}
+.btn:disabled{opacity:.3;cursor:not-allowed}
+.counter{font-size:13px;color:#888;padding:7px 14px;background:#fff;
+          border:1.5px solid #eee;border-radius:8px}
+/* filter chips */
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.chip{padding:5px 13px;border-radius:20px;border:1.5px solid #ddd;
+       background:#fff;cursor:pointer;font-size:11px;color:#888;font-family:inherit;transition:.15s}
+.chip.on{background:#1a1a2e;color:#fff;border-color:#1a1a2e}
+/* search box */
+.sbox{display:flex;align-items:center;gap:10px;background:#fff;
+       border:1.5px solid #ddd;border-radius:12px;padding:13px 18px;
+       box-shadow:0 2px 10px rgba(0,0,0,.06);margin-bottom:8px}
+.sbox input{flex:1;border:none;outline:none;font-size:15px;font-family:inherit;color:#1a1a2e}
+.qmeta{display:flex;gap:8px;align-items:center;font-size:11px;color:#aaa;
+        padding:0 4px;margin-bottom:20px;flex-wrap:wrap}
+/* type badges */
+.tb{font-size:10px;padding:2px 8px;border-radius:10px;font-weight:700}
+.tb-PREFIX_TITLE{background:#eef0ff;color:#4c6ef5}
+.tb-PREFIX_AUTHOR{background:#fff4e6;color:#e67700}
+.tb-PARTIAL{background:#e6fcf5;color:#0ca678}
+.tb-TYPO{background:#fff0f6;color:#c2255c}
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.col{background:#fff;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,.06);overflow:hidden}
+.col-hd{padding:11px 16px;font-size:11px;font-weight:700;letter-spacing:.4px;border-bottom:1px solid #f0f0f0}
+.hd-c{background:#eef2ff;color:#4c6ef5}
+.hd-b{background:#ebfbee;color:#2f9e44}
+.hd-s{background:#fff9db;color:#e67700}
+.hd-h{background:#fff0f6;color:#c2255c}
+/* book item */
+.item{display:flex;align-items:flex-start;gap:8px;padding:10px 14px;
+       border-bottom:1px solid #f7f7f7;transition:.1s}
+.item:last-child{border:none}
+.item:hover{background:#fafafa}
+.item.hit{background:#f0fdf4}
+.rn{font-size:11px;font-weight:700;color:#ccc;min-width:16px;padding-top:2px;flex-shrink:0}
+.item.hit .rn{color:#2f9e44}
+.info{flex:1;min-width:0}
+.ttl{font-size:12px;font-weight:600;color:#1a1a2e;word-break:break-word;line-height:1.4}
+.item.hit .ttl{color:#2f9e44}
+.aut{font-size:10px;color:#aaa;margin-top:2px}
+.sc{font-size:10px;color:#ccc;margin-top:2px}
+.right{display:flex;flex-direction:column;align-items:flex-end;gap:3px;flex-shrink:0}
+.hb{font-size:9px;background:#e6fcf5;color:#0ca678;padding:1px 6px;border-radius:6px;font-weight:700}
+.mv{font-size:10px;padding:1px 6px;border-radius:8px;font-weight:600}
+.mv-up{background:#e6fcf5;color:#0ca678}
+.mv-dn{background:#fff5f5;color:#e03131}
+.mv-eq{background:#f8f9fa;color:#aaa}
+.mv-nw{background:#eef2ff;color:#4c6ef5}
+.src{font-size:9px;padding:1px 5px;border-radius:4px}
+.src-completion{background:#eef0ff;color:#4c6ef5}
+.src-fuzzy{background:#fff4e6;color:#e67700}
+.miss{padding:10px 14px;font-size:11px;color:#e03131;font-style:italic;border-top:1px dashed #ffe3e3}
+.empty{padding:20px;text-align:center;color:#ccc;font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>📚 Experiment Results</h1>
+  <p class="sub">alpha = 0.60 &nbsp;·&nbsp; Gunakan filter dan tombol navigasi untuk menelusuri setiap query.</p>
+
+  <div class="nav">
+    <button class="btn" id="bPrev" onclick="go(-1)">◀ Prev</button>
+    <span class="counter" id="ctr"></span>
+    <button class="btn" id="bNext" onclick="go(1)">Next ▶</button>
+  </div>
+
+  <div class="chips">
+    <button class="chip on"  onclick="filt('ALL',this)">Semua</button>
+    <button class="chip"     onclick="filt('PREFIX_TITLE',this)">PREFIX_TITLE</button>
+    <button class="chip"     onclick="filt('PREFIX_AUTHOR',this)">PREFIX_AUTHOR</button>
+    <button class="chip"     onclick="filt('PARTIAL',this)">PARTIAL</button>
+    <button class="chip"     onclick="filt('TYPO',this)">TYPO</button>
+  </div>
+
+  <div class="sbox"><span>🔍</span><input id="qInput" readonly></div>
+  <div class="qmeta">
+    <span id="qBadge"></span>
+    <span>Expected: <strong id="qExp"></strong></span>
+    <span id="qAuth"></span>
+  </div>
+
+  <div class="grid">
+    <div class="col"><div class="col-hd hd-c">Completion Suggester</div><div id="cC"></div></div>
+    <div class="col"><div class="col-hd hd-b">BM25</div><div id="cB"></div></div>
+    <div class="col"><div class="col-hd hd-s">SBERT</div><div id="cS"></div></div>
+    <div class="col"><div class="col-hd hd-h">Hybrid (α=0.60)</div><div id="cH"></div></div>
+  </div>
+</div>
+
+<script>
+let D = [];
+let F = [];
+let idx = 0;
+
+async function loadData() {
+try {
+const resp = await fetch("v11experiment_results_alpha060.json");
+
+if (!resp.ok) {
+    throw new Error(`HTTP ${resp.status}`);
+}
+
+D = await resp.json();
+F = [...D];
+
+render();
+} catch (err) {
+    console.error("Gagal memuat data:", err);
+    document.getElementById('ctr').textContent = 'Gagal memuat data.';
+}}
+loadData();
+
+function filt(t,btn){
+  document.querySelectorAll('.chip').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  F=t==='ALL'?[...D]:D.filter(q=>q.query_type===t);
+  idx=0;render();
+}
+function go(d){idx=Math.max(0,Math.min(F.length-1,idx+d));render();}
+
+function render(){
+  if(!F.length){
+    ['cC','cB','cS','cH'].forEach(id=>{document.getElementById(id).innerHTML='<div class="empty">Tidak ada query.</div>';});
+    document.getElementById('ctr').textContent='0/0'; return;
+  }
+  const q=F[idx], exp=q.title.toLowerCase().trim();
+  document.getElementById('qInput').value=q.query_text;
+  document.getElementById('ctr').textContent=`${q.query_id} — ${idx+1}/${F.length}`;
+  document.getElementById('qBadge').innerHTML=`<span class="tb tb-${q.query_type}">${q.query_type}</span>`;
+  document.getElementById('qExp').textContent=q.title;
+  document.getElementById('qAuth').textContent=q.author?`✍️ ${q.author}`:'';
+  document.getElementById('bPrev').disabled=idx===0;
+  document.getElementById('bNext').disabled=idx===F.length-1;
+
+  const comp=q.candidates.completion||[];
+  const rm={};comp.forEach((c,i)=>{rm[c.title]=i+1;});
+  buildCol('cC',comp,'c',exp,rm);
+  buildCol('cB',q.candidates.bm25||[],'b',exp,rm);
+  buildCol('cS',q.candidates.sbert||[],'s',exp,rm);
+  buildCol('cH',q.candidates.hybrid||[],'h',exp,rm);
+}
+
+function buildCol(id,list,m,exp,rm){
+  const el=document.getElementById(id);
+  if(!list.length){el.innerHTML='<div class="empty">Belum ada data.</div>';return;}
+  let h=list.map((c,i)=>{
+    const hit=c.title.toLowerCase().trim()===exp;
+    const sc=m==='b'?c.score_bm25:m==='s'?c.score_sbert:m==='h'?c.score_hybrid:null;
+    const mv=m==='c'?'':(()=>{
+      const prev=rm[c.title];
+      if(prev==null) return '<span class="mv mv-nw">baru</span>';
+      const d=prev-(i+1);
+      if(d>0) return `<span class="mv mv-up">▲${d}</span>`;
+      if(d<0) return `<span class="mv mv-dn">▼${Math.abs(d)}</span>`;
+      return '<span class="mv mv-eq">—</span>';
+    })();
+    return `<div class="item ${hit?'hit':''}">
+      <div class="rn">${i+1}</div>
+      <div class="info">
+        <div class="ttl">${esc(c.title)}</div>
+        <div class="aut">${esc(c.author||'')}</div>
+        ${sc!=null?`<div class="sc">${sc.toFixed(4)}</div>`:''}
+      </div>
+      <div class="right">
+        ${hit?'<span class="hb">✓ FOUND</span>':''}
+        ${mv}
+        <span class="src src-${c.source||'fuzzy'}">${c.source||''}</span>
+      </div>
+    </div>`;
+  }).join('');
+  if(!list.find(c=>c.title.toLowerCase().trim()===exp))
+    h+='<div class="miss">⚠ Expected tidak ditemukan di top-10</div>';
+  el.innerHTML=h;
+}
+
+function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+render();
+</script>
+</body>
+</html>
